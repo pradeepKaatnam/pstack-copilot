@@ -1,0 +1,181 @@
+NON-SKILLS COMPATIBILITY AUDIT
+=============================
+
+Scope: every upstream/pstack file outside its top-level skills/ directory.
+All 30 text files were read in full, including the three nested automation
+SKILL.md files and every automation reference, template, and guide chapter.
+The seven images were identified by format/dimensions and copied byte-for-byte.
+The immutable upstream archive is not edited or used as an active skill root.
+
+Inventory: 37 files = 10 adapted + 8 unchanged + 19 inactive.
+Machine-readable per-file decisions, exact targets, and host notes:
+https://github.com/pradeepKaatnam/pstack-copilot/blob/main/audit/non-skills.json
+
+ADAPTED
+
+Agents:
+  agents/poteto-agent.md -> copilot/agents/poteto-agent.agent.md
+  agents/comment-sicko.md -> copilot/agents/comment-sicko.agent.md
+
+Both use native kebab-case name and description frontmatter, without model
+guesses, and include-custom-instructions: true so CLI subagents receive applicable
+repository guidance. This field is a CLI instruction-inheritance opt-in, not a
+portable delegation or permission grant. Poteto is a scoped delegate, reads the complete adapted mode/principles,
+and reports a missing prerequisite instead of searching Cursor private caches.
+It does not force background execution or use Cursor Task/generalPurpose calls.
+Comment Sicko retains the original theatrical opener, personal voice, strict
+keep-list and uncertainty-means-delete taste, suppression rules, and MUST KILL
+flags. Personal style and engineering taste are not treated as incompatibilities.
+Native read/search tools constrain actual operations: every deletion is a report
+recommendation, never a direct edit or external post. The caller applies accepted
+findings under permission gates. This resolves only the operational ambiguity in
+"touch comments" versus "report only", not the author's review philosophy.
+
+Agent definitions are distribution sources, not an assertion that every host
+automatically discovers this directory or supports nested delegation. Use the
+root installation instructions and documented host discovery. No files under
+.github/agents were read or modified by this audit.
+
+Human guides:
+  docs/guide/README.md
+  docs/guide/02-poteto-mode.md
+  docs/guide/03-understand.md
+  docs/guide/04-design.md
+  docs/guide/05-build-and-clean.md
+  docs/guide/06-verify-and-ship.md
+  docs/guide/08-principles.md
+  docs/guide/10-recipes-and-pitfalls.md
+
+Seven complete chapters retain engineering explanations, diagrams, examples,
+checklists, all 24 principles, seven benchmark questions, and realistic task
+constraints. This is not a brief summary claiming to port the full original.
+The index accurately distinguishes active adapted chapters and inactive originals.
+All Markdown links to packaged guide/skill/image files remain relative and stay
+inside the installable copilot/ root. Historical source links instead use absolute
+GitHub URLs pinned to cursor/plugins/e5136d82418d2db3165ea1050d17577cd618cc05/pstack.
+Audit links use the port repository's blob/main/audit URL. Cached plugin installs
+therefore do not depend on checkout-only upstream/ or audit/ sibling directories.
+
+Changes remove portable-slash-command claims, persistent Cursor Custom Modes,
+in-cloud guarantees, automatic model-role routing, external team-kit dependency,
+private history discovery, unverified scheduler/watcher services, and assumed
+Origin landing support. Skill examples are natural-language requests. Delegation,
+model diversity, evidence access, app-driving tools, and GitHub writes must be
+available and authorized; absent checks are blocked or honestly run serially.
+No guide overrides repository policy, permission gates, branch protection,
+required human review, or explicit authorization for merging/deployment.
+
+UNCHANGED
+
+LICENSE -> copilot/LICENSE and root LICENSE, exactly including
+"Copyright (c) 2026 Lauren Tan", MIT permission/notice terms, and disclaimer.
+assets/logo.png -> copilot/assets/logo.png (512x512 PNG).
+All six docs/guide/images/*.jpg -> copilot/docs/guide/images/ (1200x800 JPEGs).
+Image bytes and metadata are preserved, including artwork for the inactive
+overnight chapter. Artwork labels can depict original Cursor commands; they
+do not register commands or prove any runtime capability.
+
+INACTIVE: COMPLETE ORIGINALS REMAIN IN upstream/pstack
+
+README.md: full upstream product introduction, skill/playbook/principle catalog,
+examples, agent wrappers, external dependencies, model routing, and automations.
+It mixes useful guidance with Cursor-specific installation, shortcuts, Task
+semantics, and unattended merging. The parent owns the separate root port README.
+
+.gitignore: the three original housekeeping patterns are retained only as source.
+Root ignore policy is separately owned by the parent.
+
+.cursor-plugin/plugin.json: version 0.15.25, no $schema, explicit skills/agents
+fields, logo/category/tags and Cursor repository metadata. Those legacy path
+fields ARE supported. The Cursor-specific .cursor-plugin discovery location,
+not the fields themselves, differs from the active Copilot plugin.json entry.
+plugin.json: version 0.15.25, agent-plugins.org schema 1.0.0, shared metadata but
+no explicit skills/agents discovery fields. Copilot CLI supports BOTH legacy
+manifests and Agent Plugins 1.0; neither lack of $schema nor the 1.0 schema is
+itself a reason to call these originals unsupported. The port deliberately uses
+the separately adapted LEGACY copilot/plugin.json with skills: "skills/" and
+agents: "agents/", without $schema, matching copilot/agents/*.agent.md.
+The original manifests stay inactive outside that plugin root to avoid
+registering archived instructions and original Cursor metadata. The parent owns
+the active plugin manifest. Official references verified for this layout:
+https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-creating
+https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-plugin-reference
+
+docs/guide/01-setup.md: original installation/model budgets, .cursor model rules,
+verification-skill output, inheritance/panels, and persistent Custom Mode keys.
+Its product-specific contract is not realistically portable by renaming paths.
+
+docs/guide/07-overnight.md: original trust gates, bounded handoff, loop diagram,
+decision TSV, pause/resume, autopilot queues, persistent Projects/cloud fleets,
+and Benny setup. There is no port of Cursor's persistent wakeup scheduler or
+private automation infrastructure. Do not run its prompt examples as Copilot
+instructions. Its complete engineering discussion remains reference material.
+
+docs/guide/09-make-it-yours.md: original transcript-derived personal modes,
+reflect/correct, authoring, technical writing, blind eval, and Grok Bot webhook/
+sender-key/Tailscale UI. Private workspace history and Cursor create-skill,
+specific reviewer orchestration, and bot infrastructure are not provisioned.
+No active copy of these unsupported operational prompts is installed.
+
+Entire automations/benny tree (12 files), including EVERY nested SKILL:
+  FOR_AGENTS.md
+  README.md
+  skills/setup-benny/SKILL.md
+  skills/triage-issue-reports/SKILL.md
+  skills/triage-issue-reports/references/routing.example.md
+  skills/reproduce-and-fix-issues/SKILL.md
+  skills/reproduce-and-fix-issues/references/control-adapter.md
+  skills/reproduce-and-fix-issues/references/feature-map.example.md
+  skills/reproduce-and-fix-issues/references/verify-existing-fix.md
+  templates/configuration.example.yaml
+  templates/reproduce-automation-prompt.md
+  templates/triage-automation-prompt.md
+
+These files are thoroughly reviewed but deliberately not installed as skills,
+automations, active templates, MCP configuration, or setup instructions.
+They require Cursor event creation/editor handoffs, trusted Slack trigger/thread
+actions and identity, organization tracker MCP/compensation, private app-control
+launch/recording/state/cleanup, account fixtures, credential isolation, and
+retention policy. None is supplied by a prompt translation. Safety rules such as
+immutable coordinates, one verdict, double repro, evidence review, no worker
+Slack credentials, no competing fix, bounded draft-only PR, compensation, and
+fail-closed integration checks are retained intact in the archive; they have not
+been represented as implemented capabilities. No live traffic is enabled.
+
+HOST LIMITS
+
+CLI: native agent/skill discovery and tools depend on installed CLI version and
+installation. Available session history can be used, but private Cursor caches
+must not be mined. No Cursor loop/Projects runtime is installed.
+
+Native CLI delegation and background execution DO exist: the native task tool,
+/subagents, /tasks, Ctrl+X b, and list_agents/read_agent/write_agent are distinct
+from Cursor's Task signature and is_background frontmatter. This port chooses
+safe inherited-model/sequential behavior where host capabilities are uncertain;
+it does not declare those native features unsupported. CLI models/modelPolicy/
+reasoningEffort agent controls and /model are also available, but no model names
+or automatic role routing are invented here. CLI subagent model/effort settings
+belong to ~/.copilot/settings.json under subagents.agents.<id>.model and
+effortLevel, not obsolete internal ~/.copilot/config.json keys. MCP integrations
+are native capabilities but are not supplied or authorized by this pack.
+
+VS Code: custom-agent selection, skill discovery, extension version and configured
+tools govern capabilities. Do not assume CLI history, delegation, model override,
+or background continuation is available.
+
+Cloud: repository/task configuration, credentials, network policy and branch
+protection constrain execution. A cloud task is not a portable Cursor Project
+coordinator or a guarantee of nested cloud workers, video, or permission to merge.
+Cloud plugin configuration is documented through .github/copilot/settings.json
+enabledPlugins and extraKnownMarketplaces; lack of integration testing here is
+not a claim that cloud plugins are unsupported. The parent owns that setup.
+
+Additional official references:
+https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference
+https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference
+
+Remaining uncertainty: host-native loading of these definitions has not been
+smoke-tested in actual CLI, VS Code, and cloud installations. Private integrations
+were deliberately not provisioned or exercised. This portion validates file
+coverage, dispositions, targets, license/image byte equality, source preservation,
+and guide content/link transformations; it does not claim runtime host parity.

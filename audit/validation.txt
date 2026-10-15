@@ -1,0 +1,51 @@
+VALIDATION RECORD — 2026-10-15
+
+Source acquisition
+  git fetch --no-tags --depth=1 https://github.com/cursor/plugins.git
+      e5136d82418d2db3165ea1050d17577cd618cc05
+  git archive of that commit's pstack/ subtree, preserving executable modes.
+  Source subtree identity: de8e53ebbeca0fe9351e950095e720655da08349.
+  No moving revision substituted. No private infrastructure/session data fetched.
+
+Infrastructure tests (executed)
+  python -m unittest discover -s tests -v
+  9 tests passed. These use isolated temporary fixtures, not the agent prompt
+  tree, and test Git tree identity, hidden/binary/executable/symlink preservation,
+  exact original text and CRLF retention, path validation, managed installs,
+  safe updates, retained license, conflicting/local modifications, and symlinks.
+
+Audit implementer checks (executed by the respective implementers)
+  Full-content source review: 169 files across three nonoverlapping partitions.
+  Source/target inventory, byte-equality and mode checks for unchanged resources.
+  Native skill metadata, package-relative resources, active API assumptions,
+  agent metadata, dormant automation placement, and guide links checked.
+  Available Node/shell checks exercised portable runtime behavior; these are
+  not a claim that the upstream Bun test suite ran.
+
+Preserved runtime tests (executed by the orchestration implementer)
+  Transient, advisory-checked Bun 1.4.3 and frozen upstream dependencies.
+  Working directory: copilot/skills/poteto-mode/scripts.
+  bun test orch watch-pr check-plan.test.ts: 69 passed, 0 failed.
+  bun run typecheck: passed.
+  Transient tools, modules and fixtures removed; manifests/lockfile unchanged.
+
+Host runtime limitations
+  Copilot CLI is not installed here. No authenticated CLI, VS Code, or cloud
+  discovery/invocation, MCP service, model-routing, background, or permissions
+  integration test was performed. Official documentation is support evidence,
+  not execution evidence. See the root README for user-run acceptance checks.
+
+CI
+  .github/workflows/preservation.yml runs the offline preservation/mapping/
+  passage/resource/discovery verifier, infrastructure tests, and the preserved
+  Bun tests/typecheck using frozen dependencies with lifecycle scripts disabled.
+  It does not install or execute archived instructions, scripts, or automations.
+
+Security
+  Secret scan of all 169 archived source files: no secrets detected.
+  New action dependency actions/checkout 7.0.1: advisory check found no
+  vulnerabilities; workflow pins its commit and disables persisted credentials.
+  oven-sh/setup-bun 2.2.0 and @oven/bun-linux-x64 1.4.3 advisory checks also
+  found no vulnerabilities. Setup action is pinned to its commit.
+  Final whole-change secret scanning, code review, and CodeQL are reported in
+  the PR task results; this record does not pre-claim their outcome.

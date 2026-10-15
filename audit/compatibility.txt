@@ -1,0 +1,101 @@
+PSTACK COPILOT PORT — COMPATIBILITY AND REVIEW STATUS
+Retrieved official documentation: 2026-10-15
+Source: https://github.com/cursor/plugins
+Pinned commit: e5136d82418d2db3165ea1050d17577cd618cc05
+Source path/version: pstack / 0.15.25
+Unofficial port; copyright (c) 2026 Lauren Tan, MIT.
+
+Evidence navigation
+-------------------
+provenance.json: all tracked paths, bytes, types, modes, sizes, SHA256, Git blobs.
+supporting-skills.json + orchestration.json + non-skills.json: complete mapping.
+files.txt: readable, one-entry-per-file full-content audit.
+passages.json: exact changed original/replacement text and source line ranges;
+               inactive text remains in full, with an explicitly inactive state.
+documentation.json: official URLs, retrieval date, verified claims, limitations.
+The per-file rationale applies to that file's changed passages. Formatting,
+metadata normalization and host incompatibility are distinguished in the review.
+An unchanged file is deliberately retained engineering guidance, not an omission.
+
+Feature                       CLI primary             VS Code / cloud secondary
+----------------------------  ----------------------  --------------------------
+Skills + resources            54 canonical skills     Managed .github/skills
+Manual-only metadata          Supported; retained     VS Code supported; cloud
+                                                      invocation UI not equated
+user-invocable                Supported separately    Host-dependent invocation
+Plugin manifests              Supported legacy used   Agent Plugins supported;
+                                                      this package not smoke-tested
+Agent Plugins 1.0             Supported, not chosen   Portable skills/MCP only;
+                                                      host namespaces differ
+Namespaces                    Host-qualified names    VS Code prefixes differ;
+                                                      inspect actual skill picker
+Custom agents                 Native .agent.md        Installer only installs
+                                                      skills, not other-host agents
+Cursor Task APIs              Removed, not emulated   Never assumed portable
+Native delegation             Documented task tool    Different harness contracts;
+                              exists; sequential      only use tools actually
+                              roles default           exposed in that session
+Models/effort                 Native host controls    Not cross-client settings;
+                              and documented settings inherited/default otherwise
+Cursor model rules file       No loader; removed      No renamed inert config
+Background tasks              Native CLI controls     Not Cursor is_background;
+                              documented, not forced  no cross-host API assumption
+Hooks                         Native support exists   Different harness semantics;
+                              none bundled            none enabled by this port
+Permissions                   Host rules apply        No prompt can grant
+                                                      credentials or bypass policy
+MCP                           User-provisioned only   Cloud has extra network,
+                                                      OAuth, resource limitations
+Cursor caches/session recall  Disabled                No other people's data
+Benny/private automations     Archive-only            No triggers, hooks, secrets,
+                                                      private infrastructure fetched
+/loop and /in-cloud           Cursor commands removed No invented slash aliases
+Verification generation       .github/skills/verify-* Common project skill path
+Portable tooling/tests        Preserved where audited Runtime prerequisites still
+                                                      required; no automatic install
+Engineering style/principles   Preserved               Taste is not incompatibility
+Automatic merging             Not authorized          Requires explicit human
+                                                      approval; no automatic merge
+
+Packaging and safety
+--------------------
+Install only copilot/, whose legacy plugin.json explicitly selects skills/ and
+agents/. The complete archive is outside that package. No active package points
+its discovery paths into upstream/. Archived nested Benny skills and Cursor
+agents/manifests are not installed. JSON compatibility notes are sidecars, never
+illegal comments. Removed prompt blocks live in the archive/audit rather than
+being hidden in active HTML comments. Comments are not a security boundary.
+Portable scripts are resources, not automatic startup hooks.
+
+Unsupported versus unverified versus deliberately not enabled
+------------------------------------------------------------
+Unsupported means the exact Cursor syntax/assumption has no verified mapping
+in this package, not that Copilot can never offer the underlying capability.
+Unverified means evidence or a host execution test is missing: do not invent
+equivalence, enable an integration, or infer non-support from missing docs.
+Documented native model, delegation, background, plugin and hook facilities
+exist; choosing safe sequential/inherited behavior is a port policy, not a claim
+that those facilities are absent. Missing MCP/tools stop the affected operation.
+This port does not use hooks or HTML comments as immutable policy enforcement.
+
+Validation boundaries
+---------------------
+Mechanical checks validate archive identity, complete mapping and exact passage
+evidence, resources and discovery boundaries. Unit tests exercise preservation
+and safe installation/update logic. Runtime test results are recorded separately
+in validation.txt. No Copilot executable is installed in this sandbox, so actual
+CLI discovery, manual-only invocation behavior, VS Code interaction, cloud
+execution, permissions and optional MCP integrations have NOT been smoke-tested.
+The documented install/list/invoke instructions are a user-run acceptance check,
+not a fabricated successful integration test. No automatic merge is performed.
+
+Official-documentation discrepancies observed
+--------------------------------------------
+The plugin overview and current CLI reference disagree about which marketplaces
+are defaults; direct installation avoids depending on that distinction.
+Cloud plugin settings are documented, while hook documentation describes a
+different cloud settings loader: cloud plugin-hook loading remains unverified.
+Generic agent docs retire infer while CLI-specific docs still list it; this port
+does not depend on infer. CLI and VS Code differ in namespaces and direct-install
+toggle behavior. Verify the actual chosen host interface rather than blending
+these documents into a claim of feature parity.

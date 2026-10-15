@@ -1,0 +1,23 @@
+### Autopilot-full
+
+**You own the verdicts and the handoff. The operator owns landing.**
+
+The original Cursor cloud-owner, background audit, countersign-as-approval, and automatic merge passages are inactive. Source-repository provenance is `upstream/pstack/skills/poteto-mode/playbooks/autopilot-full.md`, not an installed resource. This sequential replacement preserves the engineering gates without inventing a remote-agent API or granting merge authority.
+
+A verdict covers one patch and green CI covers one head. Run a full coverage review at the code-ready head, and repeat it for a major change. The patch-id rule in `shipping.md` can carry a lane's result; every new head still needs its own green CI.
+
+1. **Operator gates come first.** The grant covers only named queue items. A request to state the plan is not a go. Every PR stops at merge-ready. No auto-merge, merge queue arming, approval bypass, or agent countersign substitutes for operator approval.
+2. **Give each PR one owner role and durable work.** Resolve the forge once. Default to `gh`. Use Origin only if its installed CLI can resolve the repository; otherwise record the fallback. Never require Graphite. Run the owner role sequentially through build, PR creation per `opening-a-pr.md`, live self-proof, and requested babysit per `babysit.md`. Open a PR early only within the user's PR policy so CI can run alongside authorized work.
+
+   Code-ready means the diff has been cleaned of unnecessary abstraction and comments and the repository checks for touched paths have run on the exact head. Report that head before verification and every later head. Fix rounds stay on the tested base unless trunk conflicts or breaks CI. Each rebase restarts CI. No Cursor cleanup plugin or fixed model slug is assumed.
+
+   Assume an environment can disappear. Keep a decision trail and make work durable using authorized branch pushes or another operator-approved artifact location. Respect no-commit and no-push directives. Force-push is never an implied autonomy grant; when explicitly authorized for an owned branch, pin `--force-with-lease` to the last accepted SHA and stop on an unexpected push.
+3. **Keep independent PRs off trunk, not stacked.** Work the queue sequentially by default. A dependency belongs in `autopilot-stack.md`. Optional real delegation requires isolated branches, explicit acceptance checks, and host-supported controls.
+4. **Verify finished code with a coverage matrix.** Use the **swarm** skill as a partition of verification perspectives. Run gates, live load-bearing behavior through an available driver, and diff audits. Sequential checks are the default. A same-session pass is not an independent verifier. For a required independent verdict, obtain a real second reviewer or mark the lane blocked. Never call a verdict clean without the live lane or before checking the receipts.
+
+   Batch every proven finding into one fix-forward, with a red test covering each site of the defect. A defect already on trunk is recorded against trunk, but one copied or newly reached by the PR belongs to the PR. Preserve one writer per branch. Re-run relevant verification after fixes.
+5. **Test the code against the trunk it would land on.** Green CI alone is not a verdict. Fetch trunk within permissions and inspect overlap. Conflicts, overlapping changed files, or changes to required checks require a reconciled, tested head. If both sides change a lockfile, test a frozen install on the prospective merge result and confirm changed packages resolve as expected. Changed callers, dependencies, or dependency versions need the patch's checks on that result. Never actually merge as a side effect of this analysis. Repeated collisions require sequencing work rather than endless rebases.
+6. **Audit the root layer at checkpoints.** Raised budgets, allowlist changes, or gate loosening need evidence and operator review. A disabled or soft-failed check is not a passing gate. Never give or bypass forge-enforced approval. Audit recorded heads, receipts, role state, blockers, and follow-ups at each bounded iteration. Judge progress by actual side effects, not status prose. Re-scope a stuck role; after repeated infrastructure failures, leave a durable handoff instead of promising background recovery.
+7. **Stand down on hold or stop.** Start no new writes. Preserve every unit's state and report where it stands. Resume only after release. There is no automatic hourly audit command in this port.
+
+**Reply:** each PR's state and verdict, verified head, remaining operator gates, links to PRs and trails, and any unavailable independent or live verification. State plainly that nothing was merged or armed for automatic merge.
