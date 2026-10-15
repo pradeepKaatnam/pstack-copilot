@@ -65,6 +65,14 @@ def files_under(directory):
     }
 
 
+def package_paths(package, pattern="*"):
+    generated = package / "skills/poteto-mode/scripts/node_modules"
+    return (
+        path for path in package.rglob(pattern)
+        if path != generated and generated not in path.parents
+    )
+
+
 def safe_path(relative):
     path = Path(relative)
     require(not path.is_absolute() and ".." not in path.parts, f"Unsafe path: {relative}")
@@ -164,7 +172,7 @@ def verify():
     require("$schema" not in manifest, "Legacy manifest cannot use Agent Plugins schema with path overrides")
     require(not any(k in manifest for k in ("hooks", "mcpServers", "commands")), "Unexpected active integration")
     package = ROOT / "copilot"
-    for path in package.rglob("*"):
+    for path in package_paths(package):
         require(not path.is_symlink(), f"Unexpected package symlink: {path}")
         require(path.name not in (".cursor-plugin", ".cursor", "upstream"), f"Archive/discovery leak: {path}")
     skills = list((package / "skills").glob("*/SKILL.md"))
@@ -180,7 +188,7 @@ def verify():
     for path in (package / "agents").glob("*.agent.md"):
         require("is_background:" not in path.read_text(), f"Cursor background agent: {path}")
     # Relative Markdown links are checked on installed counterparts, never in the archive.
-    for path in package.rglob("*.md"):
+    for path in package_paths(package, "*.md"):
         for link in re.findall(r"!?\[[^\]]*\]\(([^)\s]+)(?:\s+[^)]*)?\)", path.read_text()):
             if "://" in link or link.startswith(("#", "mailto:", "/")) or any(c in link for c in "<>{}"):
                 continue

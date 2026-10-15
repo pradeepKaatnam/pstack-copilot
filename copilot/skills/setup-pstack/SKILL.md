@@ -7,7 +7,7 @@ description: Choose the actual Copilot CLI model and explicit per-invocation rol
 
 The original Cursor always-applied rule and model-slug rewriting workflow are inactive. Source-repository provenance is `upstream/pstack/skills/setup-pstack/SKILL.md`; the archive is not part of installed skills. Copilot does not consume that rule, so do not read or write it, rename it to a Copilot-looking file, or promise per-role model routing from it.
 
-Copilot CLI does have real consumed configuration: `~/.copilot/settings.json` supports documented `subagents.agents.<id>.model` and `effortLevel` settings, and CLI agent metadata supports documented model policies and reasoning effort. This skill deliberately uses the simpler host `/model` control and explicit per-invocation choices rather than maintaining another routing file. Do not write deprecated settings to internal `~/.copilot/config.json` or treat old keys as effective. Consult current official CLI command and config-directory references before using advanced controls.
+Copilot CLI does have real consumed configuration: `~/.copilot/settings.json` supports documented `subagents.agents.<id>.model` and `effortLevel` settings, and CLI agent metadata supports documented model policies and reasoning effort. Default to the simpler host `/model` control and explicit per-invocation choices; the optional registered-agent override below uses the actual native consumer, not another routing file. Do not write deprecated settings to internal `~/.copilot/config.json` or treat old keys as effective. See the official [CLI configuration-directory reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference) and [CLI command reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference).
 
 ## Steps
 
@@ -33,10 +33,22 @@ Have the operator select an offered model in `/model`, or use another documented
 
 If the host exposes supported per-invocation model or effort controls, the operator may explicitly choose them for a particular invocation after inspecting that interface. Otherwise keep the current model. Do not fabricate slugs, append `max`, `xhigh`, or `fast`, or interpret `inherit-parent` as a portable API alias. `auto` is valid where the CLI model selector offers it, not a universal delegation parameter.
 
-### 5. Confirm what actually changed
+### 5. Optionally configure the registered native delegate
 
-Report the host model or default that the operator set, its observed scope, and any remaining explicit per-invocation choices. If nothing changed, say so. Do not claim settings apply to new sessions unless the actual host control says so.
+Do this only when the operator wants actual delegation to the installed custom agent. Use `/agent` to verify that its registered ID is `poteto-agent`; a filename or a planning role is not sufficient evidence. If it is absent, stop this optional step rather than creating an unregistered role key.
 
-### 6. Check the verification path
+Inspect the installed CLI's actual settings interface for per-agent controls. `/model` selects the session model; do not claim it alone configures an agent override. Use a documented native settings UI if it exposes these controls, or a safe host-provided configuration editor that demonstrably preserves JSONC comments, unrelated keys, and existing overrides. If neither is available, explain the intended changes for the operator and leave the file untouched. Never parse-and-rewrite the entire settings file as plain JSON, strip comments, or overwrite it with a template.
+
+With operator-selected values confirmed available, merge only `subagents.agents.poteto-agent.model` and, if requested and supported for that model, `subagents.agents.poteto-agent.effortLevel` in the real `~/.copilot/settings.json`. Preserve other agents, fields, comments, and formatting. To return to inherited behavior, remove only those selected override properties through the same safe editor; never manufacture an `inherit-parent` model value.
+
+The consumer is an actual native task delegation that selects the verified registered `poteto-agent` ID using the host's current documented task interface. Do not invent a Cursor-style invocation or treat feature, bug-fix, or other planning roles as registered IDs. Inspect the resulting native configuration and, if the host exposes it, the actual delegate's selected model to verify the change. Configuration presence alone is not proof that a task ran.
+
+Without such delegation, every sequential role pass inherits the current session model. A delegate override does not change those passes. Native CLI task/background support exists, but this port does not translate Cursor's background contracts onto it.
+
+### 6. Confirm what actually changed
+
+Report the host model or default the operator set, any safely edited native `poteto-agent` override, its observed scope, and remaining explicit per-invocation choices. Distinguish a verified configuration change from an observed delegate run. If nothing changed, say so. Do not claim settings apply to new sessions unless the actual host control says so.
+
+### 7. Check the verification path
 
 Look for an existing project-local verification skill at `.github/skills/verify-*/SKILL.md` relative to the target repository root, or an existing harness that drives the real artifact. If absent and the operator wants one, use the bundled `../create-verification-skill/SKILL.md` where available; its generated skills belong in that project-local directory. Validate actual paths and run existing checks. This optional work never changes model settings.

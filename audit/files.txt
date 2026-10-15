@@ -460,7 +460,7 @@ skills/no-comments/SKILL.md
 
 skills/poteto-help/SKILL.md
   adapted -> copilot/skills/poteto-help/SKILL.md
-  Full-content review: Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.
+  Full-content review: Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.
   cli: Primary port help; explicit skill selection and native installation.
   vscode: Host-dependent discovery; no CLI tool parity promised.
   cloud: Repository skill help; MCP/runtime capabilities must be checked.
@@ -677,8 +677,8 @@ skills/poteto-mode/scripts/check-plan.mjs
 
 skills/poteto-mode/scripts/check-plan.test.ts
   adapted -> copilot/skills/poteto-mode/scripts/check-plan.test.ts
-  Full-content review: Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. All six tests passed in the full 69-test Bun 1.4.3 run; original fixture scenarios also exercised through Node. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.
-  cli: Existing Bun suite and Node fixture scenarios validated.
+  Full-content review: Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. The initial 14 plan scenarios and separate scheduler rejection ran through ad hoc Node extraction harnesses, not the existing Bun runner. Subsequently all six actual tests, including the scheduler regression, passed in the full 69-test Bun 1.4.3 run. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.
+  cli: Actual Bun suite passed; earlier ad hoc Node fixture checks distinguished.
   vscode: Bun required for original runner.
   cloud: Runtime absence must be reported.
 
@@ -1013,8 +1013,8 @@ skills/reflect/references/tooling-reviewer.md
 
 skills/setup-pstack/SKILL.md
   adapted -> copilot/skills/setup-pstack/SKILL.md
-  Full-content review: Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.
-  cli: Uses documented /model selector and actual installed help.
+  Full-content review: Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.
+  cli: Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.
   vscode: Use actual host UI only; no CLI settings mapping.
   cloud: Retain available host model unless documented selection exists.
 

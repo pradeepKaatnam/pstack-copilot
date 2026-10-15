@@ -35,7 +35,7 @@ Check the state that changes the answer, and mention it only when it does:
 2. Read [`setup-pstack`](../setup-pstack/SKILL.md) for the port's capability checks. Do not create Cursor model rules or infer Copilot controls from Cursor configuration.
 3. Start a real task with `/poteto-mode`, a goal, and a check that can pass or fail.
 
-These skills retain `disable-model-invocation: true` for explicit selection on supporting hosts. Skill discovery and invocation syntax are host-specific; if slash selection is absent, ask the assistant to read and follow the named installed `SKILL.md`. The adapted [setup skill](../setup-pstack/SKILL.md) has the details. Offer to word their first prompt with them, per [`references/prompting.md`](references/prompting.md).
+These skills retain `disable-model-invocation: true` for explicit selection on supporting hosts. Skill discovery and invocation syntax are host-specific; if slash selection is absent, ask the assistant to read and follow the named installed `SKILL.md`. The adapted [setup skill](../setup-pstack/SKILL.md) and public [port README](https://github.com/pradeepKaatnam/pstack-copilot/blob/main/README.md) have the details. The pinned upstream [original setup chapter](https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/01-setup.md) is historical Cursor reference only, not executable Copilot guidance. Offer to word their first prompt with them, per [`references/prompting.md`](references/prompting.md).
 
 If cost is the worry, say where the tokens go and how to spend fewer: scoped reading, candidate passes, and review passes. Choose a smaller task scope or fewer optional candidate passes without dropping required verification. Model selection belongs to controls actually documented and exposed by the user's host. Save `/poteto-mode` for work that needs rigor.
 
@@ -43,7 +43,7 @@ The upstream was built for Cursor. This adaptation preserves the engineering gui
 
 ## Start a task with `/poteto-mode`
 
-`/poteto-mode` matches the task to a playbook, copies the playbook's steps into the todo list, and runs the other skills as the steps need them. A step it skips stays in the list as `skip: <reason>`. A good prompt states the goal and how to tell it's done. It doesn't list skills, because a hand-written sequence tends to drop or reorder steps the playbook would keep. Read [`references/prompting.md`](references/prompting.md) before you help word one. The [prompt recipes](references/recipes.md) have examples.
+`/poteto-mode` matches the task to a playbook, copies the playbook's steps into the todo list, and runs the other skills as the steps need them. A step it skips stays in the list as `skip: <reason>`. A good prompt states the goal and how to tell it's done. It doesn't list skills, because a hand-written sequence tends to drop or reorder steps the playbook would keep. Read [`references/prompting.md`](references/prompting.md) before you help word one. The [prompt recipes](references/recipes.md) and adapted public [guide page 2](https://github.com/pradeepKaatnam/pstack-copilot/blob/main/copilot/docs/guide/02-poteto-mode.md) have examples.
 
 Explicitly select `/poteto-mode` for each new task where the host supports slash skill selection, or ask to read and follow its installed `SKILL.md`. Do not promise persistent Custom Mode behavior. Mid-chat, "new task" makes the workflow match a fresh playbook. Run its role passes sequentially; delegation is optional only through tools the current host really exposes, with no assumed agent type, model, background, or cloud controls.
 
@@ -112,11 +112,11 @@ Playbooks are step lists inside `/poteto-mode`, not skills, so they have no slas
 - "full autopilot on this queue" runs Autopilot-full. "stack them, don't ship" runs Autopilot-stack.
 - "run the eval playbook" runs Eval.
 
-Without explicit skill selection, a phrase such as "babysit this pr" may not select the intended workflow. The Playbooks section of [`poteto-mode`](../poteto-mode/SKILL.md) lists every playbook and when it applies. The [opening a PR](../poteto-mode/playbooks/opening-a-pr.md), [babysitting](../poteto-mode/playbooks/babysit.md), and [shipping](../poteto-mode/playbooks/shipping.md) playbooks cover these workflows. Shipping still requires explicit user merge authorization.
+Without explicit skill selection, a phrase such as "babysit this pr" may not select the intended workflow. The Playbooks section of [`poteto-mode`](../poteto-mode/SKILL.md) lists every playbook and when it applies. The [opening a PR](../poteto-mode/playbooks/opening-a-pr.md), [babysitting](../poteto-mode/playbooks/babysit.md), and [shipping](../poteto-mode/playbooks/shipping.md) playbooks and adapted public [guide page 6](https://github.com/pradeepKaatnam/pstack-copilot/blob/main/copilot/docs/guide/06-verify-and-ship.md) cover these workflows. Shipping still requires explicit user merge authorization.
 
 pstack has no standalone planning skill. Use only planning controls actually exposed by the current Copilot host. For work that spans phases or stacked PRs, asking `/poteto-mode` for a plan runs the [Multi-phase plan playbook](../poteto-mode/playbooks/multi-phase-plan.md), which writes the plan and doesn't implement it. For a design question, the Prototype playbook or `/architect` settles it in code first.
 
-Principles are one-rule skills that `/poteto-mode` reads and cites in its replies. The user rarely invokes one. They steer with the names instead, as in "apply prove it works. show me the real output." Typing `/principle-<name>` still loads one on demand. Read the adjacent `principle-*/SKILL.md` files for the full rules; start with [Prove It Works](../principle-prove-it-works/SKILL.md), [Fix Root Causes](../principle-fix-root-causes/SKILL.md), and [Foundational Thinking](../principle-foundational-thinking/SKILL.md) as the task requires.
+Principles are one-rule skills that `/poteto-mode` reads and cites in its replies. The user rarely invokes one. They steer with the names instead, as in "apply prove it works. show me the real output." Typing `/principle-<name>` still loads one on demand. Read the adjacent `principle-*/SKILL.md` files for the full rules; start with [Prove It Works](../principle-prove-it-works/SKILL.md), [Fix Root Causes](../principle-fix-root-causes/SKILL.md), and [Foundational Thinking](../principle-foundational-thinking/SKILL.md) as the task requires. The adapted public [guide page 8](https://github.com/pradeepKaatnam/pstack-copilot/blob/main/copilot/docs/guide/08-principles.md) lists the principles.
 
 ## Fix a run that went wrong
 
@@ -128,10 +128,10 @@ Principles are one-rule skills that `/poteto-mode` reads and cites in its replie
 | Runs cost more than expected | See the cost paragraph under Get set up. |
 | A skill didn't load on its own | Explicitly select it; these skills retain manual-invocation metadata. Confirm the host discovers the installed skill directory. |
 | Writers overwrote each other | Run sequentially by default. Optional real delegates need isolated ownership or worktrees; never assume a cloud machine. |
-| An unattended run moved but finished nothing | Use bounded iterations and a check that can pass or fail, not a duration. See [Autonomous run playbook](../poteto-mode/playbooks/autonomous-run.md). |
+| An unattended run moved but finished nothing | Use bounded iterations and a check that can pass or fail, not a duration. See [Autonomous run playbook](../poteto-mode/playbooks/autonomous-run.md). The pinned upstream [original overnight chapter](https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/07-overnight.md) is historical Cursor reference only, not runnable Copilot instructions. |
 | The reply claims success from a green build | Ask for the real command, flow, stored value, or profile. That's the prove-it-works principle. |
 
-For a run that drifts, [`references/prompting.md`](references/prompting.md) has one-line steers. The adjacent [prompt recipes](references/recipes.md) have examples worth copying.
+For a run that drifts, [`references/prompting.md`](references/prompting.md) has one-line steers. The adjacent [prompt recipes](references/recipes.md) and adapted public [guide page 10](https://github.com/pradeepKaatnam/pstack-copilot/blob/main/copilot/docs/guide/10-recipes-and-pitfalls.md) have examples worth copying.
 
 ## Make pstack my own
 
@@ -140,7 +140,7 @@ For a run that drifts, [`references/prompting.md`](references/prompting.md) has 
 - `/poteto-mode write a skill for <workflow>` runs the authoring playbook. The eval playbook tests a skill change blind.
 - Fix a misbehaving skill in its own PR, not inside the feature work where it went wrong.
 
-The adapted [automate-me](../automate-me/SKILL.md), [reflect](../reflect/SKILL.md), and [skill-authoring playbook](../poteto-mode/playbooks/authoring-a-skill.md) cover these workflows.
+The adapted [automate-me](../automate-me/SKILL.md), [reflect](../reflect/SKILL.md), and [skill-authoring playbook](../poteto-mode/playbooks/authoring-a-skill.md) cover these workflows. The pinned upstream [original customization chapter](https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/09-make-it-yours.md) is historical Cursor reference only, not executable Copilot guidance.
 
 ## Reply
 

@@ -8294,7 +8294,7 @@
     "source": "skills/poteto-help/SKILL.md",
     "target": "copilot/skills/poteto-help/SKILL.md",
     "disposition": "adapted",
-    "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+    "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
     "hosts": {
       "cli": "Primary port help; explicit skill selection and native installation.",
       "vscode": "Host-dependent discovery; no CLI tool parity promised.",
@@ -8322,7 +8322,7 @@
         "target_start": 11,
         "target_end": 11,
         "replacement": "A message that asks for work, such as \"use pstack to fix this bug\", is not a help question. Read [`poteto-mode`](../poteto-mode/SKILL.md) and do the work under it. Do not claim a Cursor Custom Mode is available in Copilot.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8350,7 +8350,7 @@
         "target_start": 13,
         "target_end": 15,
         "replacement": "This file maps questions to the skills and guide pages that hold the answers. Those files own the details. Read the file you route to before you quote it, and trust it when it disagrees with this map. Link the local adapted file, not an upstream Cursor page presented as Copilot guidance.\n\nCursor installation, model-rule, Custom Mode, Task, and loop instructions are not portable. Their exact originals are archived at `../../../upstream/pstack/skills/poteto-help/SKILL.md`. This port targets Copilot CLI, uses sequential role passes by default, and does not assume VS Code or cloud hosts expose the same tools. Missing required MCPs, credentials, or specialist tools stop the affected workflow and must be reported unavailable. No automatic merge or auto-merge is authorized by a prompt recipe or unattended run.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8378,7 +8378,7 @@
         "target_start": 29,
         "target_end": 30,
         "replacement": "- No `.github/skills/verify-*/SKILL.md` or other app harness in the project means agents may have no scripted way to drive the app. Mention `/create-verification-skill` when the question is about proving a change works.\n- A missing integration is an explicit gap, not permission to fabricate results. Model, reasoning, concurrency, and background options depend entirely on actual host capabilities, not Cursor rule files.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8406,7 +8406,7 @@
         "target_start": 34,
         "target_end": 35,
         "replacement": "1. Install the adapted skill directories into the repository's `.github/skills/`, retaining each directory, `SKILL.md`, and its resources. Follow this port's installation documentation for any host-specific alternative.\n2. Read [`setup-pstack`](../setup-pstack/SKILL.md) for the port's capability checks. Do not create Cursor model rules or infer Copilot controls from Cursor configuration.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8433,8 +8433,8 @@
         "original": "Installing changes nothing until the user invokes a skill. Only `/setup-pstack` loads from the user's words. The [README](../../README.md) and [guide page 1](../../docs/guide/01-setup.md) have the details. Offer to word their first prompt with them, per [`references/prompting.md`](references/prompting.md).\n",
         "target_start": 38,
         "target_end": 38,
-        "replacement": "These skills retain `disable-model-invocation: true` for explicit selection on supporting hosts. Skill discovery and invocation syntax are host-specific; if slash selection is absent, ask the assistant to read and follow the named installed `SKILL.md`. The adapted [setup skill](../setup-pstack/SKILL.md) has the details. Offer to word their first prompt with them, per [`references/prompting.md`](references/prompting.md).\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "replacement": "These skills retain `disable-model-invocation: true` for explicit selection on supporting hosts. Skill discovery and invocation syntax are host-specific; if slash selection is absent, ask the assistant to read and follow the named installed `SKILL.md`. The adapted [setup skill](../setup-pstack/SKILL.md) and public [port README](https://github.com/pradeepKaatnam/pstack-copilot/blob/main/README.md) have the details. The pinned upstream [original setup chapter](https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/01-setup.md) is historical Cursor reference only, not executable Copilot guidance. Offer to word their first prompt with them, per [`references/prompting.md`](references/prompting.md).\n",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8462,7 +8462,7 @@
         "target_start": 40,
         "target_end": 40,
         "replacement": "If cost is the worry, say where the tokens go and how to spend fewer: scoped reading, candidate passes, and review passes. Choose a smaller task scope or fewer optional candidate passes without dropping required verification. Model selection belongs to controls actually documented and exposed by the user's host. Save `/poteto-mode` for work that needs rigor.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8490,7 +8490,7 @@
         "target_start": 42,
         "target_end": 42,
         "replacement": "The upstream was built for Cursor. This adaptation preserves the engineering guidance but replaces Cursor orchestration syntax with safe sequential role passes and inherited host settings. Native Copilot CLI does support delegation, model controls, and background tasks; these are optional capabilities, not APIs bundled or configured by this port. Use their actual exposed interfaces and ensure delegated roles receive the required repository instructions. Cloud plugin support is documented too, but this port does not claim integration-tested cloud execution. `make-bot-ui` is inactive because its private routine infrastructure is absent; `no-comments` stops unless its actual specialist and rules are exposed.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8517,8 +8517,8 @@
         "original": "`/poteto-mode` matches the task to a playbook, copies the playbook's steps into the todo list, and runs the other skills as the steps need them. A step it skips stays in the list as `skip: <reason>`. A good prompt states the goal and how to tell it's done. It doesn't list skills, because a hand-written sequence tends to drop or reorder steps the playbook would keep. Read [`references/prompting.md`](references/prompting.md) before you help word one. [Guide page 2](../../docs/guide/02-poteto-mode.md) has examples.\n",
         "target_start": 46,
         "target_end": 46,
-        "replacement": "`/poteto-mode` matches the task to a playbook, copies the playbook's steps into the todo list, and runs the other skills as the steps need them. A step it skips stays in the list as `skip: <reason>`. A good prompt states the goal and how to tell it's done. It doesn't list skills, because a hand-written sequence tends to drop or reorder steps the playbook would keep. Read [`references/prompting.md`](references/prompting.md) before you help word one. The [prompt recipes](references/recipes.md) have examples.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "replacement": "`/poteto-mode` matches the task to a playbook, copies the playbook's steps into the todo list, and runs the other skills as the steps need them. A step it skips stays in the list as `skip: <reason>`. A good prompt states the goal and how to tell it's done. It doesn't list skills, because a hand-written sequence tends to drop or reorder steps the playbook would keep. Read [`references/prompting.md`](references/prompting.md) before you help word one. The [prompt recipes](references/recipes.md) and adapted public [guide page 2](https://github.com/pradeepKaatnam/pstack-copilot/blob/main/copilot/docs/guide/02-poteto-mode.md) have examples.\n",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8546,7 +8546,7 @@
         "target_start": 48,
         "target_end": 48,
         "replacement": "Explicitly select `/poteto-mode` for each new task where the host supports slash skill selection, or ask to read and follow its installed `SKILL.md`. Do not promise persistent Custom Mode behavior. Mid-chat, \"new task\" makes the workflow match a fresh playbook. Run its role passes sequentially; delegation is optional only through tools the current host really exposes, with no assumed agent type, model, background, or cloud controls.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8574,7 +8574,7 @@
         "target_start": 67,
         "target_end": 68,
         "replacement": "| Cover scoped slices or candidate attempts and return one report | [`/swarm`](../swarm/SKILL.md) |\n| Review a diff through adversarial role passes | [`/interrogate`](../interrogate/SKILL.md) |\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8602,7 +8602,7 @@
         "target_start": 71,
         "target_end": 71,
         "replacement": "| Audit comments when the actual Comment Sicko specialist is available, otherwise report unavailable | [`/no-comments`](../no-comments/SKILL.md) |\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8630,7 +8630,7 @@
         "target_start": 80,
         "target_end": 80,
         "replacement": "| Check host capabilities and port setup | [`/setup-pstack`](../setup-pstack/SKILL.md) |\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8658,7 +8658,7 @@
         "target_start": 84,
         "target_end": 84,
         "replacement": "| Learn why the upstream Grok Bot UI integration is unavailable in this port | [`/make-bot-ui`](../make-bot-ui/SKILL.md) |\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8686,7 +8686,7 @@
         "target_start": 100,
         "target_end": 101,
         "replacement": "- Upstream `cursor-team-kit` helpers are not bundled here. Use only an actual repository harness or exposed integration.\n- Cursor `/loop` and `/create-skill` are not Copilot APIs. Use bounded sequential iterations and native skill authoring instead.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8713,8 +8713,8 @@
         "original": "Without `/poteto-mode`, a phrase such as \"babysit this pr\" can start Cursor's own skill for the same job instead. The Playbooks section of [`poteto-mode`](../poteto-mode/SKILL.md) lists every playbook and when it applies. [Guide page 6](../../docs/guide/06-verify-and-ship.md) covers opening, babysitting, and landing a PR.\n",
         "target_start": 115,
         "target_end": 115,
-        "replacement": "Without explicit skill selection, a phrase such as \"babysit this pr\" may not select the intended workflow. The Playbooks section of [`poteto-mode`](../poteto-mode/SKILL.md) lists every playbook and when it applies. The [opening a PR](../poteto-mode/playbooks/opening-a-pr.md), [babysitting](../poteto-mode/playbooks/babysit.md), and [shipping](../poteto-mode/playbooks/shipping.md) playbooks cover these workflows. Shipping still requires explicit user merge authorization.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "replacement": "Without explicit skill selection, a phrase such as \"babysit this pr\" may not select the intended workflow. The Playbooks section of [`poteto-mode`](../poteto-mode/SKILL.md) lists every playbook and when it applies. The [opening a PR](../poteto-mode/playbooks/opening-a-pr.md), [babysitting](../poteto-mode/playbooks/babysit.md), and [shipping](../poteto-mode/playbooks/shipping.md) playbooks and adapted public [guide page 6](https://github.com/pradeepKaatnam/pstack-copilot/blob/main/copilot/docs/guide/06-verify-and-ship.md) cover these workflows. Shipping still requires explicit user merge authorization.\n",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8742,7 +8742,7 @@
         "target_start": 117,
         "target_end": 117,
         "replacement": "pstack has no standalone planning skill. Use only planning controls actually exposed by the current Copilot host. For work that spans phases or stacked PRs, asking `/poteto-mode` for a plan runs the [Multi-phase plan playbook](../poteto-mode/playbooks/multi-phase-plan.md), which writes the plan and doesn't implement it. For a design question, the Prototype playbook or `/architect` settles it in code first.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8769,8 +8769,8 @@
         "original": "Principles are one-rule skills that `/poteto-mode` reads and cites in its replies. The user rarely invokes one. They steer with the names instead, as in \"apply prove it works. show me the real output.\" Typing `/principle-<name>` still loads one on demand. [Guide page 8](../../docs/guide/08-principles.md) lists them.\n",
         "target_start": 119,
         "target_end": 119,
-        "replacement": "Principles are one-rule skills that `/poteto-mode` reads and cites in its replies. The user rarely invokes one. They steer with the names instead, as in \"apply prove it works. show me the real output.\" Typing `/principle-<name>` still loads one on demand. Read the adjacent `principle-*/SKILL.md` files for the full rules; start with [Prove It Works](../principle-prove-it-works/SKILL.md), [Fix Root Causes](../principle-fix-root-causes/SKILL.md), and [Foundational Thinking](../principle-foundational-thinking/SKILL.md) as the task requires.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "replacement": "Principles are one-rule skills that `/poteto-mode` reads and cites in its replies. The user rarely invokes one. They steer with the names instead, as in \"apply prove it works. show me the real output.\" Typing `/principle-<name>` still loads one on demand. Read the adjacent `principle-*/SKILL.md` files for the full rules; start with [Prove It Works](../principle-prove-it-works/SKILL.md), [Fix Root Causes](../principle-fix-root-causes/SKILL.md), and [Foundational Thinking](../principle-foundational-thinking/SKILL.md) as the task requires. The adapted public [guide page 8](https://github.com/pradeepKaatnam/pstack-copilot/blob/main/copilot/docs/guide/08-principles.md) lists the principles.\n",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8798,7 +8798,7 @@
         "target_start": 125,
         "target_end": 125,
         "replacement": "| The workflow stopped applying after a few turns | Explicitly select the skill for the new task or ask to read and follow its installed `SKILL.md`. No persistent mode is promised. |\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8826,7 +8826,7 @@
         "target_start": 127,
         "target_end": 127,
         "replacement": "| A requested per-role model choice had no effect | The host may not expose per-role model selection; do not expect Cursor rules to configure Copilot. |\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8853,8 +8853,8 @@
         "original": "| A skill didn't load on its own | Only `/setup-pstack` loads from the user's words. The others load when the user types them or when `/poteto-mode` runs them, and it doesn't run every skill. |\n| Parallel agents overwrote each other | Give each agent its own worktree, or run them as cloud agents, which each get their own machine. |\n| An overnight run moved but finished nothing | `/loop` needs a check that can pass or fail, not a duration. See [guide page 7](../../docs/guide/07-overnight.md). |\n",
         "target_start": 129,
         "target_end": 131,
-        "replacement": "| A skill didn't load on its own | Explicitly select it; these skills retain manual-invocation metadata. Confirm the host discovers the installed skill directory. |\n| Writers overwrote each other | Run sequentially by default. Optional real delegates need isolated ownership or worktrees; never assume a cloud machine. |\n| An unattended run moved but finished nothing | Use bounded iterations and a check that can pass or fail, not a duration. See [Autonomous run playbook](../poteto-mode/playbooks/autonomous-run.md). |\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "replacement": "| A skill didn't load on its own | Explicitly select it; these skills retain manual-invocation metadata. Confirm the host discovers the installed skill directory. |\n| Writers overwrote each other | Run sequentially by default. Optional real delegates need isolated ownership or worktrees; never assume a cloud machine. |\n| An unattended run moved but finished nothing | Use bounded iterations and a check that can pass or fail, not a duration. See [Autonomous run playbook](../poteto-mode/playbooks/autonomous-run.md). The pinned upstream [original overnight chapter](https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/07-overnight.md) is historical Cursor reference only, not runnable Copilot instructions. |\n",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8881,8 +8881,8 @@
         "original": "For a run that drifts, [`references/prompting.md`](references/prompting.md) has one-line steers. [Guide page 10](../../docs/guide/10-recipes-and-pitfalls.md) has more pitfalls and the recipes worth copying.\n",
         "target_start": 134,
         "target_end": 134,
-        "replacement": "For a run that drifts, [`references/prompting.md`](references/prompting.md) has one-line steers. The adjacent [prompt recipes](references/recipes.md) have examples worth copying.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "replacement": "For a run that drifts, [`references/prompting.md`](references/prompting.md) has one-line steers. The adjacent [prompt recipes](references/recipes.md) and adapted public [guide page 10](https://github.com/pradeepKaatnam/pstack-copilot/blob/main/copilot/docs/guide/10-recipes-and-pitfalls.md) have examples worth copying.\n",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -8909,8 +8909,8 @@
         "original": "[Guide page 9](../../docs/guide/09-make-it-yours.md) covers each of these.\n",
         "target_start": 143,
         "target_end": 143,
-        "replacement": "The adapted [automate-me](../automate-me/SKILL.md), [reflect](../reflect/SKILL.md), and [skill-authoring playbook](../poteto-mode/playbooks/authoring-a-skill.md) cover these workflows.\n",
-        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and documented but untested cloud support, required merge authorization, and kept active resource links inside installed skills.",
+        "replacement": "The adapted [automate-me](../automate-me/SKILL.md), [reflect](../reflect/SKILL.md), and [skill-authoring playbook](../poteto-mode/playbooks/authoring-a-skill.md) cover these workflows. The pinned upstream [original customization chapter](https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/09-make-it-yours.md) is historical Cursor reference only, not executable Copilot guidance.\n",
+        "reason": "Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -9270,7 +9270,7 @@
         "original": "Bundled skills live at `../<name>/SKILL.md` from this file, so put this file's absolute path in every `poteto-agent` prompt.\n",
         "target_start": 9,
         "target_end": 29,
-        "replacement": "Bundled skills live at `../<name>/SKILL.md` from this file. Read the relevant leaf before using it.\n\n## Copilot host contract\n\nThis is a Copilot CLI-first adaptation. The display-only Cursor icon and color were removed and the native skill name matches its lowercase directory. Source-repository provenance is `upstream/pstack/skills/poteto-mode/`; the archive is not part of installed skills. The documented `disable-model-invocation: true` restriction preserves manual-only use independently of user-invocation controls; it is not an automation API.\n\nRun roles sequentially by default. In the playbooks, delegation means a separately scoped implementation, investigation, or review pass in this session unless the host actually exposes a documented delegation tool. Parallel lanes are coverage partitions, not a requirement to spawn agents. Never copy Cursor's `Task` signature or assume its `subagent_type`, `readonly`, `run_in_background`, cloud environment parameter, todo API, or model/effort slug maps onto a native Copilot control. Optional delegation must use the host's current documented interface, retain permission boundaries, and fall back to sequential passes when unavailable. A same-session review is not an independent-agent verdict. Report that limitation.\n\nCopilot CLI does support native task delegation, background task management through `/tasks` and Ctrl+X b, and agent lifecycle tools such as `list_agents`, `read_agent`, and `write_agent` when exposed. Those are not the Cursor Task signature and are optional, not this port's default orchestration. CLI agent model and effort controls are supported where documented; this port safely inherits the active model instead of translating Cursor slugs. For real custom-agent delegation, use documented `include-custom-instructions: true` where applicable so repository instructions reach the agent, and still carry standing orders and scope explicitly. Do not assume omitted instructions propagate.\n\nUse a plain checklist for todos. Ask ordinary questions for product choices only when the host supports interaction; in unattended work, preserve unresolved gates and stop the affected action. Choose the host model through CLI `/model`, confirmed by CLI help, and apply role preferences explicitly for each invocation. See `../setup-pstack/SKILL.md`. Do not load Cursor rules or discover models, tools, transcripts, or installed skills by scanning private application caches.\n\nCursor scheduling and background-agent automation are not ported. No `/loop` or `/in-cloud` commands are assumed. Use bounded foreground work, checkpoints, and the existing standalone PR watcher with a finite timeout. VS Code and cloud use the same sequential guidance only when the skill and required shell tools are available; CLI slash commands are not instructions for those hosts.\n\nCloud plugin support is documented; this package's cloud installation and runtime behavior are not integration-tested. That is a verification limitation, not a claim that cloud plugins do not exist. No native MCP server is bundled here.\n\nResource paths starting with `playbooks/` or `scripts/` in this skill and its playbooks are rooted at this skill directory, not the caller's working directory. Resolve script paths from this loaded skill's actual directory, whether plugin-installed or copied into project `.github/skills/`; never assume a source checkout's `copilot/` directory exists. External `cursor-team-kit` control skills mentioned in inherited guidance are optional, not bundled dependencies. Use an existing authorized surface driver instead; if none exists, report live verification blocked. Never simulate a successful check.\n\nProject-local verification consumers read `.github/skills/verify-*/SKILL.md` from the target repository root, not the bundled plugin directory. Read the actual matching skill and its driver before invoking it.\n\n**Operator authority.** No auto-merge, merge-queue arming, automatic landing, permission bypass, or implied approval. Stop at verified merge-ready and hand landing to the user. Scope, permissions, explicit holds, and review gates override autonomy language throughout these playbooks. An approval cannot be replaced by an agent countersign.\n",
+        "replacement": "Bundled skills live at `../<name>/SKILL.md` from this file. Read the relevant leaf before using it.\n\n## Copilot host contract\n\nThis is a Copilot CLI-first adaptation. The display-only Cursor icon and color were removed and the native skill name matches its lowercase directory. Source-repository provenance is `upstream/pstack/skills/poteto-mode/`; the archive is not part of installed skills. The documented `disable-model-invocation: true` restriction preserves manual-only use independently of user-invocation controls; it is not an automation API.\n\nRun roles sequentially by default. In the playbooks, delegation means a separately scoped implementation, investigation, or review pass in this session unless the host actually exposes a documented delegation tool. Parallel lanes are coverage partitions, not a requirement to spawn agents. Never copy Cursor's `Task` signature or assume its `subagent_type`, `readonly`, `run_in_background`, cloud environment parameter, todo API, or model/effort slug maps onto a native Copilot control. Optional delegation must use the host's current documented interface, retain permission boundaries, and fall back to sequential passes when unavailable. A same-session review is not an independent-agent verdict. Report that limitation.\n\nCopilot CLI does support native task delegation, background task management through `/tasks` and Ctrl+X b, and agent lifecycle tools such as `list_agents`, `read_agent`, and `write_agent` when exposed. Those are not the Cursor Task signature and are optional, not this port's default orchestration. Sequential passes inherit the active session model. For optional real delegation, `../setup-pstack/SKILL.md` describes safely configuring native settings for a `poteto-agent` ID verified through `/agent`; only a task actually selecting that registered ID consumes its override. Never translate Cursor slugs or planning-role names into settings keys. Use documented `include-custom-instructions: true` where applicable so repository instructions reach the agent, and still carry standing orders and scope explicitly. Do not assume omitted instructions propagate.\n\nUse a plain checklist for todos. Ask ordinary questions for product choices only when the host supports interaction; in unattended work, preserve unresolved gates and stop the affected action. Choose the host model through CLI `/model`, confirmed by CLI help, and apply role preferences explicitly for each invocation. See `../setup-pstack/SKILL.md`. Do not load Cursor rules or discover models, tools, transcripts, or installed skills by scanning private application caches.\n\nCursor scheduling and background-agent automation are not ported. No `/loop` or `/in-cloud` commands are assumed. Use bounded foreground work, checkpoints, and the existing standalone PR watcher with a finite timeout. VS Code and cloud use the same sequential guidance only when the skill and required shell tools are available; CLI slash commands are not instructions for those hosts.\n\nCloud plugin support is documented; this package's cloud installation and runtime behavior are not integration-tested. That is a verification limitation, not a claim that cloud plugins do not exist. No native MCP server is bundled here.\n\nResource paths starting with `playbooks/` or `scripts/` in this skill and its playbooks are rooted at this skill directory, not the caller's working directory. Resolve script paths from this loaded skill's actual directory, whether plugin-installed or copied into project `.github/skills/`; never assume a source checkout's `copilot/` directory exists. External `cursor-team-kit` control skills mentioned in inherited guidance are optional, not bundled dependencies. Use an existing authorized surface driver instead; if none exists, report live verification blocked. Never simulate a successful check.\n\nProject-local verification consumers read `.github/skills/verify-*/SKILL.md` from the target repository root, not the bundled plugin directory. Read the actual matching skill and its driver before invoking it.\n\n**Operator authority.** No auto-merge, merge-queue arming, automatic landing, permission bypass, or implied approval. Stop at verified merge-ready and hand landing to the user. Scope, permissions, explicit holds, and review gates override autonomy language throughout these playbooks. An approval cannot be replaced by an agent countersign.\n",
         "reason": "Read all frontmatter, principles, triggers, autonomy, subagent/model policy, writing rules, and playbook routing. Preserved engineering and prose guidance; normalized native name; removed display fields; replaced Cursor tool/model/rule assumptions with documented CLI model selection, sequential roles, scoped permission gates, and no automatic landing. Exact original remains upstream/pstack/skills/poteto-mode/SKILL.md.",
         "documentation": [
           "cli-plugin-creation",
@@ -12683,9 +12683,9 @@
     "source": "skills/poteto-mode/scripts/check-plan.test.ts",
     "target": "copilot/skills/poteto-mode/scripts/check-plan.test.ts",
     "disposition": "adapted",
-    "reason": "Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. All six tests passed in the full 69-test Bun 1.4.3 run; original fixture scenarios also exercised through Node. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.",
+    "reason": "Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. The initial 14 plan scenarios and separate scheduler rejection ran through ad hoc Node extraction harnesses, not the existing Bun runner. Subsequently all six actual tests, including the scheduler regression, passed in the full 69-test Bun 1.4.3 run. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.",
     "hosts": {
-      "cli": "Existing Bun suite and Node fixture scenarios validated.",
+      "cli": "Actual Bun suite passed; earlier ad hoc Node fixture checks distinguished.",
       "vscode": "Bun required for original runner.",
       "cloud": "Runtime absence must be reported."
     },
@@ -12711,7 +12711,7 @@
         "target_start": 23,
         "target_end": 23,
         "replacement": "\\`git show origin/main:\\` sequential audit checkpoint status message\n",
-        "reason": "Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. All six tests passed in the full 69-test Bun 1.4.3 run; original fixture scenarios also exercised through Node. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.",
+        "reason": "Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. The initial 14 plan scenarios and separate scheduler rejection ran through ad hoc Node extraction harnesses, not the existing Bun runner. Subsequently all six actual tests, including the scheduler regression, passed in the full 69-test Bun 1.4.3 run. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -12727,7 +12727,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Existing Bun suite and Node fixture scenarios validated.",
+          "cli": "Actual Bun suite passed; earlier ad hoc Node fixture checks distinguished.",
           "vscode": "Bun required for original runner.",
           "cloud": "Runtime absence must be reported."
         }
@@ -12739,7 +12739,7 @@
         "target_start": 53,
         "target_end": 53,
         "replacement": "const runPlan = (example: string, expectedExit: number, plan = validPlan) => {\n",
-        "reason": "Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. All six tests passed in the full 69-test Bun 1.4.3 run; original fixture scenarios also exercised through Node. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.",
+        "reason": "Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. The initial 14 plan scenarios and separate scheduler rejection ran through ad hoc Node extraction harnesses, not the existing Bun runner. Subsequently all six actual tests, including the scheduler regression, passed in the full 69-test Bun 1.4.3 run. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -12755,7 +12755,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Existing Bun suite and Node fixture scenarios validated.",
+          "cli": "Actual Bun suite passed; earlier ad hoc Node fixture checks distinguished.",
           "vscode": "Bun required for original runner.",
           "cloud": "Runtime absence must be reported."
         }
@@ -12767,7 +12767,7 @@
         "target_start": 56,
         "target_end": 56,
         "replacement": "\twriteFileSync(file, plan + example);\n",
-        "reason": "Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. All six tests passed in the full 69-test Bun 1.4.3 run; original fixture scenarios also exercised through Node. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.",
+        "reason": "Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. The initial 14 plan scenarios and separate scheduler rejection ran through ad hoc Node extraction harnesses, not the existing Bun runner. Subsequently all six actual tests, including the scheduler regression, passed in the full 69-test Bun 1.4.3 run. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -12783,7 +12783,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Existing Bun suite and Node fixture scenarios validated.",
+          "cli": "Actual Bun suite passed; earlier ad hoc Node fixture checks distinguished.",
           "vscode": "Bun required for original runner.",
           "cloud": "Runtime absence must be reported."
         }
@@ -12795,7 +12795,7 @@
         "target_start": 97,
         "target_end": 105,
         "replacement": "\ntest(\"requires the sequential checkpoint rather than the inactive scheduler\", () => {\n\tconst result = runPlan(\n\t\t\"\",\n\t\t1,\n\t\tvalidPlan.replace(\"sequential audit checkpoint\", \"/loop 1h\"),\n\t);\n\texpect(result.stderr).toContain('lacks \"sequential audit checkpoint\"');\n});\n",
-        "reason": "Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. All six tests passed in the full 69-test Bun 1.4.3 run; original fixture scenarios also exercised through Node. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.",
+        "reason": "Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. The initial 14 plan scenarios and separate scheduler rejection ran through ad hoc Node extraction harnesses, not the existing Bun runner. Subsequently all six actual tests, including the scheduler regression, passed in the full 69-test Bun 1.4.3 run. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -12811,7 +12811,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Existing Bun suite and Node fixture scenarios validated.",
+          "cli": "Actual Bun suite passed; earlier ad hoc Node fixture checks distinguished.",
           "vscode": "Bun required for original runner.",
           "cloud": "Runtime absence must be reported."
         }
@@ -15005,9 +15005,9 @@
     "source": "skills/setup-pstack/SKILL.md",
     "target": "copilot/skills/setup-pstack/SKILL.md",
     "disposition": "adapted",
-    "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+    "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
     "hosts": {
-      "cli": "Uses documented /model selector and actual installed help.",
+      "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
       "vscode": "Use actual host UI only; no CLI settings mapping.",
       "cloud": "Retain available host model unless documented selection exists."
     },
@@ -15033,7 +15033,7 @@
         "target_start": 3,
         "target_end": 3,
         "replacement": "description: Choose the actual Copilot CLI model and explicit per-invocation role preferences without creating an unused configuration file. Use for setup-pstack, configure pstack models, or changing model choices.\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15049,7 +15049,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15060,8 +15060,8 @@
         "original": "Write `~/.cursor/rules/pstack-models.mdc`, an always-applied rule that sets pstack's model per role.\n",
         "target_start": 8,
         "target_end": 10,
-        "replacement": "The original Cursor always-applied rule and model-slug rewriting workflow are inactive. Source-repository provenance is `upstream/pstack/skills/setup-pstack/SKILL.md`; the archive is not part of installed skills. Copilot does not consume that rule, so do not read or write it, rename it to a Copilot-looking file, or promise per-role model routing from it.\n\nCopilot CLI does have real consumed configuration: `~/.copilot/settings.json` supports documented `subagents.agents.<id>.model` and `effortLevel` settings, and CLI agent metadata supports documented model policies and reasoning effort. This skill deliberately uses the simpler host `/model` control and explicit per-invocation choices rather than maintaining another routing file. Do not write deprecated settings to internal `~/.copilot/config.json` or treat old keys as effective. Consult current official CLI command and config-directory references before using advanced controls.\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "replacement": "The original Cursor always-applied rule and model-slug rewriting workflow are inactive. Source-repository provenance is `upstream/pstack/skills/setup-pstack/SKILL.md`; the archive is not part of installed skills. Copilot does not consume that rule, so do not read or write it, rename it to a Copilot-looking file, or promise per-role model routing from it.\n\nCopilot CLI does have real consumed configuration: `~/.copilot/settings.json` supports documented `subagents.agents.<id>.model` and `effortLevel` settings, and CLI agent metadata supports documented model policies and reasoning effort. Default to the simpler host `/model` control and explicit per-invocation choices; the optional registered-agent override below uses the actual native consumer, not another routing file. Do not write deprecated settings to internal `~/.copilot/config.json` or treat old keys as effective. See the official [CLI configuration-directory reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference) and [CLI command reference](https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference).\n",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15077,7 +15077,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15089,7 +15089,7 @@
         "target_start": 14,
         "target_end": 14,
         "replacement": "### 1. Inspect the actual host\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15105,7 +15105,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15117,7 +15117,7 @@
         "target_start": 16,
         "target_end": 16,
         "replacement": "For Copilot CLI, read its current help. `/model` opens the documented model selector, including `auto`. Its documented `--repo` or `--local` controls set a repository default, and `plan` or `--plan` selects the plan-mode model. Use only options actually shown by the installed version. Do not infer availability from a Cursor cache, guessed API, or another host's model list.\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15133,7 +15133,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15145,7 +15145,7 @@
         "target_start": 18,
         "target_end": 18,
         "replacement": "For VS Code or cloud, use that host's documented model UI or configuration only if available. CLI slash commands are not portable host APIs. If model selection is unavailable, retain the host model and report the limitation.\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15161,7 +15161,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15173,7 +15173,7 @@
         "target_start": 20,
         "target_end": 20,
         "replacement": "### 2. Establish the real current state\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15189,7 +15189,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15201,7 +15201,7 @@
         "target_start": 22,
         "target_end": 22,
         "replacement": "Read the model shown by the host, not a pstack preferences file. Do not scan `~/.cursor/rules`, application state databases, plugin caches, or unrelated transcripts. No pstack model configuration file is created by this skill.\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15217,7 +15217,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15229,7 +15229,7 @@
         "target_start": 24,
         "target_end": 24,
         "replacement": "### 3. Discuss the tradeoff\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15245,7 +15245,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15257,7 +15257,7 @@
         "target_start": 26,
         "target_end": 26,
         "replacement": "Ask in ordinary language whether cost, speed, or strongest judgment matters most. The original budget ladder depended on Cursor-specific effort suffixes and is not translated into guessed Copilot model names. For unattended work, keep the current model rather than fabricating a choice.\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15273,7 +15273,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15285,7 +15285,7 @@
         "target_start": 28,
         "target_end": 28,
         "replacement": "Typical roles remain feature/refactoring, bug fix, performance, hillclimb, judgment/prose, hardest tasks, exploration, synthesis, experiment runner, and verifier. These are planning roles, not model-setting keys. Run them sequentially by default. Distinct-model review is useful only when real separate invocations support it.\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15301,7 +15301,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15313,7 +15313,7 @@
         "target_start": 30,
         "target_end": 30,
         "replacement": "### 4. Select and validate through the consumer\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15329,7 +15329,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15341,7 +15341,7 @@
         "target_start": 32,
         "target_end": 32,
         "replacement": "Have the operator select an offered model in `/model`, or use another documented control exposed by the installed CLI. Confirm the host shows the selected value. Never claim that writing a role table changed the model.\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15357,7 +15357,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15369,7 +15369,7 @@
         "target_start": 34,
         "target_end": 34,
         "replacement": "If the host exposes supported per-invocation model or effort controls, the operator may explicitly choose them for a particular invocation after inspecting that interface. Otherwise keep the current model. Do not fabricate slugs, append `max`, `xhigh`, or `fast`, or interpret `inherit-parent` as a portable API alias. `auto` is valid where the CLI model selector offers it, not a universal delegation parameter.\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15385,7 +15385,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15396,8 +15396,8 @@
         "original": "### 5. Write the rule\n",
         "target_start": 36,
         "target_end": 36,
-        "replacement": "### 5. Confirm what actually changed\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "replacement": "### 5. Optionally configure the registered native delegate\n",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15413,7 +15413,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15424,8 +15424,8 @@
         "original": "Write `~/.cursor/rules/pstack-models.mdc` with `alwaysApply: true`, a `# budget` line with the chosen label and its target effort, and one line per role, using the same labels poteto-mode uses. Overwrite the whole file so re-runs stay idempotent. Shape:\n",
         "target_start": 38,
         "target_end": 38,
-        "replacement": "Report the host model or default that the operator set, its observed scope, and any remaining explicit per-invocation choices. If nothing changed, say so. Do not claim settings apply to new sessions unless the actual host control says so.\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "replacement": "Do this only when the operator wants actual delegation to the installed custom agent. Use `/agent` to verify that its registered ID is `poteto-agent`; a filename or a planning role is not sufficient evidence. If it is absent, stop this optional step rather than creating an unregistered role key.\n",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15441,7 +15441,7 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
@@ -15452,8 +15452,8 @@
         "original": "```\n---\ndescription: pstack per-role model choices (overrides skill defaults)\nalwaysApply: true\n---\n# pstack model configuration. One line per role. Delete a line to fall back to the skill default.\n# `inherit-parent` or `auto` as a value: the role runs on the parent chat model (omit Task `model`). Alias entries in a panel list still count toward its fan-out.\n# budget: large (xhigh)\nfeature, refactoring: grok-4.7-xhigh-fast\nbug-fix: grok-4.7-xhigh-fast\nperf-issue: grok-4.7-xhigh-fast\nhillclimb: grok-4.7-xhigh-fast\njudgment and prose: claude-opus-5-5-xhigh\nhardest tasks: claude-opus-5-5-xhigh\nhow explorer: grok-4.7-xhigh-fast\nhow explainer: claude-opus-5-5-xhigh\nwhy investigators: grok-4.7-xhigh-fast\nwhy synthesizer: claude-opus-5-5-xhigh\nreflect tooling: grok-4.7-xhigh-fast\nreflect judgment, divergent, synthesizer: claude-opus-5-5-xhigh\narena runners: claude-opus-5-5-xhigh, grok-4.7-xhigh-fast\narena cross-judge pool: claude-opus-5-5-xhigh, grok-4.7-xhigh-fast\nswarm workers: grok-4.7-xhigh-fast\narchitect runners: claude-opus-5-5-xhigh, grok-4.7-xhigh-fast\ninterrogate reviewers: claude-opus-5-5-xhigh, grok-4.7-xhigh-fast\n```\n",
         "target_start": 40,
         "target_end": 40,
-        "replacement": "### 6. Check the verification path\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "replacement": "Inspect the installed CLI's actual settings interface for per-agent controls. `/model` selects the session model; do not claim it alone configures an agent override. Use a documented native settings UI if it exposes these controls, or a safe host-provided configuration editor that demonstrably preserves JSONC comments, unrelated keys, and existing overrides. If neither is available, explain the intended changes for the operator and leave the file untouched. Never parse-and-rewrite the entire settings file as plain JSON, strip comments, or overwrite it with a template.\n",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15469,19 +15469,19 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }
       },
       {
         "source_start": 68,
-        "source_end": 74,
-        "original": "### 6. Confirm\n\nTell the user the rule was written and that it applies to new sessions. Re-running this skill updates it.\n\n### 7. Offer a verification skill (optional)\n\nCheck whether the project has a way to drive the real app for proof (a `verify-*` skill, or an existing harness). If not, offer once: \"want a project-local verification skill, so agents can drive the app the way a user does and prove changes work? I can generate one with /create-verification-skill.\" On yes, invoke `/create-verification-skill` (resolves wherever pstack is installed: workspace, user, or plugin). On no, move on without pushing.\n",
+        "source_end": 68,
+        "original": "### 6. Confirm\n",
         "target_start": 42,
         "target_end": 42,
-        "replacement": "Look for an existing project-local verification skill at `.github/skills/verify-*/SKILL.md` relative to the target repository root, or an existing harness that drives the real artifact. If absent and the operator wants one, use the bundled `../create-verification-skill/SKILL.md` where available; its generated skills belong in that project-local directory. Validate actual paths and run existing checks. This optional work never changes model settings.\n",
-        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed active Cursor rule reads/writes and guessed effort suffixes; actual CLI /model consumer controls defaults, while role choices are explicit per invocation and no inert configuration is persisted. Exact original remains upstream/pstack/skills/setup-pstack/SKILL.md.",
+        "replacement": "With operator-selected values confirmed available, merge only `subagents.agents.poteto-agent.model` and, if requested and supported for that model, `subagents.agents.poteto-agent.effortLevel` in the real `~/.copilot/settings.json`. Preserve other agents, fields, comments, and formatting. To return to inherited behavior, remove only those selected override properties through the same safe editor; never manufacture an `inherit-parent` model value.\n",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
         "documentation": [
           "cli-plugin-creation",
           "cli-plugin-reference",
@@ -15497,7 +15497,91 @@
           "plugin-hosts"
         ],
         "hosts": {
-          "cli": "Uses documented /model selector and actual installed help.",
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
+          "vscode": "Use actual host UI only; no CLI settings mapping.",
+          "cloud": "Retain available host model unless documented selection exists."
+        }
+      },
+      {
+        "source_start": 70,
+        "source_end": 70,
+        "original": "Tell the user the rule was written and that it applies to new sessions. Re-running this skill updates it.\n",
+        "target_start": 44,
+        "target_end": 44,
+        "replacement": "The consumer is an actual native task delegation that selects the verified registered `poteto-agent` ID using the host's current documented task interface. Do not invent a Cursor-style invocation or treat feature, bug-fix, or other planning roles as registered IDs. Inspect the resulting native configuration and, if the host exposes it, the actual delegate's selected model to verify the change. Configuration presence alone is not proof that a task ran.\n",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
+        "documentation": [
+          "cli-plugin-creation",
+          "cli-plugin-reference",
+          "cli-skills-tools-models",
+          "cli-settings",
+          "skills-host-discovery",
+          "vscode-skills",
+          "vscode-plugins",
+          "custom-agents",
+          "hooks",
+          "cli-mcp",
+          "cloud-mcp",
+          "plugin-hosts"
+        ],
+        "hosts": {
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
+          "vscode": "Use actual host UI only; no CLI settings mapping.",
+          "cloud": "Retain available host model unless documented selection exists."
+        }
+      },
+      {
+        "source_start": 72,
+        "source_end": 72,
+        "original": "### 7. Offer a verification skill (optional)\n",
+        "target_start": 46,
+        "target_end": 46,
+        "replacement": "Without such delegation, every sequential role pass inherits the current session model. A delegate override does not change those passes. Native CLI task/background support exists, but this port does not translate Cursor's background contracts onto it.\n",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
+        "documentation": [
+          "cli-plugin-creation",
+          "cli-plugin-reference",
+          "cli-skills-tools-models",
+          "cli-settings",
+          "skills-host-discovery",
+          "vscode-skills",
+          "vscode-plugins",
+          "custom-agents",
+          "hooks",
+          "cli-mcp",
+          "cloud-mcp",
+          "plugin-hosts"
+        ],
+        "hosts": {
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
+          "vscode": "Use actual host UI only; no CLI settings mapping.",
+          "cloud": "Retain available host model unless documented selection exists."
+        }
+      },
+      {
+        "source_start": 74,
+        "source_end": 74,
+        "original": "Check whether the project has a way to drive the real app for proof (a `verify-*` skill, or an existing harness). If not, offer once: \"want a project-local verification skill, so agents can drive the app the way a user does and prove changes work? I can generate one with /create-verification-skill.\" On yes, invoke `/create-verification-skill` (resolves wherever pstack is installed: workspace, user, or plugin). On no, move on without pushing.\n",
+        "target_start": 48,
+        "target_end": 54,
+        "replacement": "### 6. Confirm what actually changed\n\nReport the host model or default the operator set, any safely edited native `poteto-agent` override, its observed scope, and remaining explicit per-invocation choices. Distinguish a verified configuration change from an observed delegate run. If nothing changed, say so. Do not claim settings apply to new sessions unless the actual host control says so.\n\n### 7. Check the verification path\n\nLook for an existing project-local verification skill at `.github/skills/verify-*/SKILL.md` relative to the target repository root, or an existing harness that drives the real artifact. If absent and the operator wants one, use the bundled `../create-verification-skill/SKILL.md` where available; its generated skills belong in that project-local directory. Validate actual paths and run existing checks. This optional work never changes model settings.\n",
+        "reason": "Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.",
+        "documentation": [
+          "cli-plugin-creation",
+          "cli-plugin-reference",
+          "cli-skills-tools-models",
+          "cli-settings",
+          "skills-host-discovery",
+          "vscode-skills",
+          "vscode-plugins",
+          "custom-agents",
+          "hooks",
+          "cli-mcp",
+          "cloud-mcp",
+          "plugin-hosts"
+        ],
+        "hosts": {
+          "cli": "Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.",
           "vscode": "Use actual host UI only; no CLI settings mapping.",
           "cloud": "Retain available host model unless documented selection exists."
         }

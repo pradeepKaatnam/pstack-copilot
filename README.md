@@ -80,7 +80,9 @@ python3 /absolute/path/to/pstack-copilot/scripts/install-project.py /absolute/pa
 
 The installer creates managed snapshots in `.github/skills/`, with a hash
 manifest and upstream license. Updates refuse conflicting skills, modified
-managed files, and symlinked discovery paths. Edit the canonical port, or keep
+managed files, and symlinked discovery paths. Only the bundled runtime's generated
+`poteto-mode/scripts/node_modules/` is excluded from snapshots and conflicts;
+updates leave those dependencies alone. Edit the canonical port, or keep
 company-specific skills under distinct names; installed snapshots are not a
 second authoritative skill tree. Do not install both a plugin and project
 copies in the same context unless you intend duplicate skill discovery.

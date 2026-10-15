@@ -64,6 +64,24 @@ class PreservationTests(unittest.TestCase):
             target.write_bytes(b"replacement\nlast line")
             self.assertEqual(verify.changes(source, target)[0]["original"], "old\r\n")
 
+    def test_package_checks_exclude_only_designated_runtime_dependencies(self):
+        with tempfile.TemporaryDirectory() as directory:
+            package = Path(directory)
+            runtime = package / "skills/poteto-mode/scripts"
+            generated = runtime / "node_modules/.bin"
+            generated.mkdir(parents=True)
+            (generated / "bun").symlink_to("/nonexistent-dependency-binary")
+            (generated.parent / "README.md").write_text("[Third party](missing.md)")
+            (runtime / "tool.ts").write_text("export {}")
+            other = package / "skills/other/node_modules"
+            other.mkdir(parents=True)
+            (other / "README.md").write_text("Not an allowed generated directory.")
+            paths = set(verify.package_paths(package))
+            self.assertIn(runtime / "tool.ts", paths)
+            self.assertIn(other / "README.md", paths)
+            self.assertNotIn(generated / "bun", paths)
+            self.assertNotIn(generated.parent / "README.md", set(verify.package_paths(package, "*.md")))
+
 
 class InstallationTests(unittest.TestCase):
     def setUp(self):
@@ -125,6 +143,23 @@ class InstallationTests(unittest.TestCase):
         record["files"] = {"../../../outside": "anything"}
         state.write_text(json.dumps(record))
         with self.assertRaisesRegex(ValueError, "Invalid"):
+            installer.install(self.project, update=True)
+
+    def test_runtime_dependencies_are_not_snapshots_or_update_conflicts(self):
+        (self.source / "example").rename(self.source / "poteto-mode")
+        source_modules = self.source / "poteto-mode/scripts/node_modules/dependency"
+        source_modules.mkdir(parents=True)
+        (source_modules / "index.js").write_text("source dependency")
+        installer.install(self.project)
+        destination = self.project / ".github/skills/poteto-mode"
+        self.assertFalse((destination / "scripts/node_modules").exists())
+        installed_modules = destination / "scripts/node_modules/dependency"
+        installed_modules.mkdir(parents=True)
+        (installed_modules / "index.js").write_text("installed dependency")
+        installer.install(self.project, update=True)
+        self.assertEqual((installed_modules / "index.js").read_text(), "installed dependency")
+        (destination / "scripts/unmanaged.js").write_text("local addition")
+        with self.assertRaisesRegex(ValueError, "Unmanaged"):
             installer.install(self.project, update=True)
 
 

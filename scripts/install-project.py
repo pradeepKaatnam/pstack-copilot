@@ -8,10 +8,15 @@ from pathlib import Path
 import shutil
 
 SOURCE = Path(__file__).resolve().parents[1] / "copilot/skills"
+GENERATED = Path("poteto-mode/scripts/node_modules")
 
 
 def fingerprint(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def is_generated(relative):
+    return relative == GENERATED or GENERATED in relative.parents
 
 
 def install(project, update=False):
@@ -35,7 +40,8 @@ def install(project, update=False):
     skills = [p for p in SOURCE.iterdir() if p.is_dir()]
     new_files = {
         f"{skill.name}/{p.relative_to(skill).as_posix()}": p
-        for skill in skills for p in skill.rglob("*") if p.is_file()
+        for skill in skills for p in skill.rglob("*")
+        if not is_generated(p.relative_to(SOURCE)) and p.is_file()
     }
     # Validate the entire operation before writing anything.
     for relative, digest in old_files.items():
@@ -52,7 +58,10 @@ def install(project, update=False):
         if destination.exists() or destination.is_symlink():
             if destination.is_symlink() or not destination.is_dir():
                 raise ValueError(f"Refusing conflicting skill path: {destination}")
-            actual = {p.relative_to(base).as_posix() for p in destination.rglob("*") if p.is_file() or p.is_symlink()}
+            actual = {
+                p.relative_to(base).as_posix() for p in destination.rglob("*")
+                if not is_generated(p.relative_to(base)) and (p.is_file() or p.is_symlink())
+            }
             expected = {p for p in old_files if p.startswith(skill.name + "/")}
             if actual != expected or not expected:
                 raise ValueError(f"Unmanaged skill conflict: {destination}")

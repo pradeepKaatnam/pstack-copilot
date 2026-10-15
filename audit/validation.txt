@@ -9,10 +9,11 @@ Source acquisition
 
 Infrastructure tests (executed)
   python -m unittest discover -s tests -v
-  9 tests passed. These use isolated temporary fixtures, not the agent prompt
+  11 tests passed. These use isolated temporary fixtures, not the agent prompt
   tree, and test Git tree identity, hidden/binary/executable/symlink preservation,
   exact original text and CRLF retention, path validation, managed installs,
-  safe updates, retained license, conflicting/local modifications, and symlinks.
+  safe updates, retained license, conflicting/local modifications, symlinks,
+  and verification/update behavior after installing bundled runtime dependencies.
 
 Audit implementer checks (executed by the respective implementers)
   Full-content source review: 169 files across three nonoverlapping partitions.
@@ -41,11 +42,23 @@ CI
   Bun tests/typecheck using frozen dependencies with lifecycle scripts disabled.
   It does not install or execute archived instructions, scripts, or automations.
 
+Final combined coverage (executed by the orchestration implementer)
+  python scripts/refresh-evidence.py && python scripts/verify.py
+  Passed: Verified 169 pinned files, 169 audit rows, 54 skills.
+  Supporting implementer also smoke-tested actual managed installation of all
+  54 skills, including its owned installed links, bytes and executable modes.
+
+Independent static review
+  Automated review binary was unavailable. A separate read-only code reviewer
+  identified generated node_modules incorrectly blocking updates/verification.
+  Both issues fixed with precisely scoped exclusions and regression tests.
+  Follow-up review: neither finding remains; no significant issues found.
+
 Security
   Secret scan of all 169 archived source files: no secrets detected.
   New action dependency actions/checkout 7.0.1: advisory check found no
   vulnerabilities; workflow pins its commit and disables persisted credentials.
   oven-sh/setup-bun 2.2.0 and @oven/bun-linux-x64 1.4.3 advisory checks also
   found no vulnerabilities. Setup action is pinned to its commit.
-  Final whole-change secret scanning, code review, and CodeQL are reported in
-  the PR task results; this record does not pre-claim their outcome.
+  Whole-change scan of 338 files plus final changed-file rescans: no secrets.
+  CodeQL reported zero alerts; the post-fix scan is reported in task results.
