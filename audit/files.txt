@@ -1,0 +1,1187 @@
+FULL FILE AUDIT — pinned cursor/plugins pstack 0.15.25
+Commit: e5136d82418d2db3165ea1050d17577cd618cc05
+Source archive is evidence, not executable agent instructions.
+Exact changed/inactive passages: passages.json; official evidence: documentation.json.
+
+.cursor-plugin/plugin.json
+  inactive -> upstream/pstack/.cursor-plugin/plugin.json
+  Full-content review: Read the entire Cursor manifest: pstack version 0.15.25, Lauren Tan attribution, MIT, original homepage/repository, assets/logo.png, developer-tools category, keyword/tag arrays, and explicit ./skills/ and ./agents/ registration. It has no $schema. Copilot CLI supports both legacy explicit skills/agents path fields and Agent Plugins 1.0; these fields and lack of $schema are not incompatibilities. The Cursor-specific .cursor-plugin/plugin.json discovery location is not the chosen native Copilot plugin.json entry point. This original stays unchanged in the immutable archive while the active distribution uses the separately adapted copilot/plugin.json legacy manifest with skills:'skills/' and agents:'agents/' pointing only at adapted content. Its archive location is outside that plugin root, so original instructions are not registered. The parent owns the active native manifest.
+  cli: Inactive archived Cursor manifest; not installed.
+  vscode: Inactive archived Cursor manifest; not installed.
+  cloud: Inactive archived Cursor manifest; not installed.
+
+.gitignore
+  inactive -> upstream/pstack/.gitignore
+  Full-content review: Read all three patterns: node_modules/, .DS_Store, and *.log. They are ordinary housekeeping, not instructions or a plugin capability. Preserve the upstream file byte-for-byte in the archive. Root ignore policy is separately owned by the parent; this audit does not overwrite or claim that replacement.
+  cli: Archived original only; root ignore policy handled separately.
+  vscode: Archived original only; root ignore policy handled separately.
+  cloud: Archived original only; root ignore policy handled separately.
+
+LICENSE
+  unchanged -> copilot/LICENSE
+  Full-content review: Read the full MIT grant, notice-retention condition, warranty disclaimer, and liability exclusion. Copyright (c) 2026 Lauren Tan is retained exactly. Copy the entire file byte-for-byte to copilot/LICENSE and also root LICENSE so redistributed adapted instructions and documentation retain the upstream license, rather than replacing attribution with a new author.
+  cli: Unchanged MIT notice accompanies distribution.
+  vscode: Unchanged MIT notice accompanies distribution.
+  cloud: Unchanged MIT notice accompanies distribution.
+
+README.md
+  inactive -> upstream/pstack/README.md
+  Full-content review: Read all 274 lines: Lauren Tan introduction and quality rationale, Cursor add-plugin/setup/custom-mode/loop installation and invocation, all 23 playbooks, all skill descriptions and informal examples, poteto-agent/generalPurpose wrapper requirements, Comment Sicko, all 24 principles, external cursor-team-kit deslop/control dependencies, planning philosophy, transcript-derived customization and model-role rules, Benny bootstrap, and MIT reference. The original combines sound engineering principles with unsupported Cursor menu shortcuts, cache/model routing, Task-style agent selection, private integrations, and unattended merge examples. Keep the complete original reference-only; the parent owns the native root README, and adapted guide chapters preserve the substantial reusable guidance without presenting this original as Copilot installation instructions.
+  cli: Inactive historical README; use root port README instead.
+  vscode: Inactive historical README; use root port README instead.
+  cloud: Inactive historical README; use root port README instead.
+
+agents/comment-sicko.md
+  adapted -> copilot/agents/comment-sicko.agent.md
+  Full-content review: Read the complete original persona and opening exclamation, default-main scope, five keep exceptions, suppression inspection, how/why tracing, MUST KILL flags, and report-only ending. Preserve the original description, theatrical first output 'Yes... Ha ha ha... Yes!', comment-hating personal voice, main fallback, every keep-list exception, uncertainty-means-delete taste, anti-suppression rules, exact-symbol refactoring flags, and prohibition on polishing a workaround into a shorter alibi. These stylistic and engineering choices are not Copilot incompatibilities and are not rewritten to another review philosophy. Actual compatibility changes are native .agent.md discovery/frontmatter, read/search-only tools, include-custom-instructions:true for CLI repository guidance, named how/why skill requests instead of presumed universal slash invocation, and clarification that every kill/deletion is a report recommendation: this reviewer cannot edit, run mutating commands, post externally, bypass permissions, or invent unavailable evidence. The caller owns accepted edits.
+  cli: Native custom-agent source; install using host-supported agent discovery. Read/search only.
+  vscode: Native custom-agent source; expose through supported custom-agent discovery. Read/search only.
+  cloud: Native custom-agent source when configured for the task; read/search only, no Slack or external posting.
+
+agents/poteto-agent.md
+  adapted -> copilot/agents/poteto-agent.agent.md
+  Full-content review: Read the full frontmatter and single dense operational paragraph: background execution, parent ownership of playbook/todos/Task spawns, mandatory full poteto-mode/principle reads, absolute parent path, hidden-skill cache search, and highest Cursor manifest-version selection. Preserve scoped delegate ownership and complete prerequisite reads, but replace is_background, Cursor Task/generalPurpose assumptions, private ~/.cursor/plugins discovery, hidden-catalog claims, and cache-version selection with an explicit installed adapted skill or repository path and a fail-closed missing-prerequisite report. Use native kebab-case name/description and include-custom-instructions:true for CLI repository-instruction inheritance; no invented tools/model routing or nested delegation without explicit parent authorization. Native CLI delegation and background facilities exist, but this portable definition does not translate Cursor Task fields or force background execution.
+  cli: Native custom-agent source; delegates only if the CLI exposes that capability.
+  vscode: Native custom-agent source; no promise that custom-agent selection creates a separate worker.
+  cloud: Native custom-agent source subject to task configuration; no forced background runtime or nested delegation.
+
+assets/logo.png
+  unchanged -> copilot/assets/logo.png
+  Full-content review: Inspected as a 512x512 RGB PNG, not executable text. Preserve the original binary exactly for attribution/branding use; no re-encoding, renamed ownership, or fabricated replacement. Byte equality is checked against the archived original.
+  cli: Static asset only.
+  vscode: Static asset only.
+  cloud: Static asset only.
+
+automations/benny/FOR_AGENTS.md
+  inactive -> upstream/pstack/automations/benny/FOR_AGENTS.md
+  Full-content review: Read the complete two-automation intent, immutable Slack thread coordinates, triage marker/tracker contract, double UI reproduction and draft-only fix gates, worker credential isolation, all configuration questions, merge-preserving bootstrap, .cursor/settings.json enablement, fresh-agent dependency check, commit prerequisites, and first-time versus existing /automate editor handoffs. Entire Benny pack stays dormant: no Copilot-native equivalent for Cursor automation creation, Slack triggers/actions, organization tracker MCPs, app-control adapter, identities, or private infrastructure has been configured or verified. Safety prose alone cannot supply those capabilities. Do not execute bootstrap or register these nested SKILL files.
+  cli: Inactive archive only; no setup, triggers, Slack writes, or automation registration.
+  vscode: Inactive archive only; no setup, triggers, Slack writes, or automation registration.
+  cloud: Inactive archive only; no setup, triggers, Slack writes, or automation registration.
+
+automations/benny/README.md
+  inactive -> upstream/pstack/automations/benny/README.md
+  Full-content review: Read every setup step: two dormant Cursor Slack automations, FOR_AGENTS entry, merge of the whole pack, Cursor project plugin setting, external user configuration, commit-before-enable, editor review, and harmless thread-safety test. It accurately describes the original product-specific dormant pack but would be misleading as active Copilot installation guidance. Keep complete only in the archive because Slack/MCP/private app infrastructure and Cursor automation scheduling/editor handoff have not been ported.
+  cli: Inactive historical automation README.
+  vscode: Inactive historical automation README.
+  cloud: Inactive historical automation README.
+
+automations/benny/skills/reproduce-and-fix-issues/SKILL.md
+  inactive -> upstream/pstack/automations/benny/skills/reproduce-and-fix-issues/SKILL.md
+  Full-content review: Read all 310 lines and all 15 phases: fail-closed config, immutable thread preflight, trusted identity/marker wait, human ownership versus bot evidence, existing-fix mode, separate operations coordinates, optional bot token, seven adapter capabilities, full report/history/media study, two independent real-UI repros, reviewed recordings/screenshots/state cross-check, rejection window, bounded fix qualifications, isolated code worker, root-cause/TDD, twice-run after proof and blast-radius checks, draft-only PR, follow-up and cleanup. No trusted Slack action/identity enforcement, organization tracker MCP, private app launch/control/recording stack, credential isolation, event trigger, or retention environment is provisioned. Preserve all safety detail as inactive archive; never expose this nested SKILL as a Copilot skill or claim its gates were run.
+  cli: Inactive archive; no reproduction/fix automation installed.
+  vscode: Inactive archive; no reproduction/fix automation installed.
+  cloud: Inactive archive; no reproduction/fix automation installed.
+
+automations/benny/skills/reproduce-and-fix-issues/references/control-adapter.md
+  inactive -> upstream/pstack/automations/benny/skills/reproduce-and-fix-issues/references/control-adapter.md
+  Full-content review: Read all required bring-up, UI action, mapped state/reset, stable selector, read-only inspection, screenshot, recording, and cleanup contracts; identical baseline/patched environment, secret and retention rules, safe environment translation caveats, and nine-step setup proof. This is a contract, not an implemented adapter: neither arbitrary app launch nor recording, account/fixture state, cleanup, or private app-control tools are supplied by Copilot. Keep it attached to the inactive Benny archive rather than presenting fictitious browser/MCP tools as a working port.
+  cli: Inactive adapter specification, not a tool implementation.
+  vscode: Inactive adapter specification, not a tool implementation.
+  cloud: Inactive adapter specification, not a tool implementation.
+
+automations/benny/skills/reproduce-and-fix-issues/references/feature-map.example.md
+  inactive -> upstream/pstack/automations/benny/skills/reproduce-and-fix-issues/references/feature-map.example.md
+  Full-content review: Read the per-feature template and every fictional sign-in, item list/detail, item editor, and settings example, including UI paths, adapter action names, stable selectors, states, fixtures/auth/permissions/services, resets, evidence cross-checks, wrong surfaces, and final completeness checklist. These examples are intentionally fictional and .cursor/benny output is not a native installed verification harness. Leave the whole reference with inactive Benny; do not turn placeholder action names into claimed Copilot tools or imply that private application features and accounts were mapped.
+  cli: Inactive fictional data/template only.
+  vscode: Inactive fictional data/template only.
+  cloud: Inactive fictional data/template only.
+
+automations/benny/skills/reproduce-and-fix-issues/references/verify-existing-fix.md
+  inactive -> upstream/pstack/automations/benny/skills/reproduce-and-fix-issues/references/verify-existing-fix.md
+  Full-content review: Read artifact qualification, isolated checkout and revision recording, twice-run pre-fix baseline and patched real-UI proofs, confirmed/insufficient/inconclusive outcomes, operations/source posting rules, no competing PR, and cleanup. The baseline-before-claiming-success principle is sound, but this operational reference requires Benny's unprovisioned private control adapter, Slack thread preflight, status integration, and retention policy. Keep complete as inactive reference with its pack, not an independent active instruction file.
+  cli: Inactive Benny operational reference.
+  vscode: Inactive Benny operational reference.
+  cloud: Inactive Benny operational reference.
+
+automations/benny/skills/setup-benny/SKILL.md
+  inactive -> upstream/pstack/automations/benny/skills/setup-benny/SKILL.md
+  Full-content review: Read all 266 lines: dormant/direct-read entry, conflict-preserving full pack copy, Cursor JSONC project plugin enablement and fresh-project skill proof, external user-owned config/feature/routing maps, all required Slack/repo/tracker/control/model/budget choices, integration and optional token capability checks, opt-in owner pings, adapter proof, serialized first-time /automate draft approval/editor handoffs, creation-only boundary, existing editor checklists, backend/deep-link ban, and seven-case thread-safety test. There is no configured Copilot automation creation/editor service or verified Slack/tracker/private-app MCP environment. Default the entire setup inactive; never copy it to an active skill root, mutate .cursor settings, or enable live traffic.
+  cli: Inactive setup source; not callable or auto-discovered.
+  vscode: Inactive setup source; not callable or auto-discovered.
+  cloud: Inactive setup source; not callable or auto-discovered.
+
+automations/benny/skills/triage-issue-reports/SKILL.md
+  inactive -> upstream/pstack/automations/benny/skills/triage-issue-reports/SKILL.md
+  Full-content review: Read all 240 lines and ten phases: immutable trigger/root/permalink, attachment review, cause-before-routing with optional source/history, five classifications, conservative owner pings, tracker adapter operations and compensation, confidence-based dedupe, seven creation gates, self-contained issue evidence, exactly one thread-only trusted marker verdict, read-back and rollback if handoff fails, and bounded follow-up. Preserve its conservative policies but do not claim them enforced by prompts alone. Cursor event delivery and Slack write isolation plus organization-specific tracker MCP compensation are unconfigured; all nested automation instructions remain inactive and archived.
+  cli: Inactive triage source; no Slack/tracker writes.
+  vscode: Inactive triage source; no Slack/tracker writes.
+  cloud: Inactive triage source; no Slack/tracker writes.
+
+automations/benny/skills/triage-issue-reports/references/routing.example.md
+  inactive -> upstream/pstack/automations/benny/skills/triage-issue-reports/references/routing.example.md
+  Full-content review: Read the full billing and desktop placeholder routes, product/code/error matches, destinations and owners, empty fallback, ping allow/deny policy, and six closing rules against keyword-only routing, private IDs, cross-posting, and unapproved pings. No actual organization ownership or Slack/tracker routing can be inferred from these placeholders. Keep it inactive with Benny because neither the private routing data nor integration authorization exists; never publish substituted private IDs or activate guessed routes.
+  cli: Inactive placeholder routing data.
+  vscode: Inactive placeholder routing data.
+  cloud: Inactive placeholder routing data.
+
+automations/benny/templates/configuration.example.yaml
+  inactive -> upstream/pstack/automations/benny/templates/configuration.example.yaml
+  Full-content review: Read all 84 lines of schema_version 1: automation names; Slack channel/identity/action placeholders, Cursor preference, environment token name and write prohibitions; example GitHub repo/draft-only PR; Linear tracker placeholder/compensation; routing defaults; control skill/feature map/test environment, /tmp/benny-artifacts and retention; verdict markers; Unicode statuses; every polling/follow-up/repro/rejection/fix budget; and four placeholder model roles. No actual secret is embedded, but environment-variable naming is not credential provisioning and example actions/models are not native tools. Preserve inactive archive, including its unexecuted upstream artifact path; do not materialize it or configure private infrastructure.
+  cli: Inactive unfilled YAML; not runtime configuration.
+  vscode: Inactive unfilled YAML; not runtime configuration.
+  cloud: Inactive unfilled YAML; not runtime configuration.
+
+automations/benny/templates/reproduce-automation-prompt.md
+  inactive -> upstream/pstack/automations/benny/templates/reproduce-automation-prompt.md
+  Full-content review: Read the complete /automate-only source preface, committed operational/config path rules, templated Slack trigger JSON, immutable coordinates, configured repo/tracker/control/map/PR capability, trusted bug/performance marker gate, twice-run UI repro/existing-fix/bounded-fix requirements, coordinator-only Slack writes and child bans. These are live Cursor automation prompt shims, not portable runnable Copilot commands. Leave inactive with the unconfigured Slack/MCP/private control infrastructure; do not instantiate templates or register the operational file.
+  cli: Inactive prompt template only.
+  vscode: Inactive prompt template only.
+  cloud: Inactive prompt template only.
+
+automations/benny/templates/triage-automation-prompt.md
+  inactive -> upstream/pstack/automations/benny/templates/triage-automation-prompt.md
+  Full-content review: Read the complete /automate draft preface, committed config/operational paths, trigger JSON placeholders, source-coordinate fail-closed rule, delegated classification/dedupe/tracker contract, no progress/root posts, coordinator-only Slack capability and read-only workers, exactly one marker and optional tracker URL. Retain only as inactive original: templating cannot supply Cursor event triggers, trusted Slack identity/write isolation, or private tracker MCP authorization, and no native automation scheduler is installed.
+  cli: Inactive prompt template only.
+  vscode: Inactive prompt template only.
+  cloud: Inactive prompt template only.
+
+docs/guide/01-setup.md
+  inactive -> upstream/pstack/docs/guide/01-setup.md
+  Full-content review: Read all 62 lines: Cursor add-plugin, setup interview, ~/.cursor/rules/pstack-models.mdc, xhigh/large/unlimited/max budgets and concrete Opus/Grok assumptions, auto/inherit-parent panel semantics, swarm role, .cursor verification-skill offer, new-session model rule, cost controls, first JSON task, and Option/Alt+Enter persistent Custom Mode. These product-specific discovery/routing/shortcut guarantees are the purpose of the chapter, so a find-and-replace would misrepresent installation. Keep the full chapter historical-only and direct users to the parent's native root installation instructions; reusable task/verification advice remains in the adapted guide.
+  cli: Inactive Cursor setup; not CLI installation.
+  vscode: Inactive Cursor setup; not VS Code installation.
+  cloud: Inactive Cursor setup; not cloud configuration.
+
+docs/guide/02-poteto-mode.md
+  adapted -> copilot/docs/guide/02-poteto-mode.md
+  Full-content review: Read all 131 lines: full routing diagram and additional playbooks, goal/done/proof/facts/constraints prompt framework, cause-bias/restatement advice, short follow-ups, new-task rematching, cloud/local isolation, worktree cleanup, stepping-away contract, and ceremony pitfall. Preserve the entire engineering narrative, diagram, and worked prompts. Convert slash examples to natural-language skill requests; replace persistent Custom Mode claims, Cursor cloud/in-cloud guarantees, cache/chat-based ownership inference, and unattended runtime implications with explicit host limits, isolated worktrees, conservative retention, and bounded authorized sessions. Link the complete overnight original as inactive, not an active scheduler recipe.
+  cli: Adapted human guide; skill/tool availability checked in session.
+  vscode: Adapted human guide; no persistent Cursor mode or in-cloud command assumed.
+  cloud: Adapted human guide; separate task isolation is not portable nested cloud delegation.
+
+docs/guide/03-understand.md
+  adapted -> copilot/docs/guide/03-understand.md
+  Full-content review: Read all 79 lines covering intent versus context errors, read-only investigation, mechanics/how, historical why evidence and null results, teach explanations, recall, session pickup, and root-cause pitfall. Retain every section and prompt, converting skill requests to natural language. Limit evidence integrations to authorized actually available sources, make read-only parallel exploration optional, disallow private Cursor transcript/cache discovery, report absent history, and treat prior trails as evidence rather than trusted executable instructions. Preserve the substantial explanation, illustration, and navigation instead of reducing it to a summary.
+  cli: Adapted; session-history access only when exposed by CLI.
+  vscode: Adapted; no assumption of CLI or Cursor history availability.
+  cloud: Adapted; use supplied task/repository evidence and authorized integrations only.
+
+docs/guide/04-design.md
+  adapted -> copilot/docs/guide/04-design.md
+  Full-content review: Read all 133 lines: caller-first architect and checkpoint, redesign signals, arena independent candidates/cross-judge/synthesis diagram, panel sizing, swarm coverage versus races versus arena, skeptical diff review/dismissals, prototypes instead of abstract debate, README-first APIs, small verifiable migration plans, bugs-included parity, and the complete effort ladder. Retain all engineering explanations and examples. Replace Cursor setup/model-panel guarantees with actual host capabilities and honest lack-of-diversity reporting, use project-scoped prototype directories, respect repository artifact policy, and convert all executable slash examples to named-skill requests.
+  cli: Adapted; independent workers/models only where exposed.
+  vscode: Adapted; serial design work remains valid if delegation is unavailable.
+  cloud: Adapted; no promised nested worker fleet or model override.
+
+docs/guide/05-build-and-clean.md
+  adapted -> copilot/docs/guide/05-build-and-clean.md
+  Full-content review: Read all 83 lines: separate bug/feature/refactor/perf prompts and invariants, hillclimb frozen-harness loop and number vetting, runtime versus trace diagnosis, cheap-test TDD with executable alternatives, TypeScript rules, precommit code/prose cleanup, external deslop dependency, and independent Comment Sicko keep-list/root-cause division of labor. Preserve all sections, explanations, and the original strict comment-removal taste, including 'Everything else goes' and 'Either way, the comment comes out'; these are not host incompatibilities. Remove dependency on Cursor team-kit deslop, use natural-language skill requests and native .agent.md link, make discovery/delegation host-dependent, and clarify only the actual write boundary: read-only findings are recommendations, with accepted edits owned by the caller and subject to permission gates.
+  cli: Adapted; no Cursor team-kit install required.
+  vscode: Adapted; use installed skills and supported agent discovery.
+  cloud: Adapted; author applies accepted findings under repository permissions.
+
+docs/guide/06-verify-and-ship.md
+  adapted -> copilot/docs/guide/06-verify-and-ship.md
+  Full-content review: Read all 130 lines: checkable real artifacts by change type, blast radius, all seven benchmark validity questions and verdicts, verification-skill discovery/Launch-Doctor-Drive-Evidence-Cleanup/features example and proof, reusable control CLI traits, feature-map upkeep with clean/changed/blocked outcomes, focused ordered PRs, conflicts/reviews/CI triage and merge-ready boundary, and contiguous bottom-up independent stack verification. Preserve these full details and examples. Replace .cursor output and scheduler/watcher guarantees with supported host installation and explicit checks; require authorization/branch protection/human review for landing, disclose absent independent workers, remove Origin-specific service assumptions, and link overnight original only as inactive reference.
+  cli: Adapted; app-driving and GitHub actions require available tools and authorization.
+  vscode: Adapted; no automatic scheduler, watcher, or merge permission.
+  cloud: Adapted; task permissions and branch protection govern writes/landing.
+
+docs/guide/07-overnight.md
+  inactive -> upstream/pstack/docs/guide/07-overnight.md
+  Full-content review: Read all 120 lines: four trust prerequisites, finish/permissions/escape-hatch contract, Cursor /loop wakeups, pause/session pickup checkpoints, iteration diagram, TSV decision trail and different-model reviewer, autopilot-full/stack/orchestrate ownership/verification gates, persistent Cursor Projects and cloud fleets, long refactor prompt, and self-starting Benny Slack automations. The sound bounded-contract and evidence-log ideas remain readable, but the chapter's operational promise depends on unavailable Cursor persistent wakeups/Projects/cloud delegation and unconfigured private Slack/MCP control infrastructure. Keep the complete chapter reference-only, not a brief replacement pretending to port unattended execution; adapted chapters explicitly explain the limits.
+  cli: Inactive; no loop wakeup or overnight scheduler installed.
+  vscode: Inactive; no Cursor Projects runtime installed.
+  cloud: Inactive; a task environment does not implement this persistent Cursor orchestrator.
+
+docs/guide/08-principles.md
+  adapted -> copilot/docs/guide/08-principles.md
+  Full-content review: Read all 72 lines: steering examples for subtraction/real-artifact proof/separate worktrees, decision-not-name-dropping test, all 24 linked principles across core/architecture/verification/delegation/meta, build-the-lever and benchmark explanations, and closing practice advice. Preserve every principle and its engineering meaning. Replace the false universal already-loaded-context guarantee with explicit linked-rule reading, constrain reversible autonomy by authorization/human-review/destructive-action gates, convert skill syntax to names, and mark the original customization link inactive while continuing to the adapted recipes.
+  cli: Adapted portable engineering guidance; explicitly load needed rules.
+  vscode: Adapted portable engineering guidance; context/discovery not assumed.
+  cloud: Adapted portable guidance; never overrides task permissions or review gates.
+
+docs/guide/09-make-it-yours.md
+  inactive -> upstream/pstack/docs/guide/09-make-it-yours.md
+  Full-content review: Read all 100 lines: transcript-mined automate-me and incremental update, three-reviewer reflect with approval, architecture/types/lint/tests/docs enforcement ranking and evidence table, create-skill-based authoring, verification generators, layered technical writing, blind sanitized eval and observer effect, Grok Bot sender-key/webhook/Tailscale UI, and separate-PR pitfall. Retain full original as reference because its personal-mode generator assumes Cursor workspace transcripts and .cursor output/built-in authoring, its reviewer/eval orchestration assumes specific delegation, and its bot UI requires separately configured private webhook/network infrastructure. Do not copy these unsupported prompts into active instructions or claim transcript mining/bot deployment was ported; generic engineering principles and design/verification are preserved in other full adapted chapters.
+  cli: Inactive Cursor customization/bot workflow.
+  vscode: Inactive Cursor customization/bot workflow.
+  cloud: Inactive Cursor customization/bot workflow.
+
+docs/guide/10-recipes-and-pitfalls.md
+  adapted -> copilot/docs/guide/10-recipes-and-pitfalls.md
+  Full-content review: Read all 156 lines: every worked recipe for understanding, restatement, prototypes, plans, arena, swarm, skeptical review, TDD, UI proof, benchmark, structural correction, help, stepping away, redirection, plain-language replies, and all 14 pitfalls. Keep the full recipes/explanations/checklists and illustration. Convert slash invocation claims to natural-language named skills, require actual-source reporting, account for missing workers with serial coverage, replace persistent-mode question and unbounded overnight promise with bounded authorized work/no merge-deploy, mark overnight original inactive, reject portable Cursor model-router assumptions, and require native skill validation instead of Cursor create-skill.
+  cli: Adapted requests; no guaranteed slash aliases or unattended continuation.
+  vscode: Adapted requests; actual skill/worker capabilities govern execution.
+  cloud: Adapted requests; bounded task permissions and blockers remain explicit.
+
+docs/guide/README.md
+  adapted -> copilot/docs/guide/README.md
+  Full-content review: Read the entire original index, all ten chapter purposes, help-only prompt behavior and token-cost explanation, goal-plus-proof example, and automatic routing/todo claims. Replace the index with an accurate map to seven full adapted chapters and explicit historical links for three complete inactive Cursor chapters; do not claim all ten workflows are operational. Preserve the central goal/checkable-finish teaching and show natural-language invocation, host/permission boundaries, retained illustration provenance, and exact audit/compatibility links. Across every adapted chapter, within-package guide/skill/image links remain relative and confined to copilot/, while historical archive links use absolute cursor/plugins GitHub URLs pinned to e5136d82418d2db3165ea1050d17577cd618cc05/pstack and audit links use the port repository blob/main/audit URL so cached plugin installations do not depend on checkout-only sibling directories. Installation remains in the parent's root README rather than duplicating unverified product commands.
+  cli: Adapted human navigation, not an instruction auto-loader.
+  vscode: Adapted human navigation, not an instruction auto-loader.
+  cloud: Adapted human navigation, not an instruction auto-loader.
+
+docs/guide/images/design.jpg
+  unchanged -> copilot/docs/guide/images/design.jpg
+  Full-content review: Inspected as a 1200x800 baseline JFIF JPEG with Exif metadata. Copy byte-for-byte and retain the full design chapter's illustration; original architect/arena/interrogate labels are historical artwork, not native command registration.
+  cli: Static guide illustration.
+  vscode: Static guide illustration.
+  cloud: Static guide illustration.
+
+docs/guide/images/overnight.jpg
+  unchanged -> copilot/docs/guide/images/overnight.jpg
+  Full-content review: Inspected as a 1200x800 baseline JFIF JPEG with Exif metadata and preserve byte-for-byte with the complete illustration set. Its original overnight chapter remains inactive due to Cursor runtime/private automation dependencies; retaining the image is not a claim that an overnight loop or scheduler works in Copilot.
+  cli: Static retained artwork; no overnight runtime.
+  vscode: Static retained artwork; no overnight runtime.
+  cloud: Static retained artwork; no overnight runtime.
+
+docs/guide/images/recipes.jpg
+  unchanged -> copilot/docs/guide/images/recipes.jpg
+  Full-content review: Inspected as a 1200x800 baseline JFIF JPEG with Exif metadata. Preserve the original binary exactly and retain the recipes illustration. Its depicted original skill/loop labels are artwork; adapted surrounding text explicitly supplies no universal slash commands or persistent loop service.
+  cli: Static guide illustration.
+  vscode: Static guide illustration.
+  cloud: Static guide illustration.
+
+docs/guide/images/router.jpg
+  unchanged -> copilot/docs/guide/images/router.jpg
+  Full-content review: Inspected as a 1200x800 baseline JFIF JPEG with Exif metadata. Preserve byte-for-byte and retain the routing chapter illustration; its departure-board labels illustrate workflow selection, not a native command/runtime API.
+  cli: Static guide illustration.
+  vscode: Static guide illustration.
+  cloud: Static guide illustration.
+
+docs/guide/images/understanding.jpg
+  unchanged -> copilot/docs/guide/images/understanding.jpg
+  Full-content review: Inspected as a 1200x800 baseline JFIF JPEG with Exif metadata. Preserve byte-for-byte and retain the complete understanding chapter's detective/evidence illustration; it grants no source-control, MCP, or private transcript access.
+  cli: Static guide illustration.
+  vscode: Static guide illustration.
+  cloud: Static guide illustration.
+
+docs/guide/images/verification.jpg
+  unchanged -> copilot/docs/guide/images/verification.jpg
+  Full-content review: Inspected as a 1200x800 baseline JFIF JPEG with Exif metadata. Preserve byte-for-byte and retain the verification chapter's real-test/evidence illustration; no benchmark result or live verification is inferred from artwork.
+  cli: Static guide illustration.
+  vscode: Static guide illustration.
+  cloud: Static guide illustration.
+
+plugin.json
+  inactive -> upstream/pstack/plugin.json
+  Full-content review: Read the full Agent Plugins 1.0 manifest: $schema https://agent-plugins.org/schemas/1.0.0/plugin.schema.json, pstack 0.15.25, quality description, Lauren Tan author, original Cursor homepage/repository, MIT, and all seven keywords. Unlike the Cursor manifest it declares no explicit skills/agents paths. Copilot CLI now supports Agent Plugins 1.0 as well as legacy manifests; this original is not archived because its schema is unsupported. It remains unchanged and inactive because this port deliberately chooses the legacy copilot/plugin.json layout with explicit skills:'skills/' and agents:'agents/' for its adapted content. The immutable original sits outside the active plugin root; the parent owns the active manifest.
+  cli: Inactive original schema/version metadata; not an installed plugin entry.
+  vscode: Inactive original schema/version metadata; not an installed plugin entry.
+  cloud: Inactive original schema/version metadata; not an installed plugin entry.
+
+skills/architect/SKILL.md
+  adapted -> copilot/skills/architect/SKILL.md
+  Full-content review: Full-content audit retained grounding, caller-first sketches, red-flag screening, checkpoints, implementation and scrap criteria; replaced Cursor model-rule runners with sequential arena candidates without claiming model independence.
+  cli: Native explicit skill; sequential design passes.
+  vscode: Explicit skill or read-and-follow; no assumed delegation.
+  cloud: Repository skill; design passes use available checkout tools.
+
+skills/architect/references/design-red-flags.md
+  unchanged -> copilot/skills/architect/references/design-red-flags.md
+  Full-content review: Read all eight design smells and their remedies: shallow modules, information leakage, temporal decomposition, forwarding, split ownership, duplicate paths, importable internals and hand-synced lists are host-independent engineering guidance.
+  cli: Portable design reference.
+  vscode: Portable design reference.
+  cloud: Portable design reference.
+
+skills/architect/references/rationale-template.md
+  unchanged -> copilot/skills/architect/references/rationale-template.md
+  Full-content review: Read every rationale section, including caller usage before shape, interface depth, synthesis, tradeoffs, alternatives, risks and next implementation step; its architect and arena relative links remain valid.
+  cli: Portable rationale template.
+  vscode: Portable rationale template.
+  cloud: Portable rationale template.
+
+skills/architect/references/runner-prompt.md
+  adapted -> copilot/skills/architect/references/runner-prompt.md
+  Full-content review: Read the full candidate discipline; preserved caller-first types, interface depth, ownership, boundary parsing and idempotence, while replacing parallel different-model runners with isolated sequential candidate passes and an archive explanation.
+  cli: Sequential candidate role template.
+  vscode: Sequential candidate template; optional real host delegation.
+  cloud: Sequential candidate template; no remote-machine assumption.
+
+skills/arena/SKILL.md
+  adapted -> copilot/skills/arena/SKILL.md
+  Full-content review: Read framing through verification and synthesis output; retained task-specific rubric, distinct artifacts, base selection, coherent grafts and dropouts, replacing Cursor Task/models/background execution with sequential candidate/judge passes and repository-local output paths.
+  cli: Sequential candidate and judge passes; model independence not claimed.
+  vscode: Read-and-follow; delegation only through actually exposed tools.
+  cloud: Sequential isolated output locations; no assumed worker service.
+
+skills/automate-me/SKILL.md
+  adapted -> copilot/skills/automate-me/SKILL.md
+  Full-content review: Read the full update/mining/interview/authoring/iteration workflow and guardrails; removed Cursor history discovery, AskQuestion and built-in create-skill assumptions, preserved personal-style intent, and specified native matching-name skills from supplied or authorized evidence.
+  cli: Explicit skill; visible or authorized history only.
+  vscode: Explicit skill; ordinary chat questions and native project authoring.
+  cloud: Works with supplied evidence; unavailable history is reported.
+
+skills/benchmark-checklist/SKILL.md
+  unchanged -> copilot/skills/benchmark-checklist/SKILL.md
+  Full-content review: Read all seven measurement questions, ballpark exception and reporting rules; profiler overhead, tuning parity, physical limits, errors, repeated alternating trials and executed work remain portable and require real available repository/runtime tools.
+  cli: Portable benchmark procedure; tools must exist.
+  vscode: Portable benchmark procedure with terminal/runtime access.
+  cloud: Portable benchmark procedure on an available comparable runner.
+
+skills/blast-radius/SKILL.md
+  adapted -> copilot/skills/blast-radius/SKILL.md
+  Full-content review: Read the confidence ladder and every risk/proof step; retained real-library execution and user-visible repro requirements, replacing mandatory multi-model arena advice with sequential candidates and honest independence limitations.
+  cli: Sequential analysis with real executable proof.
+  vscode: Same proof contract using available execution tools.
+  cloud: Same proof contract; unavailable product runtime is a limitation.
+
+skills/bro/SKILL.md
+  unchanged -> copilot/skills/bro/SKILL.md
+  Full-content review: Read the entire short skill and metadata; restating the preceding assistant response plainly requires no Cursor feature, tool API, history store or style substitution.
+  cli: Explicit portable communication skill.
+  vscode: Explicit portable communication skill.
+  cloud: Portable response rewriting.
+
+skills/correct/SKILL.md
+  unchanged -> copilot/skills/correct/SKILL.md
+  Full-content review: Read mistake-class discovery, architecture/types/lint/test ordering, historical failing-case proof and enforcement table; all are portable repository engineering instructions and do not authorize reading private history or merging.
+  cli: Portable repository workflow with available git/test tools.
+  vscode: Portable repository workflow with edit/test tools.
+  cloud: Portable repository workflow with checkout and CI access.
+
+skills/create-verification-skill/SKILL.md
+  adapted -> copilot/skills/create-verification-skill/SKILL.md
+  Full-content review: Read every interview question, generated section, feature-map contract and end-to-end proof rule; generator now genuinely writes .github/skills/verify-<app>/SKILL.md plus features, requires matching kebab-case metadata and reports missing MCP/runtime proofs blocked rather than fabricated.
+  cli: Generates native project skills and tests their actual app harness.
+  vscode: Generated project skill is portable; browser/runtime must actually exist.
+  cloud: Generates repository skill; inaccessible app/auth blocks live proof.
+
+skills/create-verification-skill/references/feature-map-example/README.md
+  adapted -> copilot/skills/create-verification-skill/references/feature-map-example/README.md
+  Full-content review: Read baseline setup, drive conventions, proof/skip reporting, exact feature headings and index; retained the complete example, identified Notes/control-notes as illustrative rather than real APIs and moved disposable data under the project directory.
+  cli: Illustrative map; substitute a discovered tested harness.
+  vscode: Illustrative map; no assumed browser wrapper.
+  cloud: Illustrative map; no assumed Notes installation.
+
+skills/create-verification-skill/references/feature-map-example/create-note.md
+  unchanged -> copilot/skills/create-verification-skill/references/feature-map-example/create-note.md
+  Full-content review: Read all create/open/save/cancel/CLI/persistence steps and gotchas; preserved the complete fictional Notes example as a resource under its explicitly illustrative README, not as an installed tool claim.
+  cli: Example only; generated recipes need actual commands.
+  vscode: Example only; selectors must be grounded in target app.
+  cloud: Example only; requires a real supplied harness.
+
+skills/create-verification-skill/references/feature-map-example/search.md
+  unchanged -> copilot/skills/create-verification-skill/references/feature-map-example/search.md
+  Full-content review: Read toolbar/keyboard/title/body/result/empty/clear/CLI proof steps and debounce/archive gotchas; preserved the full fictional example under its illustrative README rather than turning examples into Copilot APIs.
+  cli: Illustrative search map, not executable without target harness.
+  vscode: Illustrative user-path and evidence contract.
+  cloud: Illustrative user-path and evidence contract.
+
+skills/figure-it-out/SKILL.md
+  adapted -> copilot/skills/figure-it-out/SKILL.md
+  Full-content review: Read the entire framing, workflow design, hypothesis loop, audit trail and completion contract; retained rigor and falsifiable gates, replacing Cursor model/effort fan-out with sequential scoped role passes and capability-gated optional delegation.
+  cli: Sequential audited engineering workflow.
+  vscode: Portable phases with actually available tools.
+  cloud: Portable phases; no assumed unattended service or models.
+
+skills/how/SKILL.md
+  adapted -> copilot/skills/how/SKILL.md
+  Full-content review: Read all complexity routing, exploration, synthesis and output requirements; retained simple-path economy and multi-angle architecture explanations while replacing Cursor Task, readonly/model rules and concurrent spawns with sequential read-only roles.
+  cli: Native explicit skill; sequential explorer/explainer passes.
+  vscode: Sequential read-and-follow workflow.
+  cloud: Sequential checkout analysis without assumed subagents.
+
+skills/how/references/explainer-prompt.md
+  adapted -> copilot/skills/how/references/explainer-prompt.md
+  Full-content review: Read the full explanation template and communication style; retained contradiction resolution, overview/concepts/flow/map/gotchas and diagrams, replacing parallel-agent and named Cursor tool assumptions with sequential findings and exposed file/search tools.
+  cli: Read-only synthesis role.
+  vscode: Read-only synthesis using actual file tools.
+  cloud: Read-only synthesis of recorded exploration.
+
+skills/how/references/explorer-prompt.md
+  adapted -> copilot/skills/how/references/explorer-prompt.md
+  Full-content review: Read every explorer output field; preserved components, execution/data flow, files read, boundaries, surprises and open questions while making the role a sequential scoped pass instead of an assumed parallel subagent.
+  cli: Sequential scoped exploration.
+  vscode: Sequential scoped exploration.
+  cloud: Sequential scoped checkout exploration.
+
+skills/in-your-own-words/SKILL.md
+  unchanged -> copilot/skills/in-your-own-words/SKILL.md
+  Full-content review: Read the complete metadata and goal-restatement instruction; it is host-independent communication guidance and preserves the author's exact wording.
+  cli: Explicit portable skill.
+  vscode: Explicit portable skill.
+  cloud: Portable goal restatement.
+
+skills/interrogate/SKILL.md
+  adapted -> copilot/skills/interrogate/SKILL.md
+  Full-content review: Read scope, intent, reviewer setup, synthesis, lead buckets and all output fields; retained adversarial verdict discipline without auto-edits, replacing Cursor model tables and Task fallback APIs with sequential evidence-based reviewer roles and explicit non-independence disclosure.
+  cli: Sequential adversarial passes; no fabricated model consensus.
+  vscode: Same rubric; optional delegation only if actually exposed.
+  cloud: Same read-only verdict workflow; no assumed model controls.
+
+skills/interrogate/references/code-quality-review.md
+  unchanged -> copilot/skills/interrogate/references/code-quality-review.md
+  Full-content review: Read the entire structural audit prompt, seven dimensions, blocker bar and tone; guidance concerns application architecture, including real code concurrency, not agent scheduling APIs, so it remains unchanged.
+  cli: Portable code-quality reference.
+  vscode: Portable code-quality reference.
+  cloud: Portable code-quality reference.
+
+skills/interrogate/references/lead-judgment.md
+  adapted -> copilot/skills/interrogate/references/lead-judgment.md
+  Full-content review: Read nitpick gravity, real callers, abstraction costs, missing context, valid findings and verdict calibration; preserved the full framework while clarifying that repeated role-pass agreement is not independent model consensus.
+  cli: Evidence-based lead pass.
+  vscode: Evidence-based lead pass.
+  cloud: Evidence-based lead pass.
+
+skills/interrogate/references/reviewer-prompt.md
+  adapted -> copilot/skills/interrogate/references/reviewer-prompt.md
+  Full-content review: Read the full intent/code/rubric/quality template, severity definitions and evidence output; preserved review criteria and empty-review validity, replacing subagent execution assumptions with a sequential-role preface.
+  cli: Sequential reviewer template.
+  vscode: Sequential reviewer template.
+  cloud: Sequential reviewer template.
+
+skills/interrogate/references/rubric.md
+  adapted -> copilot/skills/interrogate/references/rubric.md
+  Full-content review: Read every correctness, root-cause, structure, verification, complexity and security item; retained execution-path proof and changed only presumed Read/Grep/Glob API names to tools actually exposed by the host.
+  cli: Portable rubric using actual search tools.
+  vscode: Portable rubric using actual search tools.
+  cloud: Portable rubric using actual checkout tools.
+
+skills/ketchup/SKILL.md
+  adapted -> copilot/skills/ketchup/SKILL.md
+  Full-content review: Read the entire catch-up scope, read-only gathering, action-item contract and visual constraints; preserved plain-language personal style while removing assumed /visualize and image APIs and requiring existing artifacts or unavailable-tool reporting.
+  cli: Conversation-only catch-up with real artifacts.
+  vscode: Conversation catch-up; visuals use available rendering.
+  cloud: Conversation catch-up; no assumed image tools.
+
+skills/maintain-verification-skill/SKILL.md
+  adapted -> copilot/skills/maintain-verification-skill/SKILL.md
+  Full-content review: Read outcomes, edit fence and all seven maintenance stages including doctor/retry/cleanup invariants; discovery now uses .github/skills/verify-*/SKILL.md and source readers become sequential roles while every feature still requires honest live coverage.
+  cli: Native target discovery; serial real app driving.
+  vscode: Native project skill; live runtime/browser must exist.
+  cloud: Repository target; unavailable runtime/auth yields blocked coverage.
+
+skills/make-bot-ui/SKILL.md
+  adapted -> copilot/skills/make-bot-ui/SKILL.md
+  Full-content review: Read all routine creation, secret cards, private webhook headers, credential files, Tailscale installation/exposure and wake parsing instructions; removed unsupported active originals and supplied a matching-name stop-only compatibility notice with plain-text exact archive provenance, not an installed-resource link, instead of inventing infrastructure.
+  cli: Unavailable: stop-only notice, no provisioning or private API.
+  vscode: Unavailable: no presumed Cursor routine or secret API.
+  cloud: Unavailable: no managed computer/tailnet or private webhook API.
+
+skills/no-comments/SKILL.md
+  adapted -> copilot/skills/no-comments/SKILL.md
+  Full-content review: Read the complete specialist-dependent review, exception, root-cause, encoding and reporting contract; removed invented Task/comment-sicko invocation and made unavailable specialist rules a hard stop, retaining unapproved safety comments rather than deleting constraints automatically.
+  cli: Blocked unless actual specialist and complete rules are exposed.
+  vscode: Blocked unless actual specialist and complete rules are exposed.
+  cloud: Blocked unless actual specialist and complete rules are exposed.
+
+skills/poteto-help/SKILL.md
+  adapted -> copilot/skills/poteto-help/SKILL.md
+  Full-content review: Read the full setup/help decision tree, complete skill catalog, close calls, playbook/principle guidance, pitfalls and customization; replaced Cursor install/model/Custom Mode/Task/loop syntax with native paths and safe sequential defaults, acknowledged optional native CLI controls and untested cloud support, required merge authorization, kept relative resources inside installed skills, and used public port-guide URLs plus exact pinned historical-only original chapters 01/07/09.
+  cli: Primary port help; explicit skill selection and native installation.
+  vscode: Host-dependent discovery; no CLI tool parity promised.
+  cloud: Repository skill help; MCP/runtime capabilities must be checked.
+
+skills/poteto-help/references/prompting.md
+  adapted -> copilot/skills/poteto-help/references/prompting.md
+  Full-content review: Read goals, falsifiable done checks, context loading, design-first planning and unattended steers; retained informal prompt guidance while replacing assumed Cursor /loop with bounded sequential iterations and requiring explicit merge authorization.
+  cli: Portable prompts for bounded execution.
+  vscode: Portable prompts with host-supported invocation.
+  cloud: Portable prompts; unattended work never authorizes merging.
+
+skills/poteto-help/references/recipes.md
+  adapted -> copilot/skills/poteto-help/references/recipes.md
+  Full-content review: Read every understand/build/design/review/away recipe; preserved task intent and proof requirements while replacing parallel/cloud and /loop assumptions, turning landing into merge-ready preparation, and explicitly withholding automatic merge authorization.
+  cli: Explicit skill examples; sequential default.
+  vscode: Read-and-follow where slash invocation is unavailable.
+  cloud: Bounded verified recipes; no automatic merge.
+
+skills/poteto-mode/SKILL.md
+  adapted -> copilot/skills/poteto-mode/SKILL.md
+  Full-content review: Read all frontmatter, principles, triggers, autonomy, subagent/model policy, writing rules, and playbook routing. Preserved engineering and prose guidance; normalized native name; removed display fields; replaced Cursor tool/model/rule assumptions with documented CLI model selection, sequential roles, scoped permission gates, and no automatic landing. Exact original remains upstream/pstack/skills/poteto-mode/SKILL.md.
+  cli: Primary; /model documented; optional tools capability-gated.
+  vscode: Sequential skill guidance; no CLI command equivalence claimed.
+  cloud: Sequential guidance within actual tools and permissions; no background/cloud Task API.
+
+skills/poteto-mode/playbooks/authoring-a-skill.md
+  adapted -> copilot/skills/poteto-mode/playbooks/authoring-a-skill.md
+  Full-content review: Read complete authoring voice, frontmatter/link validation, testing, deletion bias, structural sources, and reply. Replaced required Cursor built-in authoring skill with current-host documentation and lowercase naming; retained remaining guidance.
+  cli: Host skill documentation and resource checks.
+  vscode: Same portable authoring checks.
+  cloud: Same checks within writable scope.
+
+skills/poteto-mode/playbooks/autonomous-run.md
+  adapted -> copilot/skills/poteto-mode/playbooks/autonomous-run.md
+  Full-content review: Read full predicate, wake loop, measured iterations, discoveries, trail, and stopping rules. Replaced Cursor loop/watcher-agent scheduling with bounded foreground iterations, no implicit external scope expansion, and merge-ready rather than merged predicates; retained evidence-driven changes and verifiable units.
+  cli: Finite foreground work and checkpoints.
+  vscode: No assumed scheduler.
+  cloud: No assumed surviving background process.
+
+skills/poteto-mode/playbooks/autopilot-full.md
+  adapted -> copilot/skills/poteto-mode/playbooks/autopilot-full.md
+  Full-content review: Read every long owner, cloud placement, lease, swarm, trunk/lockfile, countersign, audit tick, and hold passage. Preserved one-writer ownership, durable receipts, exact-head CI, live proof, finding batching, lockfile/merge-result checks, and stop protocol; removed executable cloud-owner automation, hourly loop, approval substitution, and automatic merges. Exact original archived upstream.
+  cli: Sequential independent-PR queue to verified handoff.
+  vscode: Sequential roles; unavailable independent review stays blocked.
+  cloud: No Cursor owner lifecycle or automatic landing.
+
+skills/poteto-mode/playbooks/autopilot-stack.md
+  adapted -> copilot/skills/poteto-mode/playbooks/autopilot-stack.md
+  Full-content review: Read all owner/topology, base-chain, drift, landing freeze, and selection rules. Preserved single topology writer and operator landing; changed inherited full-autonomy/cloud lifecycle and choice rule to sequential queues that always stop merge-ready.
+  cli: Authorized base-chain preparation only.
+  vscode: Same topology and review gates.
+  cloud: No implied merge authority.
+
+skills/poteto-mode/playbooks/babysit.md
+  adapted -> copilot/skills/poteto-mode/playbooks/babysit.md
+  Full-content review: Read full mode mapping, frontier ownership, conflicts/threads/CI order, GitHub/Origin stop semantics, retry classification, safe reply payloads, Bugbot passes, and approval gates. Kept portable forge behavior and untrusted-comment handling; removed Cursor dynamic scheduler, bounded watcher runtime, documented dependencies, clarified READY excludes approval authority, and reserved all landing for user.
+  cli: Bun/gh watcher or actual forge tools; finite timeout.
+  vscode: Shell/tools required; no background promise.
+  cloud: Authenticated forge access required; no approval bypass.
+
+skills/poteto-mode/playbooks/bug-fix.md
+  adapted -> copilot/skills/poteto-mode/playbooks/bug-fix.md
+  Full-content review: Read full red-first repro, binary search, runtime mechanism, architect, verification, commit sequence, and reply. Preserved scientific root-cause discipline; replaced Cursor scheduler, default model slug, and mandatory subagent implementation with sequential scoped roles.
+  cli: Sequential repro/fix/review with actual surface driver.
+  vscode: Same evidence gates.
+  cloud: Missing runtime surface must be reported.
+
+skills/poteto-mode/playbooks/eval.md
+  adapted -> copilot/skills/poteto-mode/playbooks/eval.md
+  Full-content review: Read all blinding prohibitions, sanitized prompts/directories, common judge scale, candidate/judge steps, transcript checks, synthesis, and reply. Preserved experiment design; gated independent model contexts and judge, defaulted sequential isolated invocations, prohibited cache transcript discovery, and label non-blind rehearsals honestly.
+  cli: Explicit isolated runs and authorized exports only.
+  vscode: No assumed transcript layout or model spawning.
+  cloud: Independent context and records required for valid eval.
+
+skills/poteto-mode/playbooks/feature.md
+  adapted -> copilot/skills/poteto-mode/playbooks/feature.md
+  Full-content review: Read full throughput checkpoint, shape-first implementation, arena alternatives, review separation, shared primitives, verification, commit ordering, and owner hierarchy. Preserved domain and coverage engineering; replaced default model and forced fan-out with scoped sequential roles and disclosed independence limits.
+  cli: Sequential design/implementation/review.
+  vscode: Optional delegation only if actually available.
+  cloud: One writer; no invented nested agent controls.
+
+skills/poteto-mode/playbooks/hillclimb.md
+  adapted -> copilot/skills/poteto-mode/playbooks/hillclimb.md
+  Full-content review: Read complete realistic workload, frozen sensitive harness, median/noise gate, decision.tsv, ordered hypotheses, keep/revert, commits, plateau, and stop rules. Preserved metric rigor; replaced configured model and parallel-attempt requirement with sequential scoped attempts under the host contract.
+  cli: Existing harness and sequential measured attempts.
+  vscode: Same experiment gates.
+  cloud: Runtime/measurement availability disclosed.
+
+skills/poteto-mode/playbooks/investigation.md
+  unchanged -> copilot/skills/poteto-mode/playbooks/investigation.md
+  Full-content review: Read all routing, read-only deliverable, one-line throughput exemption, how-shaped sections/tradeoff table, no-PR/no-babysit limits, and candid reply. Entire portable guidance retained byte-for-byte; surrounding host contract governs referenced skills.
+  cli: Read-only sequential investigation.
+  vscode: Same portable guidance.
+  cloud: Same portable guidance within available read tools.
+
+skills/poteto-mode/playbooks/multi-phase-plan.md
+  adapted -> copilot/skills/poteto-mode/playbooks/multi-phase-plan.md
+  Full-content review: Read entire 155-line plan instructions and embedded skeleton including ten live lanes, trunk comparison, dual-sided perf, operator media gate, merge sections, and appendices. Preserved extensive plan structure and evidence rules; fixed relocated root commands, removed Cursor Task/model/cloud scheduling assumptions, replaced loop marker with sequential checkpoint, authorized artifact locations, and user-only landing. Updated checker/fixture together.
+  cli: Node checker and sequential coverage matrix.
+  vscode: Portable checklist; actual driver required.
+  cloud: No assumed per-lane VM or scheduler.
+
+skills/poteto-mode/playbooks/opening-a-pr.md
+  adapted -> copilot/skills/poteto-mode/playbooks/opening-a-pr.md
+  Full-content review: Read full worktree/reset, commits, cleanup skills, titles, briefing sections, forge/built-in tool policy, stacks, readiness, and babysit exceptions. Preserved review-oriented PR writing and stacks; removed destructive reset advice, external cleanup dependency, invented tool fields, and unconditional ready publication; commit/PR and landing policy respect operator scope.
+  cli: Actual forge/tool schema only.
+  vscode: Same PR writing and permission gates.
+  cloud: Use provided PR tool only when present; no assumed fields.
+
+skills/poteto-mode/playbooks/orchestrate.md
+  adapted -> copilot/skills/poteto-mode/playbooks/orchestrate.md
+  Full-content review: Read every role, nesting/cloud field, plain-file store, standing-order register, full brief template, pilot/scaling/drain, frontier, ledger, liveness, stale lock, retry, escalation, and reply paragraph. Extensively preserved briefs, context relay, unit/ledger/frontier structure, evidence and retry discipline; surgically replaced Cursor coordinator API and continual landing with sequential roles, explicit local store, bounded checkpoints, honest independence, and operator handoff.
+  cli: Portable Bun bookkeeping only; never launches agents.
+  vscode: Same sequential program with available shell.
+  cloud: No Cursor environment field/dashboard; recover durable branches.
+
+skills/poteto-mode/playbooks/pause-safely.md
+  adapted -> copilot/skills/poteto-mode/playbooks/pause-safely.md
+  Full-content review: Read explicit pause semantics, atomic stop, irreversible-action prohibition, WIP durability, resume-note fields, and reply. Retained checkpoint contents; made commits conditional on operator policy and replaced temporary/cache note locations with authorized session artifacts.
+  cli: Safe authorized checkpoint.
+  vscode: Same durable handoff.
+  cloud: Do not assume local process survival.
+
+skills/poteto-mode/playbooks/perf-issue.md
+  adapted -> copilot/skills/poteto-mode/playbooks/perf-issue.md
+  Full-content review: Read baseline trace, benchmark validation, seven ordered performance mantras and stop rule, architecture, post-fix trace, artifact diff, and measurement reply. Preserved all measurement engineering; replaced default Cursor model/delegation sentence with scoped sequential implementation and separate review.
+  cli: Actual profiler/harness required.
+  vscode: Same measurements.
+  cloud: Unavailable tracing is a reported limitation.
+
+skills/poteto-mode/playbooks/prototype.md
+  unchanged -> copilot/skills/poteto-mode/playbooks/prototype.md
+  Full-content review: Read full decision scope, reference gathering, isolated throwaway construction, alternative switcher, observed evidence, Feature handoff, and reply. Preserved byte-for-byte; scratch and dependency work remains subject to host permissions and dependency review, and external surface skills are optional under the host contract.
+  cli: Portable scoped prototype.
+  vscode: Actual browser/terminal driver needed.
+  cloud: No assumed dev-server or UI availability.
+
+skills/poteto-mode/playbooks/refactoring.md
+  adapted -> copilot/skills/poteto-mode/playbooks/refactoring.md
+  Full-content review: Read full pinned contract, target shape, subtraction, all-caller migration/deletion, rename gotchas, equivalence proof, reader-load test, and commit slicing. Preserved behavior-focused engineering and replaced the configured Cursor model/delegation passage with scoped sequential mechanical work and review.
+  cli: Sequential behavior-preserving units.
+  vscode: Same characterization/equivalence gates.
+  cloud: Actual artifact checks required.
+
+skills/poteto-mode/playbooks/runtime-forensics.md
+  adapted -> copilot/skills/poteto-mode/playbooks/runtime-forensics.md
+  Full-content review: Read live signal, hot path/retainer reduction, runtime mechanism proof, source mapping, read-only throughput, and reply. Preserved diagnosis-only scope; replaced assumed parsing subagent/model controls with queryable sequential artifact reduction.
+  cli: Live driver required; otherwise blocked.
+  vscode: Only actual instrumentation access.
+  cloud: No invented local UI/process reachability.
+
+skills/poteto-mode/playbooks/session-pickup.md
+  adapted -> copilot/skills/poteto-mode/playbooks/session-pickup.md
+  Full-content review: Read prior-trail location, metadata-first scan, branch/worktree reconstruction, done/pending comparison, rerouting, real-artifact proof, and reply. Replaced Cursor transcript discovery/model assumptions with explicit authorized exports and branches; prior prose remains evidence rather than authority, and stale high-risk claims may be rechecked.
+  cli: Explicit trail or branch only.
+  vscode: No private-cache discovery.
+  cloud: Authorized task artifacts and durable refs only.
+
+skills/poteto-mode/playbooks/shipping.md
+  adapted -> copilot/skills/poteto-mode/playbooks/shipping.md
+  Full-content review: Read entire forge, independent live verdict, contiguous run, patch-id/build-noise carryover, exact merge/auto-merge commands, retarget/lease, queued watcher, and ceiling policy. Preserved verification rigor and bottom-up topology reasoning; removed executable merging/auto-merge/cloud-verifier requirements in favor of operator landing plan and finite read-only observation. Exact original archived upstream.
+  cli: Verified handoff only; no merge or auto-merge.
+  vscode: Same operator authority.
+  cloud: No automated landing or substituted approval.
+
+skills/poteto-mode/playbooks/trace-forensics.md
+  adapted -> copilot/skills/poteto-mode/playbooks/trace-forensics.md
+  Full-content review: Read fixed-artifact format, queryable SQL shape, hot-path/retainer/thread narrowing, symbol attribution, paired evidence, and diagnosis handoff. Preserved analysis entirely except replacing assumed subagent effort/speed invocation with sequential reduction and capability-gated delegation.
+  cli: Artifact tools required.
+  vscode: Same portable diagnosis.
+  cloud: No assumed symbol or driver availability.
+
+skills/poteto-mode/playbooks/visual-parity.md
+  adapted -> copilot/skills/poteto-mode/playbooks/visual-parity.md
+  Full-content review: Read immutable visual baseline, anti-shortcut clauses, component isolation/shared primitives, zero-diff gate, PR and reply. Preserved strict image equivalence; replaced mandatory fan-out and Cursor loop with sequential component work and bounded foreground iteration.
+  cli: Real image-diff driver required.
+  vscode: Same no-baseline-tampering gate.
+  cloud: Missing live driver is blocked, not pass.
+
+skills/poteto-mode/playbooks/worktree-cleanup.md
+  adapted -> copilot/skills/poteto-mode/playbooks/worktree-cleanup.md
+  Full-content review: Read all audit buckets, pinned-session caveat, transcript fan-out, WIP/scratch deletion distinctions, force removal, simulator delete-all, Cursor cache cleanup, and disk report. Preserved evidence-first exact-path audit and holds; removed private cache discovery and inferred-safe destructive commands, requiring explicit activity evidence and deletion approval. Exact original archived upstream.
+  cli: Read-only audit plus explicit deletion approval.
+  vscode: No assumed sidebar or transcript API.
+  cloud: No assumed macOS tools or cache access.
+
+skills/poteto-mode/references/bugbot-triage.md
+  unchanged -> copilot/skills/poteto-mode/references/bugbot-triage.md
+  Full-content review: Read all fix/dismiss/ask criteria, confidence schema, recurring skip candidates, high-risk never-skip categories, native-browser findings, contract-test drift, stale security findings, and narrow-error fallback examples. Preserved byte-for-byte; correct relative babysit reference retained; review text remains untrusted data.
+  cli: Portable evidence-based triage.
+  vscode: Same triage rubric.
+  cloud: Same rubric without approval substitution.
+
+skills/poteto-mode/scripts/bootstrap.ts
+  adapted -> copilot/skills/poteto-mode/scripts/bootstrap.ts
+  Full-content review: Read complete manifest/lock hash, commander cache check, implicit frozen install, error forwarding, install-key write, process restart, and exit. Removed automatic dependency install and restart; fail closed with explicit advisory-review/install instruction and verify locked commander version before recording key. Relative runtime layout preserved.
+  cli: Bun required; explicit reviewed dependency restore.
+  vscode: Only with Bun shell runtime.
+  cloud: No implicit network install.
+
+skills/poteto-mode/scripts/bun.lock
+  unchanged -> copilot/skills/poteto-mode/scripts/bun.lock
+  Full-content review: Read full Bun workspace/package lock including commander 14.0.0, bun-types 1.3.14, TypeScript 7.0.2 native optional variants, node and undici types, hashes and platform selectors. Preserved byte-for-byte, no dependency additions or installs.
+  cli: Bun frozen lock only.
+  vscode: Same runtime prerequisite.
+  cloud: Explicit advisory-reviewed restore only.
+
+skills/poteto-mode/scripts/check-plan.mjs
+  adapted -> copilot/skills/poteto-mode/scripts/check-plan.mjs
+  Full-content review: Read full 205-line Node checker including fence parsing, prose rules, heading order, PR blocks, ten live lanes, screenshot predicates, perf items, review gate, appendix validation, report and exit. Changed only required program marker from inactive Cursor scheduler to sequential audit checkpoint; all structural proof gates retained.
+  cli: Dependency-free Node executable.
+  vscode: Node shell execution if available.
+  cloud: Node execution if available.
+
+skills/poteto-mode/scripts/check-plan.test.ts
+  adapted -> copilot/skills/poteto-mode/scripts/check-plan.test.ts
+  Full-content review: Read entire valid-plan fixture and ordinary/indented/longer/nested/tilde/mismatched/short/suffixed fence tests plus out-of-fence prose and invalid info-string failures. Updated fixture scheduler marker, added optional plan input to the same helper, and added regression rejecting old scheduler-only plans. The initial 14 plan scenarios and separate scheduler rejection ran through ad hoc Node extraction harnesses, not the existing Bun runner. Subsequently all six actual tests, including the scheduler regression, passed in the full 69-test Bun 1.4.3 run. Provisioning and lock dependencies were advisory-checked, test scratch stayed project-local, and transient tools/modules were removed.
+  cli: Actual Bun suite passed; earlier ad hoc Node fixture checks distinguished.
+  vscode: Bun required for original runner.
+  cloud: Runtime absence must be reported.
+
+skills/poteto-mode/scripts/orch/orch.test.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/orch/orch.test.ts
+  Full-content review: Read all 761 lines including isolated git/forge fixtures, lock cleanup, idempotent init, TSV sanitation, unit/ledger replacement, atomic drains, stale/live pid locks, gates/status, both forge chain pins, malformed records, closed stores, commander help/env and exit codes. Preserved suite byte-for-byte. All orchestration tests passed as part of 69 tests under advisory-checked transient Bun 1.4.3; strict watcher typecheck also passed. No dependency manifest changes; transient tools, modules, and project-local fixtures removed.
+  cli: Existing Bun tests passed with isolated fixtures.
+  vscode: Bun and git required.
+  cloud: Bun and git required; no live forge mutation.
+
+skills/poteto-mode/scripts/orch/orch.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/orch/orch.ts
+  Full-content review: Read all 590 lines including commander parsing/options, compact/JSON renderers, lock-scoped operations, units/ledger/inbox/gates/frontier/standing/status commands, env options and error exit codes. Portable bookkeeping never spawns agents or merges PRs; preserved byte-for-byte with relocated bootstrap import intact.
+  cli: Bun bookkeeping, explicit --store or ORCH_STORE.
+  vscode: Same external runtime only.
+  cloud: No background-agent API implied.
+
+skills/poteto-mode/scripts/orch/store.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/orch/store.ts
+  Full-content review: Read all 1677 lines including typed records/errors, cell sanitization, atomic writes, pid locks/stale recovery, TSV validation, inbox drains, gates/standing parsing, frontier JSON, status summaries, gh/Origin chain discovery, and every store method. Portable plain-file bookkeeping retained byte-for-byte; no Cursor cache or agent-launch behavior.
+  cli: Node-compatible library under Bun CLI.
+  vscode: Same filesystem/forge prerequisites.
+  cloud: Explicit durable directory and forge auth required.
+
+skills/poteto-mode/scripts/package.json
+  unchanged -> copilot/skills/poteto-mode/scripts/package.json
+  Full-content review: Read complete package identity, module mode, existing Bun test and strict TypeScript commands, commander runtime dependency, and development dependencies. Preserved manifest byte-for-byte to keep lock/runtime/test compatibility; package name is historical metadata, not a host API.
+  cli: Existing test/typecheck commands retained.
+  vscode: Bun/TypeScript prerequisites.
+  cloud: No automatic dependency install.
+
+skills/poteto-mode/scripts/watch-pr/cli.test.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/watch-pr/cli.test.ts
+  Full-content review: Read all defaults/queued-list parsing, invalid option and numeric cases, JSON/pretty parity, EX_USAGE, status-only queue bypass, hidden CI refusal, and help-without-reader tests. Retained fake-clock/read-only tests byte-for-byte.
+  cli: Existing Bun suite.
+  vscode: Bun runtime required.
+  cloud: No live API needed for tests.
+
+skills/poteto-mode/scripts/watch-pr/cli.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/watch-pr/cli.ts
+  Full-content review: Read complete numeric/PR/list validation, mutually exclusive modes, finite timeout/error budgets, status-only, allow-draft, render selection, context resolution, runtime clock and policy dispatch. Preserved portable read-only watcher CLI byte-for-byte; active playbook supplies finite timeout and separately checks approvals.
+  cli: Bun/commander and gh required.
+  vscode: External shell watcher only.
+  cloud: Authenticated gh and runtime required.
+
+skills/poteto-mode/scripts/watch-pr/fakes.test-helper.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/watch-pr/fakes.test-helper.ts
+  Full-content review: Read all fake reader options, check builders, fact defaults, call tracing, pagination counters and commit/open-PR responses. Retained byte-for-byte; tests simulate GitHub data only, not host agent APIs.
+  cli: Portable test helper.
+  vscode: Same helper.
+  cloud: No network required.
+
+skills/poteto-mode/scripts/watch-pr/github.test.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/watch-pr/github.test.ts
+  Full-content review: Read every fast-path/GraphQL fallback, fail-closed empty response, check/status/gate mapping, enum normalization, Bugbot pass counting, review pagination, context inference and stack-order test. Kept byte-for-byte; fake readers exercise portable behavior without live credentials.
+  cli: Existing Bun suite.
+  vscode: Bun required.
+  cloud: No live forge mutation.
+
+skills/poteto-mode/scripts/watch-pr/github.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/watch-pr/github.ts
+  Full-content review: Read all 718 lines including GraphQL queries, subprocess argv handling, JSON/enum boundaries, canonical remote/PR URL parsing, gate classification, rollup mapping, Bugbot identification/pass keys, review pagination, GhGitHubReader, fallback checks, context and connected-stack discovery. Preserved read-only GitHub adapter byte-for-byte; Cursor bot identifiers are data classification, not automation APIs.
+  cli: Authenticated gh reader.
+  vscode: Same standalone reader only.
+  cloud: No assumed Cursor or Copilot API.
+
+skills/poteto-mode/scripts/watch-pr/policy.test.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/watch-pr/policy.test.ts
+  Full-content review: Read all readiness truth-table cases, hidden GitHub refusal, pending-query omission, settled/failed rollups, merged short circuit, tier-major stacks, correct pending attribution, draft behavior, sweep recovery/completion, ADVANCE without sleep, wait dedup and backoff bounds. Retained suite byte-for-byte.
+  cli: Existing Bun fake-clock tests.
+  vscode: Bun required.
+  cloud: No network needed.
+
+skills/poteto-mode/scripts/watch-pr/policy.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/watch-pr/policy.ts
+  Full-content review: Read all 836 lines including GitHub assessment truth table, snapshot planning, conflict/thread/CI/gate priority, typed READY proof, retry backoff/envelopes, finite polling, simple mode, immutable queued state, sweeps/ADVANCE/wait dedup and terminal handling. Preserved watcher policy byte-for-byte; READY is explicitly documented as classification, never permission to bypass branch approvals or merge.
+  cli: Read-only bounded watcher policy.
+  vscode: Same standalone policy.
+  cloud: No agent scheduling or merging.
+
+skills/poteto-mode/scripts/watch-pr/render.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/watch-pr/render.ts
+  Full-content review: Read full JSON, CI/review/merge cells, Markdown status links, thread summaries, blocker details and exhaustive progress/terminal rendering. Preserved byte-for-byte; merge words describe observed forge state, not executable landing behavior.
+  cli: Portable watcher rendering.
+  vscode: Same text/JSON output.
+  cloud: Same text/JSON output.
+
+skills/poteto-mode/scripts/watch-pr/tsconfig.json
+  unchanged -> copilot/skills/poteto-mode/scripts/watch-pr/tsconfig.json
+  Full-content review: Read entire strict no-emit ESNext/bundler TypeScript configuration, TS extension imports, library-check skip, Bun types and *.ts include. Preserved exact configuration; installed type dependencies are required for existing typecheck.
+  cli: Existing TypeScript command.
+  vscode: Compatible installed compiler required.
+  cloud: Unavailable compiler/types reported.
+
+skills/poteto-mode/scripts/watch-pr/types.compile.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/watch-pr/types.compile.ts
+  Full-content review: Read full positive READY/CiClean proof fixtures and expected compile failures for BLOCKED failing rollup, invalid clean CI, wrong exit code and missing readiness proof. Preserved byte-for-byte to guard illegal watcher states.
+  cli: Strict compiler fixture.
+  vscode: Same compile-time checks.
+  cloud: Type dependencies required.
+
+skills/poteto-mode/scripts/watch-pr/types.ts
+  unchanged -> copilot/skills/poteto-mode/scripts/watch-pr/types.ts
+  Full-content review: Read all 413 lines including branded PR/nonempty helpers, repository/facts/review/check domain, CI/merge proof unions, blocker/query failures, waiting attribution note, stamped progress/terminal/timeout exits, reader API and polling options. Preserved byte-for-byte; types describe GitHub watcher data, not host delegation.
+  cli: Portable domain types.
+  vscode: Same types.
+  cloud: No host API mapping.
+
+skills/poteto-mode/scripts/watch-pr/watch-pr
+  unchanged -> copilot/skills/poteto-mode/scripts/watch-pr/watch-pr
+  Full-content review: Read complete executable Bun wrapper, relative bootstrap import, explicit dependency check, dynamic CLI import and exit propagation. Retained executable mode/layout byte-for-byte; adapted bootstrap disables the original implicit install.
+  cli: Bun executable required.
+  vscode: External shell runtime only.
+  cloud: No implicit install or host scheduler.
+
+skills/poteto-mode/scripts/worktree-audit.sh
+  adapted -> copilot/skills/poteto-mode/scripts/worktree-audit.sh
+  Full-content review: Read full base/ref parser, best-effort fetch, Origin/gh PR query, temporary PR file, Cursor transcript slug/cache scan, BSD mtime, size/age/dirty/remote classification, bucket sort and cleanup. Preserved read-only git/forge audit; kept JSON in memory, removed private cache discovery and temporary file, and changed inferred-safe merged candidates to verify-activity so unknown activity never grants deletion.
+  cli: Bash/git; optional gh or Origin and jq.
+  vscode: Same standalone audit, no sidebar assumptions.
+  cloud: No Cursor caches or macOS transcript tools.
+
+skills/principle-attack-the-premise/SKILL.md
+  unchanged -> copilot/skills/principle-attack-the-premise/SKILL.md
+  Full-content review: Read the full failed-premise trigger, falsifying observation, reproducible lever, follow-evidence branch and stop gate; all linked principle resources resolve and no host-specific API is required.
+  cli: Portable explicit principle.
+  vscode: Portable explicit principle.
+  cloud: Portable explicit principle.
+
+skills/principle-boundary-discipline/SKILL.md
+  unchanged -> copilot/skills/principle-boundary-discipline/SKILL.md
+  Full-content review: Read the complete boundary/internal distinction, representation hiding, pure business logic applications and two decision tests; these are portable engineering rules, not agent tool or environment assumptions.
+  cli: Portable explicit principle.
+  vscode: Portable explicit principle.
+  cloud: Portable explicit principle.
+
+skills/principle-build-the-lever/SKILL.md
+  unchanged -> copilot/skills/principle-build-the-lever/SKILL.md
+  Full-content review: Read the complete deterministic-artifact requirement, hand-first verification, rerun safety, smallest-tool constraint and conditional delegation contract; delegation is conditional rather than a mandated Cursor API, so original guidance remains intact.
+  cli: Portable artifact-building principle.
+  vscode: Portable artifact-building principle.
+  cloud: Portable artifact-building principle.
+
+skills/principle-encode-lessons-in-structure/SKILL.md
+  unchanged -> copilot/skills/principle-encode-lessons-in-structure/SKILL.md
+  Full-content review: Read the entire skill: encode repeatable lessons structurally, strengthen judgment-only prose with examples, and avoid redundant instructions once a structural fix exists; no platform adaptation is necessary.
+  cli: Portable explicit principle.
+  vscode: Portable explicit principle.
+  cloud: Portable explicit principle.
+
+skills/principle-exhaust-the-design-space/SKILL.md
+  unchanged -> copilot/skills/principle-exhaust-the-design-space/SKILL.md
+  Full-content review: Read the whole trigger and UI-feel extension; two or three competing prototypes are a portable design method and do not imply parallel or model-specific execution.
+  cli: Portable prototype principle.
+  vscode: Portable prototype principle.
+  cloud: Portable prototype principle.
+
+skills/principle-experience-first/SKILL.md
+  unchanged -> copilot/skills/principle-experience-first/SKILL.md
+  Full-content review: Read all delight/scope/prototype/detail/core-loop guidance and the library-maintainer user interpretation; preserved the author's tradeoff and sequencing distinction without changing personal style.
+  cli: Portable product/design principle.
+  vscode: Portable product/design principle.
+  cloud: Portable product/design principle.
+
+skills/principle-explain-the-number/SKILL.md
+  unchanged -> copilot/skills/principle-explain-the-number/SKILL.md
+  Full-content review: Read limiter profiling, alternative measurement explanations, run/spread evidence and benchmark/eval distinctions; linked benchmark and prove-it-works skills resolve and all claims still require observed evidence.
+  cli: Portable measurement principle.
+  vscode: Portable measurement principle.
+  cloud: Portable measurement principle.
+
+skills/principle-fix-root-causes/SKILL.md
+  unchanged -> copilot/skills/principle-fix-root-causes/SKILL.md
+  Full-content review: Read reproduction, causal tracing, legitimate-state distinction, persisted-state debugging, sibling-pattern search and cheap signals; ordinary application caches are diagnostic targets, not permission to inspect Cursor history.
+  cli: Portable debugging principle.
+  vscode: Portable debugging principle.
+  cloud: Portable debugging principle.
+
+skills/principle-foundational-thinking/SKILL.md
+  unchanged -> copilot/skills/principle-foundational-thinking/SKILL.md
+  Full-content review: Read structural option value, data-first modeling, concurrency isolation, scaffold sequencing, coherent increments and subtraction; these are host-independent implementation principles with no orchestration API assumptions.
+  cli: Portable design principle.
+  vscode: Portable design principle.
+  cloud: Portable design principle.
+
+skills/principle-guard-the-context-window/SKILL.md
+  adapted -> copilot/skills/principle-guard-the-context-window/SKILL.md
+  Full-content review: Read the complete short scope/budget rule and trigger metadata; replaced mandatory bulk routing to subagents with scoped sequential reading and capability-gated optional delegation while retaining context-pressure rationale.
+  cli: Scoped sequential passes; no assumed Task API.
+  vscode: Scoped sequential passes.
+  cloud: Scoped sequential passes.
+
+skills/principle-laziness-protocol/SKILL.md
+  unchanged -> copilot/skills/principle-laziness-protocol/SKILL.md
+  Full-content review: Read the whole diff-minimization and decision-consolidation principle; it is portable code-design guidance and needs no stylistic rewrite.
+  cli: Portable explicit principle.
+  vscode: Portable explicit principle.
+  cloud: Portable explicit principle.
+
+skills/principle-make-operations-idempotent/SKILL.md
+  unchanged -> copilot/skills/principle-make-operations-idempotent/SKILL.md
+  Full-content review: Read convergence from current state, crash-stale markers, atomic publication and all three repeatability tests; these are portable lifecycle requirements rather than host-specific filesystem commands.
+  cli: Portable lifecycle principle.
+  vscode: Portable lifecycle principle.
+  cloud: Portable lifecycle principle.
+
+skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md
+  unchanged -> copilot/skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md
+  Full-content review: Read the full coordinated migration rule, time-boxed adapter exception, test migration and external-consumer applicability limits; no tool API or host behavior is assumed.
+  cli: Portable migration principle.
+  vscode: Portable migration principle.
+  cloud: Portable migration principle.
+
+skills/principle-minimize-reader-load/SKILL.md
+  unchanged -> copilot/skills/principle-minimize-reader-load/SKILL.md
+  Full-content review: Read both reader-load axes, interface compression, shrinking mutable scope, boundary invariants and the thirty-second tracing test; the linked context principle resolves and guidance remains platform-neutral.
+  cli: Portable maintainability principle.
+  vscode: Portable maintainability principle.
+  cloud: Portable maintainability principle.
+
+skills/principle-model-the-domain/SKILL.md
+  unchanged -> copilot/skills/principle-model-the-domain/SKILL.md
+  Full-content review: Read every suggested domain structure, anti-overengineering caveat and booleans/temporal-decomposition warning; all concern application modeling and preserve the original complete engineering advice.
+  cli: Portable modeling principle.
+  vscode: Portable modeling principle.
+  cloud: Portable modeling principle.
+
+skills/principle-never-block-on-the-human/SKILL.md
+  adapted -> copilot/skills/principle-never-block-on-the-human/SKILL.md
+  Full-content review: Read the full reversible-work autonomy rule and irreversible-action exception; retained asynchronous execution posture but added explicit authorization for merges, auto-merge and stack landing so unattended runs cannot infer permission.
+  cli: Reversible autonomy; explicit merge authorization required.
+  vscode: Same authorization boundary.
+  cloud: Unattended operation does not authorize merging.
+
+skills/principle-outcome-oriented-execution/SKILL.md
+  unchanged -> copilot/skills/principle-outcome-oriented-execution/SKILL.md
+  Full-content review: Read target-state priority, scoped reversible intermediate breakage and static/runtime completion gates; this is portable planned-migration guidance and does not bypass safety or verification.
+  cli: Portable migration principle.
+  vscode: Portable migration principle.
+  cloud: Portable migration principle.
+
+skills/principle-prove-it-works/SKILL.md
+  unchanged -> copilot/skills/principle-prove-it-works/SKILL.md
+  Full-content review: Read direct-artifact verification, observation-method skepticism, deterministic checks and audit-trail visibility; all are portable and conditional references to agent self-reports do not require delegation.
+  cli: Portable verification principle.
+  vscode: Portable verification principle.
+  cloud: Portable verification principle.
+
+skills/principle-redesign-from-first-principles/SKILL.md
+  unchanged -> copilot/skills/principle-redesign-from-first-principles/SKILL.md
+  Full-content review: Read all affected-file grounding, day-one requirement reframing, propagation through docs/types/examples and incremental delivery; no host-specific instructions are present.
+  cli: Portable redesign principle.
+  vscode: Portable redesign principle.
+  cloud: Portable redesign principle.
+
+skills/principle-separate-before-serializing-shared-state/SKILL.md
+  unchanged -> copilot/skills/principle-separate-before-serializing-shared-state/SKILL.md
+  Full-content review: Read the full shared-state inventory, separate-object default, field-versus-file distinction and structural serialization fallback; this is portable application/contributor concurrency guidance, not mandatory agent fan-out.
+  cli: Portable ownership principle.
+  vscode: Portable ownership principle.
+  cloud: Portable ownership principle.
+
+skills/principle-sequence-verifiable-units/SKILL.md
+  unchanged -> copilot/skills/principle-sequence-verifiable-units/SKILL.md
+  Full-content review: Read per-unit green boundaries, scoped baseline preparation, lever checks and test-first delivery ordering; no Cursor APIs are present and git operations remain subject to host/user safety constraints.
+  cli: Portable sequencing principle.
+  vscode: Portable sequencing principle.
+  cloud: Portable sequencing principle.
+
+skills/principle-subtract-before-you-add/SKILL.md
+  unchanged -> copilot/skills/principle-subtract-before-you-add/SKILL.md
+  Full-content review: Read every subtraction, observed-usage, no-speculative-guards and redundant-reference rule; the complete original is portable engineering guidance.
+  cli: Portable simplification principle.
+  vscode: Portable simplification principle.
+  cloud: Portable simplification principle.
+
+skills/principle-test-behavior-not-implementation/SKILL.md
+  unchanged -> copilot/skills/principle-test-behavior-not-implementation/SKILL.md
+  Full-content review: Read the two imagined edits, observable-contract definition, external-versus-internal mocks, empty-result examples and invariant tests; all are portable testing guidance and remain byte-identical.
+  cli: Portable behavioral-testing principle.
+  vscode: Portable behavioral-testing principle.
+  cloud: Portable behavioral-testing principle.
+
+skills/principle-type-system-discipline/SKILL.md
+  unchanged -> copilot/skills/principle-type-system-discipline/SKILL.md
+  Full-content review: Read every sum-type, constructive-model, branded primitive, boundary parse, cast, exhaustiveness, schema derivation and partiality rule; language examples are ordinary code and no Copilot adaptation is needed.
+  cli: Portable typed-code principle.
+  vscode: Portable typed-code principle.
+  cloud: Portable typed-code principle.
+
+skills/recall/SKILL.md
+  adapted -> copilot/skills/recall/SKILL.md
+  Full-content review: Read the full personal/shared-record distinction, scope, mining, live-state checks and capsule contract; removed Cursor transcript storage and parallel fast-model assumptions, retaining authorized history or supplied exports with explicit gaps and sequential source passes.
+  cli: Authorized exposed history tool or supplied exports; otherwise limited brief.
+  vscode: Visible conversation or supplied exports; no private cache access.
+  cloud: Available conversation/history only; unavailable record is a limitation.
+
+skills/reflect/SKILL.md
+  adapted -> copilot/skills/reflect/SKILL.md
+  Full-content review: Read all transcript discovery, three reviewer lenses, synthesis, structural routing, approval and authoring steps; replaced Cursor storage/Task/model/create-skill APIs with sequential supplied-context passes and native authoring, preserving explicit approval before skill edits and authorized external posting.
+  cli: Sequential reflection; visible conversation or supplied export.
+  vscode: Sequential reflection without Cursor transcript discovery.
+  cloud: Sequential reflection; missing MCP lookups reported unavailable.
+
+skills/reflect/references/divergent-reviewer.md
+  adapted -> copilot/skills/reflect/references/divergent-reviewer.md
+  Full-content review: Read the complete contrarian lens, untrusted-transcript boundary, scan list and routing contract; retained all evidence filters while replacing Cursor path/tool proof and transcript discovery with explicitly supplied conversation evidence and sequential role limits.
+  cli: Read-only divergent pass over supplied evidence.
+  vscode: Same supplied-context pass.
+  cloud: Same pass; unavailable MCP lookup is reported.
+
+skills/reflect/references/judgment-reviewer.md
+  adapted -> copilot/skills/reflect/references/judgment-reviewer.md
+  Full-content review: Read all durability signals, injection precautions, used-skill routing and numbered evidence output; preserved judgment criteria while removing Cursor storage/tool assumptions and requiring supplied context with unavailable MCP disclosure.
+  cli: Read-only judgment pass.
+  vscode: Read-only judgment pass over supplied context.
+  cloud: Read-only judgment pass; no private history discovery.
+
+skills/reflect/references/synthesizer.md
+  adapted -> copilot/skills/reflect/references/synthesizer.md
+  Full-content review: Read every accept/reject/backlog criterion and output table; preserved durability, structural enforcement and approval routing while replacing host/history assumptions, weakening false same-model consensus and correcting unsupported paths-trigger advice.
+  cli: Sequential evidence-based synthesis.
+  vscode: Same synthesis; no assumed authoring API.
+  cloud: Same synthesis; unavailable MCP verification is a gap.
+
+skills/reflect/references/tooling-reviewer.md
+  adapted -> copilot/skills/reflect/references/tooling-reviewer.md
+  Full-content review: Read concrete tooling signals, self-sufficiency examples, untrusted-data boundary and used-skill routing; retained technical-evidence detail while replacing Cursor transcript/tool assumptions with supplied-context sequential review and missing-access reporting.
+  cli: Read-only tooling pass using real exposed tools.
+  vscode: Read-only tooling pass over supplied context.
+  cloud: Read-only tooling pass; no assumed history/MCP inheritance.
+
+skills/setup-pstack/SKILL.md
+  adapted -> copilot/skills/setup-pstack/SKILL.md
+  Full-content review: Read full original model detection, existing-rule migration, budget ladder, role lists, validation, rule output, and verification offer. Removed Cursor rule consumers and guessed effort suffixes. Default /model controls the session; optional native settings model/effort override requires /agent-verified poteto-agent registration, a JSONC-preserving host editor/UI, and an actual native task selecting that ID. No inert renamed file or fake planning-role keys; unavailable safe editing leaves settings untouched. Sequential passes explicitly inherit session model. Cites official CLI config-directory/command references and uses project .github/skills verification consumers. After final native-settings prose change, ad hoc Python assertions checked both exact override keys, JSONC protection, /agent verification, official citation, inheritance wording, all owned Markdown links, and 47 audit rows. This was a documentation contract check, not host integration; no user settings were read or edited. Runtime code unchanged since 69 passing Bun tests and strict typecheck. Exact original remains archived upstream.
+  cli: Documented /model; optional JSONC-safe native registered-agent override; loading/editing not integration-tested.
+  vscode: Use actual host UI only; no CLI settings mapping.
+  cloud: Retain available host model unless documented selection exists.
+
+skills/sharpen/SKILL.md
+  unchanged -> copilot/skills/sharpen/SKILL.md
+  Full-content review: Read the entire expert-method/outcome/specification balancing paragraph and metadata; it needs only visible task context and preserves the author's non-narrated framing style.
+  cli: Portable explicit task-framing skill.
+  vscode: Portable explicit task-framing skill.
+  cloud: Portable task-framing guidance.
+
+skills/show-me-your-work/SKILL.md
+  adapted -> copilot/skills/show-me-your-work/SKILL.md
+  Full-content review: Read TSV format, formula safety, append-only multi-run semantics, evidence audit and Attention output; preserved the complete log contract/helper references while replacing Cursor transcript discovery and mandatory different-model subagents with supplied-context sequential audit and honest independence disclosure.
+  cli: Portable log helper plus sequential audit.
+  vscode: Same log contract with available shell tools.
+  cloud: Same log contract; transcript coverage limitations disclosed.
+
+skills/show-me-your-work/references/decision-log-template.tsv
+  unchanged -> copilot/skills/show-me-your-work/references/decision-log-template.tsv
+  Full-content review: Read the entire six-column TSV header and preserved its bytes/mode exactly; it is the portable canonical decision-log schema consumed by the unchanged helper.
+  cli: Portable TSV resource.
+  vscode: Portable TSV resource.
+  cloud: Portable TSV resource.
+
+skills/show-me-your-work/scripts/log.sh
+  unchanged -> copilot/skills/show-me-your-work/scripts/log.sh
+  Full-content review: Read the complete Bash script: six-argument validation, parent creation, append-only header, UTC timestamp, control-character flattening and spreadsheet-formula escaping; compatible portable helper retained byte-for-byte with executable mode and behavior checked.
+  cli: Works where Bash/date/tr are present.
+  vscode: Works in a Bash-capable terminal.
+  cloud: Works on Bash-capable runners; no added dependency.
+
+skills/swarm/SKILL.md
+  adapted -> copilot/skills/swarm/SKILL.md
+  Full-content review: Read framing, race selection, worker briefs, SHA/method validation, retry/dropout handling and report contract; removed Cursor cloud_base_branch/environment/Task/model/background APIs, preserving coverage through sequential role passes and explicitly refusing unsupported concurrent-model requirements.
+  cli: Sequential coverage or candidate passes; one report.
+  vscode: Sequential passes; real delegation optional only if exposed.
+  cloud: No assumed worker-provisioning service or model controls.
+
+skills/tdd/SKILL.md
+  unchanged -> copilot/skills/tdd/SKILL.md
+  Full-content review: Read practical-test routing, all six red/green steps, impractical-test alternatives, assertion safeguards and evidence report; these are portable repository testing instructions with no Cursor API dependency.
+  cli: Existing repository test runner or honest alternative proof.
+  vscode: Existing runner through available execution tools.
+  cloud: Existing runner; unavailable integration is reported.
+
+skills/teach/SKILL.md
+  adapted -> copilot/skills/teach/SKILL.md
+  Full-content review: Read the full layered teaching method, how/why composition, confidence preservation, incremental diagrams and personal prose style; changed only assumed parallel invocation/image tools to sequential read-and-follow roles and capability-checked rendering.
+  cli: Sequential how/why teaching; ASCII/Mermaid if no image tool.
+  vscode: Same teaching flow with actual available media tools.
+  cloud: Same teaching flow; no assumed image generation.
+
+skills/technical-writing/SKILL.md
+  unchanged -> copilot/skills/technical-writing/SKILL.md
+  Full-content review: Read all Diataxis modes, Google style, STE instructions, Global English disambiguation, repository conventions and worked example; preserved the complete personal writing standard without a global style rewrite.
+  cli: Portable writing standard.
+  vscode: Portable writing standard.
+  cloud: Portable writing standard.
+
+skills/typescript-best-practices/SKILL.md
+  adapted -> copilot/skills/typescript-best-practices/SKILL.md
+  Full-content review: Read all sixteen TypeScript rules and metadata; preserved every engineering rule and examples reference while removing unsupported skill paths-trigger metadata with an adjacent archive note and retaining explicit .ts/.tsx selection.
+  cli: Explicit TypeScript skill; no assumed paths trigger.
+  vscode: Explicit skill, not a path-specific instruction file.
+  cloud: Explicit repository skill; metadata does not imply automatic selection.
+
+skills/typescript-best-practices/references/patterns.md
+  adapted -> copilot/skills/typescript-best-practices/references/patterns.md
+  Full-content review: Read every complete TypeScript example from branding through object arguments; compatible code remains untouched, with only the broken local SKILL.md reference corrected to ../SKILL.md and explained against the archive.
+  cli: Portable TypeScript examples.
+  vscode: Portable TypeScript examples.
+  cloud: Portable TypeScript examples.
+
+skills/unslop/SKILL.md
+  unchanged -> copilot/skills/unslop/SKILL.md
+  Full-content review: Read every stable-numbered content/language/style/artifact/filler/jargon/plain-speech rule; preserved the full personal style catalog exactly, including rule-number gaps and deliberate punctuation preferences.
+  cli: Portable prose-editing skill.
+  vscode: Portable prose-editing skill.
+  cloud: Portable prose-editing skill.
+
+skills/why/SKILL.md
+  adapted -> copilot/skills/why/SKILL.md
+  Full-content review: Read target anchoring, seven evidence categories, skip rules, synthesis and confidence output; removed Cursor model/agent-mode/mcps-directory assumptions, defaulted to sequential source passes and made missing MCP, authentication, git history or PR access explicit gaps.
+  cli: Sequential evidence investigation with actual exposed integrations.
+  vscode: Same source coverage contract; no assumed CLI tool parity.
+  cloud: Same source coverage contract; missing access stops affected source.
+
+skills/why/references/epistemics.md
+  unchanged -> copilot/skills/why/references/epistemics.md
+  Full-content review: Read all five confidence tiers, phrasing rules, rationalization/sycophancy traps, contradictions, missing evidence and final check; these are portable evidentiary standards and remain exact.
+  cli: Portable evidence-confidence framework.
+  vscode: Portable evidence-confidence framework.
+  cloud: Portable evidence-confidence framework.
+
+skills/why/references/investigator-prompt.md
+  adapted -> copilot/skills/why/references/investigator-prompt.md
+  Full-content review: Read placeholders, six-step source loop, epistemic discipline and complete evidence/gap output; retained the entire investigation method while replacing parallel-source agent assumptions with sequential roles and requiring real exposed schemas or explicit unavailable results.
+  cli: Sequential source-specific pass.
+  vscode: Source-specific pass using actual exposed tools.
+  cloud: Source-specific pass; missing access stops that source.
+
+skills/why/references/source-playbook.md
+  adapted -> copilot/skills/why/references/source-playbook.md
+  Full-content review: Read the full seven-category link table and defensive-code addendum; all resources are preserved and linked, while the orchestration sentence now requires sequential passes and actual MCP schemas instead of assumed spawns.
+  cli: Portable source-playbook index.
+  vscode: Portable index; MCP availability checked.
+  cloud: Portable index; missing integrations reported.
+
+skills/why/references/sources/code-archaeology.md
+  unchanged -> copilot/skills/why/references/sources/code-archaeology.md
+  Full-content review: Read all source types and every git/pickaxe/blame/show/ADR/TODO/test query; these are genuine portable command-line examples, retained exactly and used only when git/gh/ripgrep are actually available under the parent skill's gap contract.
+  cli: Real git/rg examples; gh availability checked.
+  vscode: Usable with actual terminal/source-control access.
+  cloud: Usable with checkout/history access; shallow gaps reported.
+
+skills/why/references/sources/databricks.md
+  adapted -> copilot/skills/why/references/sources/databricks.md
+  Full-content review: Read every analytics source, bounded SQL pattern, dbt/raw tradeoff, lineage lead, retention/schema pitfall and numeric output field; removed assumed SQL MCP function names and made all illustrative private-schema/column conventions subject to actual discovery before use.
+  cli: Requires real authorized read-only SQL integration.
+  vscode: Same integration prerequisite; unavailable source is reported.
+  cloud: Same prerequisite; no private warehouse knowledge assumed.
+
+skills/why/references/sources/datadog.md
+  adapted -> copilot/skills/why/references/sources/datadog.md
+  Full-content review: Read metrics/monitors/dashboard/APM/log/incident evidence and every causation/retention pitfall; retained search goals and evidence outputs while removing assumed Datadog API names in favor of actual exposed schemas and explicit unavailable-access handling.
+  cli: Requires real authenticated observability integration.
+  vscode: Same prerequisite; no presumed MCP APIs.
+  cloud: Same prerequisite; missing access stops affected search.
+
+skills/why/references/sources/incident-postmortem.md
+  unchanged -> copilot/skills/why/references/sources/incident-postmortem.md
+  Full-content review: Read the entire Linear/Slack/git incident-query addendum; it is a portable keyword/category playbook, not a tool API, and inherits explicit unavailable-source handling from why.
+  cli: Portable incident search hints for available sources.
+  vscode: Portable hints; actual integrations required.
+  cloud: Portable hints; unavailable source reported.
+
+skills/why/references/sources/linear.md
+  adapted -> copilot/skills/why/references/sources/linear.md
+  Full-content review: Read all ticket sources, linked-ticket/project/parent searches, evidence examples, stale/template/duplicate/access pitfalls and output fields; replaced assumed get_issue/list_issues/get_project calls with actual integration operations and hard unavailable-source reporting.
+  cli: Requires actually exposed authenticated issue integration.
+  vscode: Same prerequisite; no fabricated tool calls.
+  cloud: Same prerequisite; access gaps retained.
+
+skills/why/references/sources/notion.md
+  adapted -> copilot/skills/why/references/sources/notion.md
+  Full-content review: Read all document types, keyword/page/backlink/database searches, rationale examples and freshness/access caveats; preserved evidence guidance while removing assumed notion-* APIs and requiring actual authenticated schemas or unavailable results.
+  cli: Requires actually exposed authenticated document integration.
+  vscode: Same prerequisite; tool schema inspected.
+  cloud: Same prerequisite; unavailable pages are gaps.
+
+skills/why/references/sources/sentry.md
+  adapted -> copilot/skills/why/references/sources/sentry.md
+  Full-content review: Read organization/project orientation, issue/event/release/time/tag/stack analysis, optional Seer caution and every output field; preserved the investigative recipe but replaced assumed Sentry tool APIs with actual available operations and access gates.
+  cli: Requires real authenticated error-tracking integration.
+  vscode: Same prerequisite; no assumed API names.
+  cloud: Same prerequisite; unavailable operations reported.
+
+skills/why/references/sources/slack.md
+  adapted -> copilot/skills/why/references/sources/slack.md
+  Full-content review: Read all author/PR/error searches, retention/DM/thread/context pitfalls and stop-on-auth-failure rule; retained the full playbook and replaced assumed mcp_auth with the actual host's documented authentication flow.
+  cli: Requires actually exposed authenticated chat integration.
+  vscode: Same prerequisite; missing authentication stops search.
+  cloud: Same prerequisite; no fabricated conversational evidence.
+
+skills/why/references/synthesizer-prompt.md
+  adapted -> copilot/skills/why/references/synthesizer-prompt.md
+  Full-content review: Read all tier/citation instructions, synthesis steps, eight output sections and seven quality checks; retained confidence language, corrected the epistemics resource path, removed a fake URL link and replaced guaranteed git/gh access with explicit coverage gaps.
+  cli: Sequential evidence synthesis with honest source gaps.
+  vscode: Portable synthesis; actual citation access required.
+  cloud: Portable synthesis; no assumed PR authentication.

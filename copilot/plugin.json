@@ -1,0 +1,13 @@
+{
+  "name": "pstack-copilot",
+  "version": "0.15.25-copilot.1",
+  "description": "Unofficial preservation-first Copilot port of Lauren Tan's pstack. Sequential workflows by default; no bundled private services or automations.",
+  "author": {
+    "name": "pstack-copilot contributors"
+  },
+  "homepage": "https://github.com/pradeepKaatnam/pstack-copilot",
+  "repository": "https://github.com/pradeepKaatnam/pstack-copilot",
+  "license": "MIT",
+  "skills": "skills/",
+  "agents": "agents/"
+}

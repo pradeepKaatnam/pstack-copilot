@@ -1,0 +1,119 @@
+[
+  {
+    "id": "cli-plugin-creation",
+    "url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/plugins-creating",
+    "retrieved": "2026-10-15",
+    "claims": [
+      "Copilot CLI supports Agent Plugins 1.0 and legacy Copilot manifests.",
+      "Legacy manifests may explicitly configure skills and agents paths.",
+      "Local plugin installs are cached; reinstall to pick up edits.",
+      "Use plugin list, /skills list and /agent to verify discovery."
+    ],
+    "limitations": ["This port chooses documented legacy component paths, not Agent Plugins namespaced paths.", "CLI discovery was not executed in the sandbox."]
+  },
+  {
+    "id": "cli-plugin-reference",
+    "url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-plugin-reference",
+    "retrieved": "2026-10-15",
+    "claims": [
+      "CLI accepts exact Agent Plugins 1.0.0 and 1.1.0 schema URLs, with fixed skills/ and com.github.copilot/agents/ paths.",
+      "Legacy agents use .agent.md files and may configure component paths.",
+      "Direct installation supports OWNER/REPO:PATH and absolute local paths.",
+      "Marketplace manifests are supported, but not required for direct installs.",
+      "Portable MCP components and Copilot-specific namespaces have separate semantics."
+    ],
+    "limitations": ["Original Cursor .cursor-plugin metadata is not a Copilot manifest.", "The archived root Agent Plugins manifest is a supported format in principle, but cannot load root agents/ with Copilot Agent Plugins semantics."]
+  },
+  {
+    "id": "cli-skills-tools-models",
+    "url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-command-reference",
+    "retrieved": "2026-10-15",
+    "claims": [
+      "Skills support name, description, user-invocable, disable-model-invocation, argument-hint and allowed-tools.",
+      "disable-model-invocation prevents automatic invocation; user-invocable independently controls manual slash invocation.",
+      "CLI duplicate skills can use plugin-qualified slash invocation names; inspect the actual list.",
+      "CLI has a task tool and list_agents/read_agent/write_agent; these are not the Cursor Task call contract.",
+      "CLI custom agents support model, models, modelPolicy and reasoningEffort.",
+      "CLI background task controls include /tasks and Ctrl+X then b; sidekick agents are a separate native feature.",
+      "Custom CLI subagents do not inherit repository instructions by default; include-custom-instructions opts in.",
+      "Model selection, permissions, sandboxing and available tools remain host-controlled."
+    ],
+    "limitations": ["No portable mapping was verified for Cursor subagent_type, readonly, run_in_background, is_background, AskQuestion, todo tools, /loop or /in-cloud.", "This port defaults to sequential role passes and inherited models; no hardcoded Cursor model IDs or fabricated APIs."]
+  },
+  {
+    "id": "cli-settings",
+    "url": "https://docs.github.com/en/copilot/reference/copilot-cli-reference/cli-config-dir-reference",
+    "retrieved": "2026-10-15",
+    "claims": [
+      "~/.copilot/settings.json is the CLI user settings file; config.json is internal state.",
+      "CLI user subagents.agents.<id>.model and effortLevel have actual documented consumers.",
+      ".github/copilot/settings.json and settings.local.json accept only a supported repository subset; unknown keys are ignored.",
+      "Repository enabledPlugins and extraKnownMarketplaces support declarative plugin adoption."
+    ],
+    "limitations": ["An arbitrary renamed pstack-models file has no automatic loader.", "User settings, repository settings and custom-agent frontmatter are not interchangeable.", "Company policy may override local preferences."]
+  },
+  {
+    "id": "skills-host-discovery",
+    "url": "https://docs.github.com/en/copilot/concepts/agents/about-agent-skills",
+    "retrieved": "2026-10-15",
+    "claims": ["Repository skills live in .github/skills/<name>/SKILL.md.", "Skills bundle instructions, scripts and resources and load when relevant."],
+    "limitations": ["Common skill discovery does not establish tool, MCP, model or background execution parity."]
+  },
+  {
+    "id": "vscode-skills",
+    "url": "https://github.com/microsoft/vscode-docs/blob/main/docs/agent-customization/agent-skills.md",
+    "retrieved": "2026-10-15",
+    "claims": [
+      "Skill names use lowercase letters, numbers and hyphens and match the directory.",
+      "user-invocable and disable-model-invocation independently control manual and automatic availability.",
+      "VS Code prefixes plugin skill slash commands with a plugin namespace."
+    ],
+    "limitations": ["Background knowledge is not background process execution.", "Do not promise identical slash command spelling across CLI and VS Code."]
+  },
+  {
+    "id": "vscode-plugins",
+    "url": "https://github.com/microsoft/vscode-docs/blob/main/docs/agent-customization/agent-plugins.md",
+    "retrieved": "2026-10-15",
+    "claims": ["VS Code documents Agent Plugins 1.0, source installs, marketplaces and local plugin locations.", "CLI-installed plugins can be discovered by VS Code."],
+    "limitations": ["VS Code customization interfaces and CLI /plugin commands maintain separate inventories.", "This legacy CLI package is not claimed integration-tested in VS Code; use managed project skills for the documented common path."]
+  },
+  {
+    "id": "custom-agents",
+    "url": "https://docs.github.com/en/copilot/reference/custom-agents-configuration",
+    "retrieved": "2026-10-15",
+    "claims": ["Portable tool aliases include read, search, edit, execute and agent.", "A tools list controls availability, not approval.", "Cloud ignores custom-agent handoffs and argument-hint."],
+    "limitations": ["An omitted tools list exposes all session-available tools; not a read-only security boundary.", "CLI model/effort extensions are not assumed portable."]
+  },
+  {
+    "id": "hooks",
+    "url": "https://docs.github.com/en/copilot/reference/hooks-reference",
+    "retrieved": "2026-10-15",
+    "claims": [
+      "Copilot supports native hook events and structured permission decisions.",
+      "CLI preToolUse command failures fail closed, but hook timeouts fail open.",
+      "Cloud is noninteractive; permissionRequest is not an effective cloud approval gate."
+    ],
+    "limitations": ["This port does not bundle hooks or translate Cursor automation triggers.", "Prompt comments and optional hooks are not security boundaries."]
+  },
+  {
+    "id": "cli-mcp",
+    "url": "https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-mcp-servers",
+    "retrieved": "2026-10-15",
+    "claims": ["CLI MCP servers require explicit configuration and appropriate trust/authentication.", "Trusted project MCP configuration is distinct from VS Code's configuration envelope."],
+    "limitations": ["No upstream private/internal MCP availability is implied or provisioned.", "Missing tools must stop the affected workflow rather than fabricate results."]
+  },
+  {
+    "id": "cloud-mcp",
+    "url": "https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/configure-mcp-servers",
+    "retrieved": "2026-10-15",
+    "claims": ["Cloud supports configured MCP tools with network and secret constraints.", "MCP resources/prompts and OAuth-authenticated remote servers are not currently supported."],
+    "limitations": ["Private Cursor infrastructure and credentials are not fetched.", "Cloud runtime and plugin installation were not exercised in this sandbox."]
+  },
+  {
+    "id": "plugin-hosts",
+    "url": "https://docs.github.com/en/copilot/concepts/agents/about-plugins",
+    "retrieved": "2026-10-15",
+    "claims": ["GitHub documents plugins across Copilot clients, including declarative cloud adoption through repository plugin settings.", "Portable components do not imply portable harness behavior."],
+    "limitations": ["No claim of feature parity or automatic cloud adoption is made by this port."]
+  }
+]

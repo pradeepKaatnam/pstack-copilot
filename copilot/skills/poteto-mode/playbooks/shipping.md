@@ -1,0 +1,14 @@
+### Shipping
+
+**You own the verified handoff. The operator owns landing.**
+
+The original merge and auto-merge commands are inactive. Source-repository provenance is `upstream/pstack/skills/poteto-mode/playbooks/shipping.md`, not an installed resource. This port never merges, arms auto-merge, or bypasses approval.
+
+1. **Resolve the forge and verify each PR independently.** Default to `gh`. Use Origin only when installed and able to resolve the repository. Never require Graphite. Run the change as a user would, parent against head, through a real available driver. Record `PASS`, `PASS+NOTES`, `FAIL`, or blocked with receipts. Green CI or an approving bot is not a live verdict. Seek a reviewer who did not write the code. If unavailable, disclose that a sequential review pass is not independent and do not claim the independent gate cleared.
+2. **Identify the contiguous verified run from the bottom.** Walk from the lowest unmerged PR and stop at the first missing verdict. The top verified PR below that gap is the ceiling. A verified PR above a gap waits. An independent patch moved onto trunk needs a fresh verdict because its old one ran with different code beneath it.
+3. **Re-check that verdicts describe current code.** Compare `git patch-id` at verdict and current head. A tests/docs/lint-only change may preserve a lane result only if the actual build output is equivalent apart from demonstrated noise. Noise must also occur between two builds of the verdict SHA or be an embedded SHA. Name noise files and evidence. Fresh changes still need checks and review. A dev-server lane without build artifacts must rerun. Re-verify anything else that drifted.
+4. **Hand the user a bottom-up landing plan.** Include PR numbers, exact heads, bases, verdict authors, CI status, and ceiling. Tell the operator to confirm each actual merge before proceeding. Queue acceptance or a successful merge request is not evidence of a completed merge. Read forge state after a user-performed merge and confirm the PR was merged into trunk, not merely into a parent branch.
+5. **Preserve topology during operator landing.** Do not edit branches or bases during a landing in flight. If the user separately authorizes moving the next child onto the actual merge result and retargeting it to trunk, use one writer, preserve the lease, apply step 3 again, and wait for new CI. Report stalls before any surgery. The standalone watcher is read-only and may observe user-performed merges with a finite timeout; it does not authorize or perform them.
+6. **Stop at the ceiling.** Extending the run requires new verdicts and a new handoff, not automatic continuation.
+
+**Reply:** the verified run and ceiling, exact heads, each verdict and reviewer, operator landing steps, observed merges if any, and the next gap. Never report an unobserved merge.

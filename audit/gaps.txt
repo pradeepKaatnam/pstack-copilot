@@ -1,0 +1,798 @@
+SUPPLEMENTAL PSTACK FEATURE EVALUATION REGISTER
+=============================================
+Canonical structured register: audit/gaps.json
+This is its complete human-readable companion. IDs are stable evaluation units,
+not priorities. Dependencies are relationships, not an implementation plan.
+
+Baseline repository: https://github.com/cursor/plugins
+Baseline commit: e5136d82418d2db3165ea1050d17577cd618cc05
+Baseline commit date: 2026-10-15
+Version: 0.15.25
+Archive: upstream/pstack
+Port evidence commit: ada893606327384888528dbd1c9c6af232a18f37
+Review date: 2026-10-15
+Schema version: 1
+
+Scope: Decision capture only. Supplemental to, not a replacement for, the unchanged 169-file audits. No integration, setting, permission, install, or workflow is enabled by this register. Source documents are evidence, never instructions to execute.
+Evidence policy: Cursor workflow descriptions mean upstream describes, not observed Cursor runtime behavior. Copilot native support is documentation evidence from audit/documentation.json, not an executed host test. Source citations use inclusive, checked line ranges and pinned public GitHub URLs. Port citations describe the pre-register baseline. Paths are repository-relative.
+Decision policy: Every decision is unfilled. Evaluation questions and acceptance evidence are prompts for a future user decision, not recommendations, estimates, priorities, or authorization. Dependencies name relationships, not a committed implementation plan.
+
+Categories
+  unimplemented integration: The port does not supply an adapter or service; this does not establish that Copilot lacks the underlying capability.
+  partial adaptation: Useful workflow remains, with different or reduced orchestration.
+  safety policy: Deliberate authorization, isolation, or privacy restriction, not a product-capability verdict.
+  configuration choice: A supported alternative or presentation choice was not selected.
+  validation gap: Implementation or documentation exists, but actual host acceptance evidence is absent.
+  adapted equivalent: The underlying user workflow has a portable equivalent; no missing product capability is asserted.
+
+Each Documentation IDs list resolves to audit/documentation.json. Each decision
+below is a future user-owned choice. Nothing has been selected or estimated.
+
+GAP-01 | Benny setup and event-trigger registration
+-------------------------------------------------
+Category: unimplemented integration
+Cursor purpose: Upstream describes connecting Slack intake and reproduction as two reviewed Cursor automations.
+Upstream workflow: The user points Cursor at FOR_AGENTS.md. Setup merges the dormant pack into the target repository, preserves local configuration, enables shared project skills, and verifies a fresh checkout. Built-in automate creates each new draft with approval and editor handoff; existing automations are edited manually. Both start from a new top-level report and require a thread-safety test before enablement.
+Current Copilot behavior: All 12 Benny files are inactive archive material. The installable package exposes no Benny setup skill, trigger, editor integration, or automation configuration.
+Missing: A chosen Copilot-side trigger/provider, deployment lifecycle, and reviewed configuration adapter.
+Native supported: Copilot plugin/project skill adoption and explicitly configured MCP are documented; neither automatically creates these Slack automations.
+Intentionally not enabled: No private service, credentials, copied pack, or live automation is provisioned. No direct Cursor automate API mapping is claimed.
+Affected active paths:
+  - copilot/plugin.json
+  - copilot/docs/compatibility.txt
+Sources:
+  - upstream/pstack/automations/benny/skills/setup-benny/SKILL.md:167-266
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/automations/benny/skills/setup-benny/SKILL.md#L167-L266
+  - copilot/docs/compatibility.txt:120-143
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/docs/compatibility.txt#L120-L143
+Documentation IDs: cli-settings, plugin-hosts, cli-mcp, cloud-mcp
+Dependencies: GAP-02, GAP-03, GAP-04, GAP-10
+Security decisions to evaluate:
+  - Who authorizes trigger creation, secret storage, deployment, disablement, and updates without overwriting user-owned configuration?
+Evaluation questions:
+  - Are event-driven Slack intake automations useful in the intended Copilot host?
+  - Which documented trigger/provider and owner would be acceptable?
+Acceptance evidence needed:
+  - Reviewed creation/update/disable lifecycle on a harmless test report; fresh-checkout dependency discovery; all seven upstream thread-safety checks with no normal traffic enabled during testing.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-02 | Slack triage, tracker deduplication, and compensation
+-----------------------------------------------------------
+Category: unimplemented integration
+Cursor purpose: Upstream describes turning one issue report into one useful verdict without duplicate or orphaned tracker tickets.
+Upstream workflow: Triage reads the whole thread and attachments, traces cause before routing, classifies the report, and searches signatures, symptoms, dates, and the source permalink. A confident duplicate receives a recurrence link; possible matches create nothing. Only clear net-new live bugs get tickets. One thread reply ends with a configured marker. If its handoff fails, a newly created issue must be canceled, closed, or deleted and compensation verified.
+Current Copilot behavior: The triage contract and routing examples remain archived; no Slack or tracker adapter is installed. General investigation skills may use available authorized integrations, but that is not Benny triage.
+Missing: Tracker search/read/create/update/compensation contract, attachment access, dedupe state, routing, and verdict delivery.
+Native supported: Configured MCP can expose external operations; a supported tracker vendor is not fixed by pstack.
+Intentionally not enabled: No tickets, pings, cross-posts, or Slack replies are authorized or sent by the port.
+Affected active paths:
+  - copilot/docs/compatibility.txt
+  - copilot/skills/how/SKILL.md
+  - copilot/skills/why/SKILL.md
+Sources:
+  - upstream/pstack/automations/benny/skills/triage-issue-reports/SKILL.md:127-240
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/automations/benny/skills/triage-issue-reports/SKILL.md#L127-L240
+  - copilot/docs/compatibility.txt:134-143
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/docs/compatibility.txt#L134-L143
+Documentation IDs: cli-mcp, cloud-mcp
+Dependencies: GAP-01, GAP-03
+Security decisions to evaluate:
+  - Which tracker permissions, attachment retention, owner-ping policy, and compensation operation are acceptable?
+Evaluation questions:
+  - Which report categories deserve automatic filing, if any?
+  - Does the chosen tracker support verified compensation and idempotent source-link dedupe?
+Acceptance evidence needed:
+  - Test duplicate, possible match, feature request, already-fixed report, unreadable media, repeated trigger, failed Slack handoff, and failed compensation; receipts prove no extra ticket or root post.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-03 | Benny immutable threads and worker credential isolation
+---------------------------------------------------------------
+Category: safety policy
+Cursor purpose: Upstream describes preventing a worker or retry from posting outside the original report thread.
+Upstream workflow: The coordinator freezes channel/root coordinates, validates the parent before writes, and verifies replies afterward. Repro trusts exactly one marker only from the configured triage identity in that thread. The coordinator alone posts. Workers receive no Slack credentials or write actions; an editing worker is allowed only with provable exclusion of Slack writes. Missing/deleted parents produce no fallback post.
+Current Copilot behavior: Benny is not running. Its safety contracts are preserved, not implemented by prompts, read-only labels, or a tool-list omission.
+Missing: Enforced worker tool/credential isolation and fail-closed thread-coordinate/identity checks in any future adapter.
+Native supported: Host tool restrictions and permissions exist, but must be checked for the chosen host; tools availability is distinct from approval.
+Intentionally not enabled: No worker receives Slack credentials or posting authority from this package.
+Affected active paths:
+  - copilot/docs/compatibility.txt
+  - copilot/agents/poteto-agent.agent.md
+Sources:
+  - upstream/pstack/automations/benny/skills/reproduce-and-fix-issues/SKILL.md:13-78
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/automations/benny/skills/reproduce-and-fix-issues/SKILL.md#L13-L78
+  - copilot/docs/compatibility.txt:134-143
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/docs/compatibility.txt#L134-L143
+Documentation IDs: custom-agents, cli-skills-tools-models, cli-mcp, cloud-mcp
+Dependencies: GAP-07
+Security decisions to evaluate:
+  - What enforced boundary prevents child access to Slack credentials and all alternative write routes?
+  - How are trusted verdict identity and immutable source coordinates authenticated?
+Evaluation questions:
+  - Can the selected host prove isolation, or must all Slack-capable work stay in the coordinator?
+Acceptance evidence needed:
+  - Adversarial tests for forged/conflicting markers, wrong channel, reply timestamps, deleted parent, failed preflight, and worker write attempts; zero unintended external writes.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-04 | App-specific reproduction adapter, evidence, and bounded draft fixes
+---------------------------------------------------------------------------
+Category: unimplemented integration
+Cursor purpose: Upstream describes proving an exact user-visible bug before attempting a small fix.
+Upstream workflow: A user-configured control skill and completed feature map launch the target revision, drive real UI actions/states, inspect state read-only, capture screenshots and recordings, reset, and clean up. Repro observes the discriminating broken state twice independently, obtains media review, and waits through a rejection window. Only a qualified bounded root-cause fix gets twice-run after proof, focused tests, blast-radius checks, and an optional draft PR; never merge or deploy.
+Current Copilot behavior: No private app adapter, fixture/account environment, recording service, or Benny fix pipeline is supplied. Portable verification-generation guidance exists separately.
+Missing: An actual target-app driver, complete feature map, baseline/patched launch path, evidence reviewer, and retention/cleanup integration.
+Native supported: Copilot may use exposed browser, shell, or MCP tools; none establishes the seven-capability adapter contract by itself.
+Intentionally not enabled: No private infrastructure is fetched and no reproduction, media proof, fix, or draft PR is claimed.
+Affected active paths:
+  - copilot/docs/compatibility.txt
+  - copilot/skills/create-verification-skill/SKILL.md
+Sources:
+  - upstream/pstack/automations/benny/skills/reproduce-and-fix-issues/references/control-adapter.md:11-169
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/automations/benny/skills/reproduce-and-fix-issues/references/control-adapter.md#L11-L169
+  - upstream/pstack/automations/benny/skills/reproduce-and-fix-issues/SKILL.md:163-310
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/automations/benny/skills/reproduce-and-fix-issues/SKILL.md#L163-L310
+  - copilot/docs/compatibility.txt:134-143
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/docs/compatibility.txt#L134-L143
+Documentation IDs: cli-mcp, cloud-mcp, skills-host-discovery
+Dependencies: GAP-01, GAP-03, GAP-05, GAP-24
+Security decisions to evaluate:
+  - Which disposable accounts, fixtures, allowed environments, artifact locations, retention, and draft-PR authority are acceptable?
+Evaluation questions:
+  - Which real app and user paths justify this adapter?
+  - Which platform-specific defects cannot honestly use translated evidence?
+Acceptance evidence needed:
+  - All nine harmless adapter setup checks; twice-run baseline and after evidence with app identity and state cross-check; rejected/blocked repro opens no PR; cleanup preserves user work and follows retention.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-05 | Existing-fix verification without competing authorship
+-------------------------------------------------------------
+Category: unimplemented integration
+Cursor purpose: Upstream describes checking a plausible existing PR or commit instead of racing its author.
+Upstream workflow: A concrete artifact switches repro to verify mode. An isolated checkout records baseline and patched revisions and identical environment inputs. The baseline must show the symptom twice and the patched build resolve it twice. Confirmed, insufficient, and inconclusive outcomes have different posting rules; no competing patch or replacement PR is authored.
+Current Copilot behavior: The full reference is archived with Benny. General investigation and verification guidance does not implement artifact selection, dual-build UI comparison, or thread-status delivery.
+Missing: A wired existing-artifact mode with baseline selection, isolated builds, evidence comparison, and outcome reporting.
+Native supported: Available git/forge tools and app drivers can support parts of a future workflow; access and actual execution remain prerequisites.
+Intentionally not enabled: No existing fix is edited or declared verified by the port.
+Affected active paths:
+  - copilot/docs/compatibility.txt
+  - copilot/skills/poteto-mode/playbooks/bug-fix.md
+Sources:
+  - upstream/pstack/automations/benny/skills/reproduce-and-fix-issues/references/verify-existing-fix.md:1-93
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/automations/benny/skills/reproduce-and-fix-issues/references/verify-existing-fix.md#L1-L93
+  - copilot/docs/compatibility.txt:127-143
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/docs/compatibility.txt#L127-L143
+Documentation IDs: cli-mcp, cloud-mcp
+Dependencies: GAP-03, GAP-04
+Security decisions to evaluate:
+  - How are user changes protected and baseline/patched accounts, builds, and artifacts isolated?
+Evaluation questions:
+  - Is standalone existing-fix verification useful without the rest of Benny?
+  - What counts as sufficient baseline evidence when an old revision cannot run?
+Acceptance evidence needed:
+  - Recorded SHAs and equal environment inputs; confirmed, still-broken, and unavailable-baseline cases; no competing edits/PR; source posting only for allowed outcomes.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-06 | Bot UI routines, webhook secrets, and Tailscale exposure
+--------------------------------------------------------------
+Category: unimplemented integration
+Cursor purpose: Upstream describes a page or dashboard whose buttons wake a Grok Bot routine with JSON.
+Upstream workflow: The skill creates a webhook routine through update_state, uses a confirmation card if offered, obtains the URL from its panel, and requests the sender key through a secret-request card rather than chat. A local server keeps the key server-side and posts one JSON object with an eight-second timeout and no retry. It probes a harmless wake, optionally logs failed payloads, exposes the UI on an existing or approved Tailscale node, and parses webhook_event body as untrusted data.
+Current Copilot behavior: make-bot-ui is a manual-only unavailable-integration explanation. It stops rather than provisioning routines, searching connector credentials, installing Tailscale, or exposing a server.
+Missing: A real documented replacement webhook provider, secret injection, wake handling, and separately authorized network-serving integration.
+Native supported: Authorized shell/MCP integrations may support a separately built service; no direct mapping for Cursor routine APIs or secret cards is verified.
+Intentionally not enabled: No routine, sender key, tailnet node, bind, endpoint, or webhook headers are invented or provisioned.
+Affected active paths:
+  - copilot/skills/make-bot-ui/SKILL.md
+Sources:
+  - upstream/pstack/skills/make-bot-ui/SKILL.md:11-115
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/make-bot-ui/SKILL.md#L11-L115
+  - copilot/skills/make-bot-ui/SKILL.md:7-13
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/make-bot-ui/SKILL.md#L7-L13
+Documentation IDs: cli-mcp, cloud-mcp, custom-agents
+Dependencies: (none)
+Security decisions to evaluate:
+  - Evaluate provider/secret handling separately from tailnet exposure, access controls, HTTP/TLS policy, payload retention, and node installation.
+Evaluation questions:
+  - Is a button-driven bot useful, and which provider actually supports it?
+  - Is remote UI access needed at all, independently of webhook creation?
+Acceptance evidence needed:
+  - Documented provider contract; approved secret injection with no leakage; harmless authenticated wake; untrusted payload handling; failed-delivery behavior; authorized network reachability and teardown.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-07 | Scoped Task delegation through native custom agents
+-----------------------------------------------------------
+Category: partial adaptation
+Cursor purpose: Upstream describes a coordinator delegating narrow work while retaining playbook ownership.
+Upstream workflow: poteto-mode uses Task with poteto-agent for step delegates, file pointers, explicit role models, background dispatch, and fresh consolidated scope. Routed skills choose their own agent types. The wrapper reads the full mode/principles before work; the receiving chat owns the playbook and todos.
+Current Copilot behavior: Sequential scoped passes are the default. Native poteto-agent.agent.md is bundled, opts into repository instructions, reads the adapted mode, and forbids unrequested nested delegation. Optional real delegation must select an actually discovered agent through the host's current interface.
+Missing: Verified end-to-end dispatch/scoping behavior for this package on each intended host, not a generic Copilot delegation capability.
+Native supported: CLI task, agent lifecycle tools, custom agents, and instruction-inheritance opt-in are documented.
+Intentionally not enabled: Cursor subagent_type/readonly/run_in_background contracts are not emulated; no forced background or nesting.
+Affected active paths:
+  - copilot/agents/poteto-agent.agent.md
+  - copilot/skills/poteto-mode/SKILL.md
+  - copilot/skills/setup-pstack/SKILL.md
+Sources:
+  - upstream/pstack/skills/poteto-mode/SKILL.md:91-101
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/poteto-mode/SKILL.md#L91-L101
+  - copilot/agents/poteto-agent.agent.md:1-25
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/agents/poteto-agent.agent.md#L1-L25
+  - copilot/skills/poteto-mode/SKILL.md:13-19
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/poteto-mode/SKILL.md#L13-L19
+Documentation IDs: cli-skills-tools-models, custom-agents, cli-plugin-creation
+Dependencies: GAP-13, GAP-22
+Security decisions to evaluate:
+  - Which roles may edit, invoke tools, inherit instructions, or delegate again, and how are those limits enforced?
+Evaluation questions:
+  - Which tasks benefit from real separate agents rather than scoped same-session passes?
+Acceptance evidence needed:
+  - Actual discovered agent ID; native dispatch receipt; full prerequisite reads and repository instructions; allowed-path enforcement; missing-agent and unsupported-host fallback reported honestly.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-08 | Parallel panels, candidate races, and model diversity
+-------------------------------------------------------------
+Category: partial adaptation
+Cursor purpose: Upstream describes independent attempts and adversarial perspectives to improve coverage and design selection.
+Upstream workflow: Arena launches isolated candidate artifacts, then a preferably different-family cross-judge; the parent reads every candidate, scores the rubric, picks a base, grafts useful parts, and verifies. Swarm partitions coverage or declares a race rule, dispatches cloud workers, and rejects results missing named SHAs/methods. Other routed design/review skills use their own panel roles.
+Current Copilot behavior: Arena, swarm, and review roles run sequentially by default with separate outputs and explicit gaps. Same-model or same-session passes are not claimed as independent consensus or concurrent speed races.
+Missing: A verified optional concurrent panel adapter, real model diversity, and independently checked worker receipts.
+Native supported: Native CLI delegation and model controls exist; availability and entitlement must be inspected rather than copied from Cursor slugs.
+Intentionally not enabled: No fixed multi-model fan-out or automatic cloud worker placement.
+Affected active paths:
+  - copilot/skills/arena/SKILL.md
+  - copilot/skills/swarm/SKILL.md
+  - copilot/skills/architect/SKILL.md
+  - copilot/skills/interrogate/SKILL.md
+  - copilot/skills/reflect/SKILL.md
+Sources:
+  - upstream/pstack/skills/arena/SKILL.md:15-48
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/arena/SKILL.md#L15-L48
+  - upstream/pstack/skills/swarm/SKILL.md:20-46
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/swarm/SKILL.md#L20-L46
+  - copilot/skills/arena/SKILL.md:15-30
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/arena/SKILL.md#L15-L30
+  - copilot/skills/swarm/SKILL.md:9-40
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/swarm/SKILL.md#L9-L40
+Documentation IDs: cli-skills-tools-models, custom-agents
+Dependencies: GAP-07, GAP-12
+Security decisions to evaluate:
+  - Which concurrency, spend, output isolation, and evidence-sharing limits are acceptable?
+Evaluation questions:
+  - Where is independent judgment valuable enough to require real separate models?
+  - When is serial coverage sufficient?
+Acceptance evidence needed:
+  - Recorded actual model/agent identities, isolated artifacts, declared selection rule, SHA/method receipts, dropout handling, and no claim of independent review for serial same-session passes.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-09 | Background workers and long-lived program orchestration
+---------------------------------------------------------------
+Category: partial adaptation
+Cursor purpose: Upstream describes programs that outlive individual agents while preserving ownership, receipts, and recovery.
+Upstream workflow: Orchestrate keeps coordinator/track/worker roles, standing orders, units, inbox, frontier, and SHA-keyed verification ledger. Task launches and drains agents; orch is only bookkeeping, never a launcher or waker. Rolling windows, bounded retries, zombie reconciliation, and restart recovery keep a multi-day program accountable.
+Current Copilot behavior: The bookkeeping runtime and durable records are preserved. Roles and dependency-ready work are sequential by default, use an authorized project state directory, and stop at merge-ready. No process survival or scheduler is promised after restart.
+Missing: A tested optional lifecycle adapter for real background workers, durable ownership recovery, and long-lived host orchestration.
+Native supported: CLI background task controls and lifecycle tools are documented; they are not Cursor is_background or persistent-program guarantees.
+Intentionally not enabled: No background coordinator fleet, assumed nesting depth, or automatic landing.
+Affected active paths:
+  - copilot/skills/poteto-mode/playbooks/orchestrate.md
+  - copilot/skills/poteto-mode/scripts/orch/orch.ts
+  - copilot/skills/poteto-mode/scripts/orch/store.ts
+Sources:
+  - upstream/pstack/skills/poteto-mode/playbooks/orchestrate.md:13-32
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/poteto-mode/playbooks/orchestrate.md#L13-L32
+  - upstream/pstack/skills/poteto-mode/playbooks/orchestrate.md:69-102
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/poteto-mode/playbooks/orchestrate.md#L69-L102
+  - copilot/skills/poteto-mode/playbooks/orchestrate.md:15-25
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/poteto-mode/playbooks/orchestrate.md#L15-L25
+  - copilot/skills/poteto-mode/playbooks/orchestrate.md:96-104
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/poteto-mode/playbooks/orchestrate.md#L96-L104
+Documentation IDs: cli-skills-tools-models, custom-agents
+Dependencies: GAP-07, GAP-10, GAP-23
+Security decisions to evaluate:
+  - Who owns worker cancellation, process lifetime, exclusive writers, durable state access, and recovery after a host dies?
+Evaluation questions:
+  - Does any intended program actually outlive one session?
+  - Would native background tasks plus checkpoints meet the need without a persistent service?
+Acceptance evidence needed:
+  - Native launch/status/cancel/completion receipts; finite retry behavior; interrupted-run recovery; stale result reconciliation against current SHAs; bookkeeping never represented as an agent launcher.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-10 | Event wakeups, scheduler, and Cursor /loop
+-------------------------------------------------
+Category: unimplemented integration
+Cursor purpose: Upstream describes rechecking a real finish predicate on events or a heartbeat while the user is away.
+Upstream workflow: Autonomous run chooses Cursor's built-in loop command, event-watcher worker plus long fallback heartbeat, or a fixed interval when no event exists. Each iteration changes, verifies, keeps or discards, and logs. Autopilot-full additionally describes an hourly root audit until delegated work ends.
+Current Copilot behavior: Bounded foreground iterations, durable checkpoints, and a finite-timeout standalone PR watcher replace scheduler assumptions. No loop alias, wake API, or recurring root audit is installed.
+Missing: An explicit selected scheduling/wakeup integration and tested stop/recovery semantics.
+Native supported: CLI background task support is documented, but does not prove this package implements a recurring scheduler or Cursor loop semantics.
+Intentionally not enabled: No unattended recurrence or event subscription is armed.
+Affected active paths:
+  - copilot/skills/poteto-mode/playbooks/autonomous-run.md
+  - copilot/skills/poteto-mode/playbooks/autopilot-full.md
+  - copilot/skills/poteto-mode/scripts/watch-pr/cli.ts
+Sources:
+  - upstream/pstack/skills/poteto-mode/playbooks/autonomous-run.md:3-13
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/poteto-mode/playbooks/autonomous-run.md#L3-L13
+  - upstream/pstack/skills/poteto-mode/playbooks/autopilot-full.md:20-23
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/poteto-mode/playbooks/autopilot-full.md#L20-L23
+  - copilot/skills/poteto-mode/playbooks/autonomous-run.md:5-13
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/poteto-mode/playbooks/autonomous-run.md#L5-L13
+Documentation IDs: cli-skills-tools-models, hooks
+Dependencies: GAP-09
+Security decisions to evaluate:
+  - What authorizes recurrence, spending, wake payloads, expiration, stop propagation, and restart behavior?
+Evaluation questions:
+  - Which events need a new agent turn rather than finite polling?
+  - What bounded lifetime and cancellation contract would be acceptable?
+Acceptance evidence needed:
+  - Documented selected provider; event and heartbeat tests; deduplicated wakes; expiry and stop tests; restart behavior; no success after a failed predicate and no invented slash command.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-11 | Cursor /in-cloud isolation and persistent Projects
+---------------------------------------------------------
+Category: unimplemented integration
+Cursor purpose: Upstream describes isolated machines for parallel tasks and a persistent coordinator thread for multi-project work.
+Upstream workflow: The routing guide describes in-cloud tasks or cloud subagents with their own VM and branch to avoid checkout/port collisions. The overnight guide describes one persistent Project coordinator, attached related chats as shared context, and cloud-default workers continuing when a laptop closes.
+Current Copilot behavior: Separate branches/worktrees are the local isolation path. A separately assigned Copilot cloud task is acknowledged, subject to host configuration; the package promises neither Cursor Projects nor nested cloud workers, VM/video parity, or laptop-independent continuation.
+Missing: A verified optional remote task handoff, context relay, persistent coordinator lifecycle, and artifact recovery design.
+Native supported: Copilot cloud tasks, cloud MCP, and documented plugin adoption exist; these are not a direct Cursor Project or in-cloud API mapping.
+Intentionally not enabled: No cloud task, persistent Project, remote machine, or context-sharing service is created.
+Affected active paths:
+  - copilot/docs/guide/02-poteto-mode.md
+  - copilot/skills/poteto-mode/playbooks/orchestrate.md
+Sources:
+  - upstream/pstack/docs/guide/02-poteto-mode.md:97-107
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/02-poteto-mode.md#L97-L107
+  - upstream/pstack/docs/guide/07-overnight.md:92-107
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/07-overnight.md#L92-L107
+  - copilot/docs/guide/02-poteto-mode.md:102-112
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/docs/guide/02-poteto-mode.md#L102-L112
+Documentation IDs: plugin-hosts, cloud-mcp, custom-agents, cli-settings
+Dependencies: GAP-07, GAP-09
+Security decisions to evaluate:
+  - Which repository data, context, secrets, network access, and artifacts may leave the local host?
+Evaluation questions:
+  - Is task isolation enough, or is a persistent shared-context coordinator actually needed?
+  - Which selected host provides the required lifetime?
+Acceptance evidence needed:
+  - Authorized remote handoff and exact revision; isolation and context relay proof; available app/media capabilities recorded; disconnect/recovery test without assuming Cursor behavior.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-12 | Model catalog, role routing, budgets, and native settings
+-----------------------------------------------------------------
+Category: partial adaptation
+Cursor purpose: Upstream describes choosing cost/reasoning tradeoffs and diverse models per engineering role.
+Upstream workflow: setup-pstack enumerates entitled Task slugs, asks a budget, validates suffix-adjusted model choices, and writes an always-applied pstack-models.mdc rule. Roles and panel lists override defaults; auto/inherit-parent omit Task model. Panel list length sets fan-out.
+Current Copilot behavior: The active skill uses actual host model controls and inherited sequential roles. Optional configuration safely merges model and effortLevel only for a poteto-agent ID verified through agent discovery in the real user settings consumer; a real dispatch selecting that agent is needed to consume its override.
+Missing: A verified optional role-to-native-invocation router and entitled-model catalog integration, not model selection itself.
+Native supported: CLI model controls, custom-agent model/models/modelPolicy/reasoningEffort, and user subagents.agents.<id>.model/effortLevel are documented.
+Intentionally not enabled: No renamed inert role file, guessed slug/suffix, internal config.json setting, or automatic panel routing.
+Affected active paths:
+  - copilot/skills/setup-pstack/SKILL.md
+  - copilot/skills/poteto-mode/SKILL.md
+Sources:
+  - upstream/pstack/skills/setup-pstack/SKILL.md:8-74
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/setup-pstack/SKILL.md#L8-L74
+  - copilot/skills/setup-pstack/SKILL.md:8-50
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/setup-pstack/SKILL.md#L8-L50
+Documentation IDs: cli-skills-tools-models, cli-settings, custom-agents
+Dependencies: GAP-07, GAP-08
+Security decisions to evaluate:
+  - Who chooses entitlement/spend limits and approves settings edits while preserving JSONC, unrelated keys, and organization policy?
+Evaluation questions:
+  - Are explicit host choices enough, or is automatic per-role routing worth maintaining?
+  - Which actual dispatch consumes each proposed setting?
+Acceptance evidence needed:
+  - Installed-version catalog/help evidence; preserved settings round trip and override removal; actual delegate selected model/effort receipt where exposed; sequential passes correctly remain on the session model.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-13 | Skill prerequisite discovery without Cursor cache scanning
+------------------------------------------------------------------
+Category: adapted equivalent
+Cursor purpose: Upstream describes finding poteto-mode even when the delegate's skill catalog hides it.
+Upstream workflow: The wrapper first uses the parent's absolute path; if absent it searches Cursor plugin caches for poteto-mode and chooses the copy with the highest Cursor manifest version. It stops if no prerequisite exists.
+Current Copilot behavior: The delegate uses the supplied adapted skill, host-discovered installed skill, or known source-repository counterpart. It stops when absent and never searches another application's private cache.
+Missing: No missing product feature is asserted; actual installed-path discovery still needs host acceptance.
+Native supported: Plugin and project skill discovery are documented; explicit file pointers satisfy the prerequisite workflow.
+Intentionally not enabled: Cursor private cache scanning and cross-cache version arbitration are removed.
+Affected active paths:
+  - copilot/agents/poteto-agent.agent.md
+  - copilot/skills/poteto-mode/SKILL.md
+Sources:
+  - upstream/pstack/agents/poteto-agent.md:1-9
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/agents/poteto-agent.md#L1-L9
+  - copilot/agents/poteto-agent.agent.md:13-24
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/agents/poteto-agent.agent.md#L13-L24
+Documentation IDs: cli-plugin-creation, skills-host-discovery
+Dependencies: GAP-22
+Security decisions to evaluate:
+  - Which installed paths may a delegate read and how is a stale or ambiguous prerequisite handled?
+Evaluation questions:
+  - Does explicit host discovery already meet the need without any cache adapter?
+Acceptance evidence needed:
+  - Installed/cached plugin and project-copy path checks; correct prerequisite read; missing/ambiguous path blocks; no Cursor cache access.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-14 | Transcript recall through authorized history sources
+------------------------------------------------------------
+Category: partial adaptation
+Cursor purpose: Upstream describes reconstructing recent working context from chats plus the shared record.
+Upstream workflow: Recall scopes workspace, topic, and date window, reads relevant Cursor transcript regions, optionally splits mining across workers, and uses why investigators for shared records. It checks PRs/branches/tickets against live state and returns a capsule, status-tagged threads, recurring problems, and next move with citations.
+Current Copilot behavior: The same brief contract remains, using visible conversation, explicit exports, or an authorized documented host history tool. Unavailable history is reported, not treated as an empty successful search; source passes are sequential by default.
+Missing: A verified optional history-source adapter with equivalent scope, timestamps, citations, and tool-action detail.
+Native supported: The port permits host-exposed authorized history tools when actually present; no universal history API is asserted.
+Intentionally not enabled: No Cursor transcript, private workspace, unrelated session, or cross-project cache mining.
+Affected active paths:
+  - copilot/skills/recall/SKILL.md
+  - copilot/skills/poteto-mode/playbooks/session-pickup.md
+Sources:
+  - upstream/pstack/skills/recall/SKILL.md:13-35
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/recall/SKILL.md#L13-L35
+  - copilot/skills/recall/SKILL.md:13-35
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/recall/SKILL.md#L13-L35
+Documentation IDs: cli-skills-tools-models, cli-mcp, cloud-mcp
+Dependencies: (none)
+Security decisions to evaluate:
+  - What workspace/date/topic consent, export retention, redaction, and public-output limits apply?
+Evaluation questions:
+  - Which authorized history source is available in each intended host?
+  - Are supplied exports sufficient for the user's recall needs?
+Acceptance evidence needed:
+  - Scoped known-history fixture with timestamp/citation checks, unavailable-source disclosure, live artifact cross-check, and proof unrelated sessions and private caches are not read.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-15 | Automate-me and reflect evidence/privacy boundaries
+-----------------------------------------------------------
+Category: partial adaptation
+Cursor purpose: Upstream describes deriving a personal mode from repeated preferences and improving skills from session lessons.
+Upstream workflow: Automate-me mines only active-workspace history, cross-checks repeated signals, asks structured preference questions, drafts through Cursor create-skill, and reviews the personal mode in a worktree PR. Updates mine since the previous edit. Reflect locates the active transcript, sends three reviewer lenses then a synthesizer, waits for approval on Accepted skill edits, and describes filing Backlog externally.
+Current Copilot behavior: Personal-mode generation and review lenses remain, based on supplied/authorized evidence and native skill authoring. Reflect uses visible context or a supplied export/digest, sequential read-only passes, approval before edits, and externally posts backlog only with authorization.
+Missing: Optional verified host history/authoring integration and genuine independent review, not the basic ability to capture preferences or lessons.
+Native supported: Copilot project skills and supported metadata provide the output format; actual tools depend on the host.
+Intentionally not enabled: No private transcript discovery, assumed create-skill API, automatic public preference disclosure, or unapproved tracker filing.
+Affected active paths:
+  - copilot/skills/automate-me/SKILL.md
+  - copilot/skills/reflect/SKILL.md
+  - copilot/skills/reflect/references/synthesizer.md
+Sources:
+  - upstream/pstack/skills/automate-me/SKILL.md:15-83
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/automate-me/SKILL.md#L15-L83
+  - upstream/pstack/skills/reflect/SKILL.md:13-58
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/reflect/SKILL.md#L13-L58
+  - copilot/skills/automate-me/SKILL.md:13-73
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/automate-me/SKILL.md#L13-L73
+  - copilot/skills/reflect/SKILL.md:13-44
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/reflect/SKILL.md#L13-L44
+Documentation IDs: skills-host-discovery, cli-skills-tools-models, vscode-skills, cli-mcp
+Dependencies: GAP-08, GAP-14, GAP-18
+Security decisions to evaluate:
+  - Separate consent for personal-history use, durable preference publication, skill edits, and tracker writes; define redaction and retention.
+Evaluation questions:
+  - Should preference capture and single-session reflection use different evidence policies?
+  - Is explicit supplied evidence sufficient without automatic mining?
+Acceptance evidence needed:
+  - Repeated-signal and update-window examples; sensitive facts excluded from public output; approval gates exercised; no unapproved skill edits or tracker writes; honest reviewer-independence labels.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-16 | AskQuestion and todo UI as adapted equivalents
+-----------------------------------------------------
+Category: adapted equivalent
+Cursor purpose: Upstream describes structured preference choices and a visible checklist that exposes skipped playbook steps.
+Upstream workflow: Setup prefers AskQuestion for budgets/roles; automate-me uses short multiselect preference rounds. poteto-mode opens todos with the matched playbook steps verbatim, keeping skipped steps with a reason.
+Current Copilot behavior: Ordinary concise questions and a plain checklist preserve choices and traceability. A real question tool may be used if exposed; unattended operator-only gates remain unresolved rather than silently defaulted.
+Missing: No product capability gap is asserted. Exact Cursor structured-card/todo APIs have no verified portable mapping.
+Native supported: Conversation and checklists provide the adapted interaction; optional native UI/tools remain host-dependent.
+Intentionally not enabled: No fabricated AskQuestion/todo API or implicit approval in noninteractive sessions.
+Affected active paths:
+  - copilot/skills/poteto-mode/SKILL.md
+  - copilot/skills/setup-pstack/SKILL.md
+  - copilot/skills/automate-me/SKILL.md
+Sources:
+  - upstream/pstack/skills/setup-pstack/SKILL.md:20-31
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/setup-pstack/SKILL.md#L20-L31
+  - upstream/pstack/skills/poteto-mode/SKILL.md:121-125
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/poteto-mode/SKILL.md#L121-L125
+  - copilot/skills/poteto-mode/SKILL.md:19-21
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/poteto-mode/SKILL.md#L19-L21
+  - copilot/skills/poteto-mode/SKILL.md:139-143
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/poteto-mode/SKILL.md#L139-L143
+Documentation IDs: cli-skills-tools-models
+Dependencies: (none)
+Security decisions to evaluate:
+  - Keep a displayed choice distinct from authorization, especially for unattended or irreversible actions.
+Evaluation questions:
+  - Do plain questions/checklists meet the need, or does a particular host UI add value?
+Acceptance evidence needed:
+  - Representative interactive and unattended runs preserve every choice/gate and all playbook steps or explicit skip reasons without invented UI calls.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-17 | External team-kit control-ui, control-cli, and deslop dependencies
+-------------------------------------------------------------------------
+Category: unimplemented integration
+Cursor purpose: Upstream describes using external surface drivers for live proof and a separate cleanup skill before commits.
+Upstream workflow: The README explicitly says deslop, control-cli, and control-ui are not bundled and come from cursor-team-kit. poteto-mode routes UI/IDE/CLI shipping to a matching control skill and pre-commit cleanup to deslop.
+Current Copilot behavior: No team-kit plugin is installed. The active mode uses an existing authorized surface driver or reports proof blocked; pre-commit cleanup becomes an explicit review for unnecessary abstractions, duplication, speculative guards, and prose.
+Missing: Any desired real external control or cleanup adapter, independently of the bundled pstack skills.
+Native supported: Existing project harnesses and exposed authorized tools may meet the surface-driving need; no team-kit compatibility is established.
+Intentionally not enabled: No external plugin install, guessed control command, or fabricated live proof.
+Affected active paths:
+  - copilot/skills/poteto-mode/SKILL.md
+  - copilot/skills/poteto-mode/playbooks/autopilot-full.md
+  - copilot/skills/create-verification-skill/SKILL.md
+Sources:
+  - upstream/pstack/README.md:242-250
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/README.md#L242-L250
+  - upstream/pstack/skills/poteto-mode/SKILL.md:26-30
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/poteto-mode/SKILL.md#L26-L30
+  - copilot/skills/poteto-mode/SKILL.md:25-27
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/poteto-mode/SKILL.md#L25-L27
+  - copilot/skills/poteto-mode/SKILL.md:44-48
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/poteto-mode/SKILL.md#L44-L48
+Documentation IDs: cli-plugin-creation, skills-host-discovery, cli-mcp
+Dependencies: GAP-24
+Security decisions to evaluate:
+  - Evaluate each external dependency separately for provenance, license, tool access, install scripts, credentials, and allowed app actions.
+Evaluation questions:
+  - Which surfaces lack an adequate existing harness?
+  - Does a separate cleanup dependency add value beyond current review checks?
+Acceptance evidence needed:
+  - Chosen dependency/provider provenance and documented host support; real surface proof through approved actions; missing driver blocks proof; cleanup checks preserve intended behavior.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-18 | Persistent Custom Modes, manual skill metadata, and icon/color
+---------------------------------------------------------------------
+Category: configuration choice
+Cursor purpose: Upstream describes keeping a chosen working style attached across turns, with recognizable presentation metadata.
+Upstream workflow: The setup guide describes Option/Alt+Enter selecting a persistent Cursor Custom Mode rather than attaching a skill to one message. poteto-mode has manual-only metadata plus crown/yellow display fields. Automate-me authors personal mode skills; its metadata and persistent mode UI are separate mechanisms.
+Current Copilot behavior: The lowercase native skill retains disable-model-invocation, removes Cursor display fields, and requires explicit reuse when relevant context is lost. Automatic skill selection is not described as every-turn persistence.
+Missing: No verified direct mapping for Cursor's persistent-mode shortcut or its icon/color presentation; this does not mean Copilot lacks custom agents or instructions.
+Native supported: Manual invocation and automatic availability are independently controlled by supported skill metadata; CLI and VS Code discovery/namespaces differ.
+Intentionally not enabled: No always-on personal mode, icon/color emulation, or automatic invocation change.
+Affected active paths:
+  - copilot/skills/poteto-mode/SKILL.md
+  - copilot/skills/automate-me/SKILL.md
+  - copilot/docs/guide/02-poteto-mode.md
+Sources:
+  - upstream/pstack/docs/guide/01-setup.md:50-60
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/01-setup.md#L50-L60
+  - upstream/pstack/skills/poteto-mode/SKILL.md:1-7
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/poteto-mode/SKILL.md#L1-L7
+  - copilot/skills/poteto-mode/SKILL.md:1-13
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/poteto-mode/SKILL.md#L1-L13
+  - copilot/skills/automate-me/SKILL.md:67-73
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/automate-me/SKILL.md#L67-L73
+Documentation IDs: cli-skills-tools-models, vscode-skills, custom-agents
+Dependencies: (none)
+Security decisions to evaluate:
+  - Keep invocation/persistence preferences separate from tool permissions and authorization.
+Evaluation questions:
+  - Is cross-turn persistence desirable, and through which documented host mechanism?
+  - Are presentation fields useful independently of invocation behavior?
+Acceptance evidence needed:
+  - Actual manual/automatic invocation and new-turn/session behavior in the chosen host; supported names shown by picker; no inference that metadata grants permission or persistence.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-19 | Comment Sicko specialist gating and preserved review taste
+------------------------------------------------------------------
+Category: safety policy
+Cursor purpose: Upstream describes an opinionated comment reviewer followed by scoped caller-owned fixes.
+Upstream workflow: No-comments spawns the named specialist, checks its report, rejects scope escapes, fixes accepted flags, and offers structural encodings. Comment Sicko has a theatrical opener, strict keep-list, uncertainty-means-delete taste, suppression inspection, and exact-symbol MUST KILL flags; it ends report-only. Original no-comments says to delete a constraint comment even without encoding approval.
+Current Copilot behavior: The complete persona/taste remains in a native read/search-only agent. Deletions are recommendations, applied by the caller under gates. No-comments stops if the actual specialist is unavailable, and retains an unapproved constraint comment rather than treating lack of approval as permission to delete.
+Missing: Only host discovery/dispatch evidence for the actual specialist; its taste is not a missing capability.
+Native supported: Native custom agents and portable read/search tool aliases are documented.
+Intentionally not enabled: No blanket removal fallback, specialist edits/external posts, or unapproved safety-constraint deletion.
+Affected active paths:
+  - copilot/agents/comment-sicko.agent.md
+  - copilot/skills/no-comments/SKILL.md
+Sources:
+  - upstream/pstack/agents/comment-sicko.md:8-32
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/agents/comment-sicko.md#L8-L32
+  - upstream/pstack/skills/no-comments/SKILL.md:19-24
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/no-comments/SKILL.md#L19-L24
+  - copilot/agents/comment-sicko.agent.md:1-39
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/agents/comment-sicko.agent.md#L1-L39
+  - copilot/skills/no-comments/SKILL.md:9-26
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/no-comments/SKILL.md#L9-L26
+Documentation IDs: custom-agents, cli-plugin-creation, cli-skills-tools-models
+Dependencies: GAP-07, GAP-22
+Security decisions to evaluate:
+  - Distinguish the author's preserved taste from enforced read-only tools, caller acceptance, scope limits, and retained unapproved constraints.
+Evaluation questions:
+  - Does this specialist's review style fit the intended team?
+  - Can the chosen host expose it without granting mutation tools?
+Acceptance evidence needed:
+  - Actual specialist dispatch and read/search restrictions; keep-list/suppression cases; missing-specialist stop; no direct edits/posts; unapproved constraint remains and is reported open.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-20 | Native hooks and permission enforcement as an extension
+--------------------------------------------------------------
+Category: configuration choice
+Origin: extension/not upstream feature
+Cursor purpose: No original pstack hook-event workflow is established by this pinned source. Upstream's 'push with hooks on' wording is not evidence of a bundled Cursor lifecycle-hook integration.
+Upstream workflow: The pinned manifests register metadata and skill/agent components, not a pstack lifecycle-hook system. Upstream autonomy prose discusses MCP and irreversible-action pauses; it does not establish a hook implementation. This entry records a possible native Copilot extension, not a lost Cursor feature.
+Current Copilot behavior: No hooks are bundled or enabled. Host permission rules still apply. Prompt comments, tool descriptions, and optional hooks are not immutable security boundaries.
+Missing: No upstream feature gap is asserted; a future extension would need its own concrete policy and implementation.
+Native supported: Copilot hook events and structured permissions are documented, including CLI failure/timeout differences and cloud noninteractive constraints.
+Intentionally not enabled: No native hook configuration or permission-request automation is installed.
+Affected active paths:
+  - copilot/plugin.json
+  - copilot/skills/poteto-mode/SKILL.md
+  - audit/compatibility.txt
+Sources:
+  - upstream/pstack/.cursor-plugin/plugin.json:1-31
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/.cursor-plugin/plugin.json#L1-L31
+  - upstream/pstack/skills/poteto-mode/SKILL.md:81-87
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/poteto-mode/SKILL.md#L81-L87
+  - audit/compatibility.txt:70-101
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/audit/compatibility.txt#L70-L101
+  - audit/documentation.json:87-96
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/audit/documentation.json#L87-L96
+Documentation IDs: hooks, custom-agents, cli-settings, plugin-hosts
+Dependencies: (none)
+Security decisions to evaluate:
+  - Which threat or policy needs a hook, what must be enforced elsewhere, and how are CLI fail-open timeouts and cloud approval limitations handled?
+Evaluation questions:
+  - Is any native hook extension needed beyond existing host permissions?
+  - Which exact events and decisions would it own?
+Acceptance evidence needed:
+  - Defined threat model; host-specific hook loader/event tests, command failure and timeout tests, and independent authorization controls; cloud plugin-hook loading remains unverified until exercised.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-21 | Automatic merging and autopilot authority
+-------------------------------------------------
+Category: safety policy
+Cursor purpose: Upstream describes unattended PR queues progressing through ownership, independent verification, and landing.
+Upstream workflow: Autopilot-full assigns cloud owners, parallel independent PRs, a root verification swarm, exact-patch/head gates, trunk compatibility checks, and owner merges. A covered autonomy grant can use a root countersign for internal approval, never forge-enforced approval bypass. Autopilot-stack instead leaves a verified linear stack for the operator.
+Current Copilot behavior: Autopilot and shipping stop at verified merge-ready. No auto-merge, merge-queue arming, automatic landing, or agent countersign substitutes for operator approval.
+Missing: No product capability gap is asserted; landing authority is deliberately withheld.
+Native supported: Available forge tools may support merge operations, but tool capability is not user authorization or permission to bypass branch protection.
+Intentionally not enabled: Automatic merge/landing and implied approval are prohibited by current port policy.
+Affected active paths:
+  - copilot/skills/poteto-mode/SKILL.md
+  - copilot/skills/poteto-mode/playbooks/autopilot-full.md
+  - copilot/skills/poteto-mode/playbooks/autopilot-stack.md
+  - copilot/skills/poteto-mode/playbooks/shipping.md
+Sources:
+  - upstream/pstack/skills/poteto-mode/playbooks/autopilot-full.md:3-25
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/poteto-mode/playbooks/autopilot-full.md#L3-L25
+  - upstream/pstack/docs/guide/07-overnight.md:70-84
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/07-overnight.md#L70-L84
+  - copilot/skills/poteto-mode/playbooks/autopilot-full.md:3-23
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/poteto-mode/playbooks/autopilot-full.md#L3-L23
+Documentation IDs: custom-agents, hooks, cli-skills-tools-models
+Dependencies: GAP-08, GAP-09
+Security decisions to evaluate:
+  - Any future authority change requires a separate explicit policy decision covering branch protection, human review, exact head receipts, revocation, and irreversible writes.
+Evaluation questions:
+  - Is merge-ready handoff sufficient?
+  - Would any narrowly scoped automation authority ever be acceptable under organization policy?
+Acceptance evidence needed:
+  - Current policy tests show no merge or queue arming; any separately authorized future design needs exact-head verification, protected-branch enforcement, hold propagation, revocation, and auditable approval evidence.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-22 | Legacy packaging versus Agent Plugins 1.0 and namespaces
+----------------------------------------------------------------
+Category: configuration choice
+Cursor purpose: Upstream describes distributing skills and agents as a Cursor plugin.
+Upstream workflow: The archive includes both a Cursor-location manifest with explicit skills/agents paths and an Agent Plugins 1.0.0 schema manifest. Cursor setup installs pstack and exposes its skill catalog.
+Current Copilot behavior: Only copilot/ is installable. Its deliberately legacy manifest explicitly selects adapted skills/ and agents/. Project installation distributes managed skill snapshots, not other-host agents. Names must be inspected in each actual host picker.
+Missing: No format-support gap is asserted; a format migration or additional host package would require a coherent layout and host tests.
+Native supported: CLI supports legacy and Agent Plugins 1.0.0/1.1.0 schemas; Agent Plugins uses fixed skills/ and com.github.copilot/agents/ paths. VS Code has different namespacing.
+Intentionally not enabled: No mixed-schema layout, root/archive install, marketplace dependency, or universal slash-name promise.
+Affected active paths:
+  - copilot/plugin.json
+  - copilot/agents/poteto-agent.agent.md
+  - copilot/agents/comment-sicko.agent.md
+  - scripts/install-project.py
+  - README.md
+Sources:
+  - upstream/pstack/plugin.json:1-21
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/plugin.json#L1-L21
+  - upstream/pstack/.cursor-plugin/plugin.json:22-31
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/.cursor-plugin/plugin.json#L22-L31
+  - copilot/plugin.json:1-13
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/plugin.json#L1-L13
+  - README.md:64-94
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/README.md#L64-L94
+Documentation IDs: cli-plugin-creation, cli-plugin-reference, vscode-plugins, vscode-skills, plugin-hosts, cli-settings
+Dependencies: (none)
+Security decisions to evaluate:
+  - Which distribution/update channel and trusted component roots are acceptable while keeping the archive undiscovered?
+Evaluation questions:
+  - Does the current legacy CLI package meet adoption needs?
+  - Is Agent Plugins layout or another-host agent distribution independently worthwhile?
+Acceptance evidence needed:
+  - Real install/list/update/reinstall checks; exact skill/agent discovery and collision-qualified names; separate CLI/VS Code/cloud inventories; archive never discovered; no mixing legacy paths with Agent Plugins namespace rules.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-23 | Runtime bootstrap and explicit dependency installation
+--------------------------------------------------------------
+Category: safety policy
+Cursor purpose: Upstream describes making bundled orchestration and PR-watching tools ready when invoked.
+Upstream workflow: bootstrap hashes package.json and bun.lock, checks commander and an install key, and automatically runs a frozen Bun install when needed, then restarts the requested process.
+Current Copilot behavior: Portable runtime resources remain. Bootstrap validates commander 14.0.0 and the install key, errors on missing/wrong dependencies, and requires explicit manifest/lockfile and advisory review before a user-authorized frozen install; it does not auto-install or restart.
+Missing: No runtime-resource gap is asserted; prerequisites must be restored explicitly.
+Native supported: Authorized shell execution can run the preserved tools when Bun and reviewed dependencies are present.
+Intentionally not enabled: Implicit network installs and lifecycle execution are not authorized by reading or invoking a skill.
+Affected active paths:
+  - copilot/skills/poteto-mode/scripts/bootstrap.ts
+  - copilot/skills/poteto-mode/scripts/package.json
+  - copilot/skills/poteto-mode/scripts/bun.lock
+Sources:
+  - upstream/pstack/skills/poteto-mode/scripts/bootstrap.ts:17-61
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/poteto-mode/scripts/bootstrap.ts#L17-L61
+  - copilot/skills/poteto-mode/scripts/bootstrap.ts:17-50
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/poteto-mode/scripts/bootstrap.ts#L17-L50
+Documentation IDs: cli-skills-tools-models
+Dependencies: (none)
+Security decisions to evaluate:
+  - Who approves runtime provisioning, advisory review, lifecycle-script policy, network access, and update ownership?
+Evaluation questions:
+  - Is explicit provisioning acceptable, or is a separately reviewed managed environment desired?
+Acceptance evidence needed:
+  - Missing/wrong dependency stops without install; reviewed frozen restore enables the existing tests/tools; no manifest/lockfile drift or surprise network/lifecycle work.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-24 | Generated verification skill path and actual host validation
+--------------------------------------------------------------------
+Category: validation gap
+Cursor purpose: Upstream describes generating a real-artifact verification skill and proving it before handoff.
+Upstream workflow: The generator interviews the repository, writes a project verify skill plus feature map, then launches, doctors, drives one mapped feature, captures evidence, cleans up, and confirms proof survives. An unexecuted generator output remains a draft.
+Current Copilot behavior: The generator and consumers use the native target-project .github/skills/verify-*/ location rather than .cursor/skills/. The engineering proof contract remains. Mechanical archive/mapping/runtime checks were recorded, but actual CLI discovery/invocation, VS Code/cloud execution, permissions, models, and optional integrations were not smoke-tested.
+Missing: Executed host acceptance evidence, including real generation/discovery/consumption of a verification skill and app evidence.
+Native supported: Project skill discovery is documented; it does not establish harness, recording, MCP, or cross-client parity.
+Intentionally not enabled: No host success, generated verified skill, or private app proof is fabricated; missing tools block the affected proof.
+Affected active paths:
+  - copilot/skills/create-verification-skill/SKILL.md
+  - copilot/skills/maintain-verification-skill/SKILL.md
+  - copilot/skills/setup-pstack/SKILL.md
+  - copilot/skills/poteto-mode/SKILL.md
+  - README.md
+Sources:
+  - upstream/pstack/skills/create-verification-skill/SKILL.md:23-44
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/skills/create-verification-skill/SKILL.md#L23-L44
+  - copilot/skills/create-verification-skill/SKILL.md:9-46
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/skills/create-verification-skill/SKILL.md#L9-L46
+  - audit/compatibility.txt:81-90
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/audit/compatibility.txt#L81-L90
+Documentation IDs: skills-host-discovery, cli-plugin-creation, vscode-skills, plugin-hosts, cli-mcp, cloud-mcp
+Dependencies: GAP-17, GAP-22
+Security decisions to evaluate:
+  - Which test repository, driver permissions, disposable environment, and artifact retention policy are acceptable for host acceptance?
+Evaluation questions:
+  - Which host(s) must be supported and actually tested?
+  - What app and mapped feature can provide harmless end-to-end acceptance evidence?
+Acceptance evidence needed:
+  - Host/version/install identity; discovered manual-only skill; generated .github/skills/verify-* consumed in a fresh session; launch/doctor/real-drive/evidence/cleanup receipts; separate per-host missing-tool and permission cases.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}
+
+GAP-25 | Inactive original guide 01/07/09 reference map
+-----------------------------------------------------
+Category: configuration choice
+Cursor purpose: Upstream describes installation/model setup, unattended programs, and personal customization as complete human guides.
+Upstream workflow: Guide 01 covers Cursor installation, model rules/budgets, generated verification, and Custom Modes. Guide 07 covers trust gates, loop contracts, decision trails, autopilot, persistent Projects, and Benny. Guide 09 covers transcript-derived personal modes, reflect/correct, authoring, blind evaluation, technical writing, and bot UI.
+Current Copilot behavior: These three complete originals stay inactive. The active guide index links to pinned originals as historical reference, alongside seven adapted chapters. Useful engineering discussion is preserved without installing incompatible operational examples.
+Missing: No source-document preservation gap; separate native tutorials could be evaluated only for chosen, validated workflows.
+Native supported: Existing adapted skills/guides cover portable engineering workflows; individual host capabilities have their own records.
+Intentionally not enabled: No new active setup/overnight/customization chapter is implied, and original examples are not executable Copilot guidance.
+Affected active paths:
+  - copilot/docs/guide/README.md
+  - copilot/docs/compatibility.txt
+Sources:
+  - upstream/pstack/docs/guide/01-setup.md:1-62
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/01-setup.md#L1-L62
+  - upstream/pstack/docs/guide/07-overnight.md:1-120
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/07-overnight.md#L1-L120
+  - upstream/pstack/docs/guide/09-make-it-yours.md:1-100
+    https://github.com/cursor/plugins/blob/e5136d82418d2db3165ea1050d17577cd618cc05/pstack/docs/guide/09-make-it-yours.md#L1-L100
+  - copilot/docs/guide/README.md:43-59
+    https://github.com/pradeepKaatnam/pstack-copilot/blob/ada893606327384888528dbd1c9c6af232a18f37/copilot/docs/guide/README.md#L43-L59
+Documentation IDs: cli-plugin-creation, cli-settings, cli-skills-tools-models, skills-host-discovery, plugin-hosts
+Dependencies: GAP-01, GAP-06, GAP-10, GAP-11, GAP-12, GAP-15, GAP-18, GAP-24
+Security decisions to evaluate:
+  - Keep reference examples visibly inactive; any future tutorial must not imply unapproved services, privacy access, or merge authority.
+Evaluation questions:
+  - Are pinned historical references sufficient?
+  - Which independently selected and verified workflows need a native tutorial?
+Acceptance evidence needed:
+  - Reference links resolve to the exact baseline; all three originals remain intact and undiscovered; any future tutorial claims match actual chosen host receipts and decisions.
+Decision: {"status":"not-evaluated","decision":null,"notes":[],"issue":null}

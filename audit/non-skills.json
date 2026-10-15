@@ -1,0 +1,261 @@
+[
+  {
+    "source": ".cursor-plugin/plugin.json",
+    "disposition": "inactive",
+    "target": "upstream/pstack/.cursor-plugin/plugin.json",
+    "review": "Read the entire Cursor manifest: pstack version 0.15.25, Lauren Tan attribution, MIT, original homepage/repository, assets/logo.png, developer-tools category, keyword/tag arrays, and explicit ./skills/ and ./agents/ registration. It has no $schema. Copilot CLI supports both legacy explicit skills/agents path fields and Agent Plugins 1.0; these fields and lack of $schema are not incompatibilities. The Cursor-specific .cursor-plugin/plugin.json discovery location is not the chosen native Copilot plugin.json entry point. This original stays unchanged in the immutable archive while the active distribution uses the separately adapted copilot/plugin.json legacy manifest with skills:'skills/' and agents:'agents/' pointing only at adapted content. Its archive location is outside that plugin root, so original instructions are not registered. The parent owns the active native manifest.",
+    "hosts": {"cli": "Inactive archived Cursor manifest; not installed.", "vscode": "Inactive archived Cursor manifest; not installed.", "cloud": "Inactive archived Cursor manifest; not installed."}
+  },
+  {
+    "source": ".gitignore",
+    "disposition": "inactive",
+    "target": "upstream/pstack/.gitignore",
+    "review": "Read all three patterns: node_modules/, .DS_Store, and *.log. They are ordinary housekeeping, not instructions or a plugin capability. Preserve the upstream file byte-for-byte in the archive. Root ignore policy is separately owned by the parent; this audit does not overwrite or claim that replacement.",
+    "hosts": {"cli": "Archived original only; root ignore policy handled separately.", "vscode": "Archived original only; root ignore policy handled separately.", "cloud": "Archived original only; root ignore policy handled separately."}
+  },
+  {
+    "source": "LICENSE",
+    "disposition": "unchanged",
+    "target": "copilot/LICENSE",
+    "review": "Read the full MIT grant, notice-retention condition, warranty disclaimer, and liability exclusion. Copyright (c) 2026 Lauren Tan is retained exactly. Copy the entire file byte-for-byte to copilot/LICENSE and also root LICENSE so redistributed adapted instructions and documentation retain the upstream license, rather than replacing attribution with a new author.",
+    "hosts": {"cli": "Unchanged MIT notice accompanies distribution.", "vscode": "Unchanged MIT notice accompanies distribution.", "cloud": "Unchanged MIT notice accompanies distribution."}
+  },
+  {
+    "source": "README.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/README.md",
+    "review": "Read all 274 lines: Lauren Tan introduction and quality rationale, Cursor add-plugin/setup/custom-mode/loop installation and invocation, all 23 playbooks, all skill descriptions and informal examples, poteto-agent/generalPurpose wrapper requirements, Comment Sicko, all 24 principles, external cursor-team-kit deslop/control dependencies, planning philosophy, transcript-derived customization and model-role rules, Benny bootstrap, and MIT reference. The original combines sound engineering principles with unsupported Cursor menu shortcuts, cache/model routing, Task-style agent selection, private integrations, and unattended merge examples. Keep the complete original reference-only; the parent owns the native root README, and adapted guide chapters preserve the substantial reusable guidance without presenting this original as Copilot installation instructions.",
+    "hosts": {"cli": "Inactive historical README; use root port README instead.", "vscode": "Inactive historical README; use root port README instead.", "cloud": "Inactive historical README; use root port README instead."}
+  },
+  {
+    "source": "agents/comment-sicko.md",
+    "disposition": "adapted",
+    "target": "copilot/agents/comment-sicko.agent.md",
+    "review": "Read the complete original persona and opening exclamation, default-main scope, five keep exceptions, suppression inspection, how/why tracing, MUST KILL flags, and report-only ending. Preserve the original description, theatrical first output 'Yes... Ha ha ha... Yes!', comment-hating personal voice, main fallback, every keep-list exception, uncertainty-means-delete taste, anti-suppression rules, exact-symbol refactoring flags, and prohibition on polishing a workaround into a shorter alibi. These stylistic and engineering choices are not Copilot incompatibilities and are not rewritten to another review philosophy. Actual compatibility changes are native .agent.md discovery/frontmatter, read/search-only tools, include-custom-instructions:true for CLI repository guidance, named how/why skill requests instead of presumed universal slash invocation, and clarification that every kill/deletion is a report recommendation: this reviewer cannot edit, run mutating commands, post externally, bypass permissions, or invent unavailable evidence. The caller owns accepted edits.",
+    "hosts": {"cli": "Native custom-agent source; install using host-supported agent discovery. Read/search only.", "vscode": "Native custom-agent source; expose through supported custom-agent discovery. Read/search only.", "cloud": "Native custom-agent source when configured for the task; read/search only, no Slack or external posting."}
+  },
+  {
+    "source": "agents/poteto-agent.md",
+    "disposition": "adapted",
+    "target": "copilot/agents/poteto-agent.agent.md",
+    "review": "Read the full frontmatter and single dense operational paragraph: background execution, parent ownership of playbook/todos/Task spawns, mandatory full poteto-mode/principle reads, absolute parent path, hidden-skill cache search, and highest Cursor manifest-version selection. Preserve scoped delegate ownership and complete prerequisite reads, but replace is_background, Cursor Task/generalPurpose assumptions, private ~/.cursor/plugins discovery, hidden-catalog claims, and cache-version selection with an explicit installed adapted skill or repository path and a fail-closed missing-prerequisite report. Use native kebab-case name/description and include-custom-instructions:true for CLI repository-instruction inheritance; no invented tools/model routing or nested delegation without explicit parent authorization. Native CLI delegation and background facilities exist, but this portable definition does not translate Cursor Task fields or force background execution.",
+    "hosts": {"cli": "Native custom-agent source; delegates only if the CLI exposes that capability.", "vscode": "Native custom-agent source; no promise that custom-agent selection creates a separate worker.", "cloud": "Native custom-agent source subject to task configuration; no forced background runtime or nested delegation."}
+  },
+  {
+    "source": "assets/logo.png",
+    "disposition": "unchanged",
+    "target": "copilot/assets/logo.png",
+    "review": "Inspected as a 512x512 RGB PNG, not executable text. Preserve the original binary exactly for attribution/branding use; no re-encoding, renamed ownership, or fabricated replacement. Byte equality is checked against the archived original.",
+    "hosts": {"cli": "Static asset only.", "vscode": "Static asset only.", "cloud": "Static asset only."}
+  },
+  {
+    "source": "automations/benny/FOR_AGENTS.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/automations/benny/FOR_AGENTS.md",
+    "review": "Read the complete two-automation intent, immutable Slack thread coordinates, triage marker/tracker contract, double UI reproduction and draft-only fix gates, worker credential isolation, all configuration questions, merge-preserving bootstrap, .cursor/settings.json enablement, fresh-agent dependency check, commit prerequisites, and first-time versus existing /automate editor handoffs. Entire Benny pack stays dormant: no Copilot-native equivalent for Cursor automation creation, Slack triggers/actions, organization tracker MCPs, app-control adapter, identities, or private infrastructure has been configured or verified. Safety prose alone cannot supply those capabilities. Do not execute bootstrap or register these nested SKILL files.",
+    "hosts": {"cli": "Inactive archive only; no setup, triggers, Slack writes, or automation registration.", "vscode": "Inactive archive only; no setup, triggers, Slack writes, or automation registration.", "cloud": "Inactive archive only; no setup, triggers, Slack writes, or automation registration."}
+  },
+  {
+    "source": "automations/benny/README.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/automations/benny/README.md",
+    "review": "Read every setup step: two dormant Cursor Slack automations, FOR_AGENTS entry, merge of the whole pack, Cursor project plugin setting, external user configuration, commit-before-enable, editor review, and harmless thread-safety test. It accurately describes the original product-specific dormant pack but would be misleading as active Copilot installation guidance. Keep complete only in the archive because Slack/MCP/private app infrastructure and Cursor automation scheduling/editor handoff have not been ported.",
+    "hosts": {"cli": "Inactive historical automation README.", "vscode": "Inactive historical automation README.", "cloud": "Inactive historical automation README."}
+  },
+  {
+    "source": "automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/automations/benny/skills/reproduce-and-fix-issues/SKILL.md",
+    "review": "Read all 310 lines and all 15 phases: fail-closed config, immutable thread preflight, trusted identity/marker wait, human ownership versus bot evidence, existing-fix mode, separate operations coordinates, optional bot token, seven adapter capabilities, full report/history/media study, two independent real-UI repros, reviewed recordings/screenshots/state cross-check, rejection window, bounded fix qualifications, isolated code worker, root-cause/TDD, twice-run after proof and blast-radius checks, draft-only PR, follow-up and cleanup. No trusted Slack action/identity enforcement, organization tracker MCP, private app launch/control/recording stack, credential isolation, event trigger, or retention environment is provisioned. Preserve all safety detail as inactive archive; never expose this nested SKILL as a Copilot skill or claim its gates were run.",
+    "hosts": {"cli": "Inactive archive; no reproduction/fix automation installed.", "vscode": "Inactive archive; no reproduction/fix automation installed.", "cloud": "Inactive archive; no reproduction/fix automation installed."}
+  },
+  {
+    "source": "automations/benny/skills/reproduce-and-fix-issues/references/control-adapter.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/automations/benny/skills/reproduce-and-fix-issues/references/control-adapter.md",
+    "review": "Read all required bring-up, UI action, mapped state/reset, stable selector, read-only inspection, screenshot, recording, and cleanup contracts; identical baseline/patched environment, secret and retention rules, safe environment translation caveats, and nine-step setup proof. This is a contract, not an implemented adapter: neither arbitrary app launch nor recording, account/fixture state, cleanup, or private app-control tools are supplied by Copilot. Keep it attached to the inactive Benny archive rather than presenting fictitious browser/MCP tools as a working port.",
+    "hosts": {"cli": "Inactive adapter specification, not a tool implementation.", "vscode": "Inactive adapter specification, not a tool implementation.", "cloud": "Inactive adapter specification, not a tool implementation."}
+  },
+  {
+    "source": "automations/benny/skills/reproduce-and-fix-issues/references/feature-map.example.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/automations/benny/skills/reproduce-and-fix-issues/references/feature-map.example.md",
+    "review": "Read the per-feature template and every fictional sign-in, item list/detail, item editor, and settings example, including UI paths, adapter action names, stable selectors, states, fixtures/auth/permissions/services, resets, evidence cross-checks, wrong surfaces, and final completeness checklist. These examples are intentionally fictional and .cursor/benny output is not a native installed verification harness. Leave the whole reference with inactive Benny; do not turn placeholder action names into claimed Copilot tools or imply that private application features and accounts were mapped.",
+    "hosts": {"cli": "Inactive fictional data/template only.", "vscode": "Inactive fictional data/template only.", "cloud": "Inactive fictional data/template only."}
+  },
+  {
+    "source": "automations/benny/skills/reproduce-and-fix-issues/references/verify-existing-fix.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/automations/benny/skills/reproduce-and-fix-issues/references/verify-existing-fix.md",
+    "review": "Read artifact qualification, isolated checkout and revision recording, twice-run pre-fix baseline and patched real-UI proofs, confirmed/insufficient/inconclusive outcomes, operations/source posting rules, no competing PR, and cleanup. The baseline-before-claiming-success principle is sound, but this operational reference requires Benny's unprovisioned private control adapter, Slack thread preflight, status integration, and retention policy. Keep complete as inactive reference with its pack, not an independent active instruction file.",
+    "hosts": {"cli": "Inactive Benny operational reference.", "vscode": "Inactive Benny operational reference.", "cloud": "Inactive Benny operational reference."}
+  },
+  {
+    "source": "automations/benny/skills/setup-benny/SKILL.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/automations/benny/skills/setup-benny/SKILL.md",
+    "review": "Read all 266 lines: dormant/direct-read entry, conflict-preserving full pack copy, Cursor JSONC project plugin enablement and fresh-project skill proof, external user-owned config/feature/routing maps, all required Slack/repo/tracker/control/model/budget choices, integration and optional token capability checks, opt-in owner pings, adapter proof, serialized first-time /automate draft approval/editor handoffs, creation-only boundary, existing editor checklists, backend/deep-link ban, and seven-case thread-safety test. There is no configured Copilot automation creation/editor service or verified Slack/tracker/private-app MCP environment. Default the entire setup inactive; never copy it to an active skill root, mutate .cursor settings, or enable live traffic.",
+    "hosts": {"cli": "Inactive setup source; not callable or auto-discovered.", "vscode": "Inactive setup source; not callable or auto-discovered.", "cloud": "Inactive setup source; not callable or auto-discovered."}
+  },
+  {
+    "source": "automations/benny/skills/triage-issue-reports/SKILL.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/automations/benny/skills/triage-issue-reports/SKILL.md",
+    "review": "Read all 240 lines and ten phases: immutable trigger/root/permalink, attachment review, cause-before-routing with optional source/history, five classifications, conservative owner pings, tracker adapter operations and compensation, confidence-based dedupe, seven creation gates, self-contained issue evidence, exactly one thread-only trusted marker verdict, read-back and rollback if handoff fails, and bounded follow-up. Preserve its conservative policies but do not claim them enforced by prompts alone. Cursor event delivery and Slack write isolation plus organization-specific tracker MCP compensation are unconfigured; all nested automation instructions remain inactive and archived.",
+    "hosts": {"cli": "Inactive triage source; no Slack/tracker writes.", "vscode": "Inactive triage source; no Slack/tracker writes.", "cloud": "Inactive triage source; no Slack/tracker writes."}
+  },
+  {
+    "source": "automations/benny/skills/triage-issue-reports/references/routing.example.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/automations/benny/skills/triage-issue-reports/references/routing.example.md",
+    "review": "Read the full billing and desktop placeholder routes, product/code/error matches, destinations and owners, empty fallback, ping allow/deny policy, and six closing rules against keyword-only routing, private IDs, cross-posting, and unapproved pings. No actual organization ownership or Slack/tracker routing can be inferred from these placeholders. Keep it inactive with Benny because neither the private routing data nor integration authorization exists; never publish substituted private IDs or activate guessed routes.",
+    "hosts": {"cli": "Inactive placeholder routing data.", "vscode": "Inactive placeholder routing data.", "cloud": "Inactive placeholder routing data."}
+  },
+  {
+    "source": "automations/benny/templates/configuration.example.yaml",
+    "disposition": "inactive",
+    "target": "upstream/pstack/automations/benny/templates/configuration.example.yaml",
+    "review": "Read all 84 lines of schema_version 1: automation names; Slack channel/identity/action placeholders, Cursor preference, environment token name and write prohibitions; example GitHub repo/draft-only PR; Linear tracker placeholder/compensation; routing defaults; control skill/feature map/test environment, /tmp/benny-artifacts and retention; verdict markers; Unicode statuses; every polling/follow-up/repro/rejection/fix budget; and four placeholder model roles. No actual secret is embedded, but environment-variable naming is not credential provisioning and example actions/models are not native tools. Preserve inactive archive, including its unexecuted upstream artifact path; do not materialize it or configure private infrastructure.",
+    "hosts": {"cli": "Inactive unfilled YAML; not runtime configuration.", "vscode": "Inactive unfilled YAML; not runtime configuration.", "cloud": "Inactive unfilled YAML; not runtime configuration."}
+  },
+  {
+    "source": "automations/benny/templates/reproduce-automation-prompt.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/automations/benny/templates/reproduce-automation-prompt.md",
+    "review": "Read the complete /automate-only source preface, committed operational/config path rules, templated Slack trigger JSON, immutable coordinates, configured repo/tracker/control/map/PR capability, trusted bug/performance marker gate, twice-run UI repro/existing-fix/bounded-fix requirements, coordinator-only Slack writes and child bans. These are live Cursor automation prompt shims, not portable runnable Copilot commands. Leave inactive with the unconfigured Slack/MCP/private control infrastructure; do not instantiate templates or register the operational file.",
+    "hosts": {"cli": "Inactive prompt template only.", "vscode": "Inactive prompt template only.", "cloud": "Inactive prompt template only."}
+  },
+  {
+    "source": "automations/benny/templates/triage-automation-prompt.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/automations/benny/templates/triage-automation-prompt.md",
+    "review": "Read the complete /automate draft preface, committed config/operational paths, trigger JSON placeholders, source-coordinate fail-closed rule, delegated classification/dedupe/tracker contract, no progress/root posts, coordinator-only Slack capability and read-only workers, exactly one marker and optional tracker URL. Retain only as inactive original: templating cannot supply Cursor event triggers, trusted Slack identity/write isolation, or private tracker MCP authorization, and no native automation scheduler is installed.",
+    "hosts": {"cli": "Inactive prompt template only.", "vscode": "Inactive prompt template only.", "cloud": "Inactive prompt template only."}
+  },
+  {
+    "source": "docs/guide/01-setup.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/docs/guide/01-setup.md",
+    "review": "Read all 62 lines: Cursor add-plugin, setup interview, ~/.cursor/rules/pstack-models.mdc, xhigh/large/unlimited/max budgets and concrete Opus/Grok assumptions, auto/inherit-parent panel semantics, swarm role, .cursor verification-skill offer, new-session model rule, cost controls, first JSON task, and Option/Alt+Enter persistent Custom Mode. These product-specific discovery/routing/shortcut guarantees are the purpose of the chapter, so a find-and-replace would misrepresent installation. Keep the full chapter historical-only and direct users to the parent's native root installation instructions; reusable task/verification advice remains in the adapted guide.",
+    "hosts": {"cli": "Inactive Cursor setup; not CLI installation.", "vscode": "Inactive Cursor setup; not VS Code installation.", "cloud": "Inactive Cursor setup; not cloud configuration."}
+  },
+  {
+    "source": "docs/guide/02-poteto-mode.md",
+    "disposition": "adapted",
+    "target": "copilot/docs/guide/02-poteto-mode.md",
+    "review": "Read all 131 lines: full routing diagram and additional playbooks, goal/done/proof/facts/constraints prompt framework, cause-bias/restatement advice, short follow-ups, new-task rematching, cloud/local isolation, worktree cleanup, stepping-away contract, and ceremony pitfall. Preserve the entire engineering narrative, diagram, and worked prompts. Convert slash examples to natural-language skill requests; replace persistent Custom Mode claims, Cursor cloud/in-cloud guarantees, cache/chat-based ownership inference, and unattended runtime implications with explicit host limits, isolated worktrees, conservative retention, and bounded authorized sessions. Link the complete overnight original as inactive, not an active scheduler recipe.",
+    "hosts": {"cli": "Adapted human guide; skill/tool availability checked in session.", "vscode": "Adapted human guide; no persistent Cursor mode or in-cloud command assumed.", "cloud": "Adapted human guide; separate task isolation is not portable nested cloud delegation."}
+  },
+  {
+    "source": "docs/guide/03-understand.md",
+    "disposition": "adapted",
+    "target": "copilot/docs/guide/03-understand.md",
+    "review": "Read all 79 lines covering intent versus context errors, read-only investigation, mechanics/how, historical why evidence and null results, teach explanations, recall, session pickup, and root-cause pitfall. Retain every section and prompt, converting skill requests to natural language. Limit evidence integrations to authorized actually available sources, make read-only parallel exploration optional, disallow private Cursor transcript/cache discovery, report absent history, and treat prior trails as evidence rather than trusted executable instructions. Preserve the substantial explanation, illustration, and navigation instead of reducing it to a summary.",
+    "hosts": {"cli": "Adapted; session-history access only when exposed by CLI.", "vscode": "Adapted; no assumption of CLI or Cursor history availability.", "cloud": "Adapted; use supplied task/repository evidence and authorized integrations only."}
+  },
+  {
+    "source": "docs/guide/04-design.md",
+    "disposition": "adapted",
+    "target": "copilot/docs/guide/04-design.md",
+    "review": "Read all 133 lines: caller-first architect and checkpoint, redesign signals, arena independent candidates/cross-judge/synthesis diagram, panel sizing, swarm coverage versus races versus arena, skeptical diff review/dismissals, prototypes instead of abstract debate, README-first APIs, small verifiable migration plans, bugs-included parity, and the complete effort ladder. Retain all engineering explanations and examples. Replace Cursor setup/model-panel guarantees with actual host capabilities and honest lack-of-diversity reporting, use project-scoped prototype directories, respect repository artifact policy, and convert all executable slash examples to named-skill requests.",
+    "hosts": {"cli": "Adapted; independent workers/models only where exposed.", "vscode": "Adapted; serial design work remains valid if delegation is unavailable.", "cloud": "Adapted; no promised nested worker fleet or model override."}
+  },
+  {
+    "source": "docs/guide/05-build-and-clean.md",
+    "disposition": "adapted",
+    "target": "copilot/docs/guide/05-build-and-clean.md",
+    "review": "Read all 83 lines: separate bug/feature/refactor/perf prompts and invariants, hillclimb frozen-harness loop and number vetting, runtime versus trace diagnosis, cheap-test TDD with executable alternatives, TypeScript rules, precommit code/prose cleanup, external deslop dependency, and independent Comment Sicko keep-list/root-cause division of labor. Preserve all sections, explanations, and the original strict comment-removal taste, including 'Everything else goes' and 'Either way, the comment comes out'; these are not host incompatibilities. Remove dependency on Cursor team-kit deslop, use natural-language skill requests and native .agent.md link, make discovery/delegation host-dependent, and clarify only the actual write boundary: read-only findings are recommendations, with accepted edits owned by the caller and subject to permission gates.",
+    "hosts": {"cli": "Adapted; no Cursor team-kit install required.", "vscode": "Adapted; use installed skills and supported agent discovery.", "cloud": "Adapted; author applies accepted findings under repository permissions."}
+  },
+  {
+    "source": "docs/guide/06-verify-and-ship.md",
+    "disposition": "adapted",
+    "target": "copilot/docs/guide/06-verify-and-ship.md",
+    "review": "Read all 130 lines: checkable real artifacts by change type, blast radius, all seven benchmark validity questions and verdicts, verification-skill discovery/Launch-Doctor-Drive-Evidence-Cleanup/features example and proof, reusable control CLI traits, feature-map upkeep with clean/changed/blocked outcomes, focused ordered PRs, conflicts/reviews/CI triage and merge-ready boundary, and contiguous bottom-up independent stack verification. Preserve these full details and examples. Replace .cursor output and scheduler/watcher guarantees with supported host installation and explicit checks; require authorization/branch protection/human review for landing, disclose absent independent workers, remove Origin-specific service assumptions, and link overnight original only as inactive reference.",
+    "hosts": {"cli": "Adapted; app-driving and GitHub actions require available tools and authorization.", "vscode": "Adapted; no automatic scheduler, watcher, or merge permission.", "cloud": "Adapted; task permissions and branch protection govern writes/landing."}
+  },
+  {
+    "source": "docs/guide/07-overnight.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/docs/guide/07-overnight.md",
+    "review": "Read all 120 lines: four trust prerequisites, finish/permissions/escape-hatch contract, Cursor /loop wakeups, pause/session pickup checkpoints, iteration diagram, TSV decision trail and different-model reviewer, autopilot-full/stack/orchestrate ownership/verification gates, persistent Cursor Projects and cloud fleets, long refactor prompt, and self-starting Benny Slack automations. The sound bounded-contract and evidence-log ideas remain readable, but the chapter's operational promise depends on unavailable Cursor persistent wakeups/Projects/cloud delegation and unconfigured private Slack/MCP control infrastructure. Keep the complete chapter reference-only, not a brief replacement pretending to port unattended execution; adapted chapters explicitly explain the limits.",
+    "hosts": {"cli": "Inactive; no loop wakeup or overnight scheduler installed.", "vscode": "Inactive; no Cursor Projects runtime installed.", "cloud": "Inactive; a task environment does not implement this persistent Cursor orchestrator."}
+  },
+  {
+    "source": "docs/guide/08-principles.md",
+    "disposition": "adapted",
+    "target": "copilot/docs/guide/08-principles.md",
+    "review": "Read all 72 lines: steering examples for subtraction/real-artifact proof/separate worktrees, decision-not-name-dropping test, all 24 linked principles across core/architecture/verification/delegation/meta, build-the-lever and benchmark explanations, and closing practice advice. Preserve every principle and its engineering meaning. Replace the false universal already-loaded-context guarantee with explicit linked-rule reading, constrain reversible autonomy by authorization/human-review/destructive-action gates, convert skill syntax to names, and mark the original customization link inactive while continuing to the adapted recipes.",
+    "hosts": {"cli": "Adapted portable engineering guidance; explicitly load needed rules.", "vscode": "Adapted portable engineering guidance; context/discovery not assumed.", "cloud": "Adapted portable guidance; never overrides task permissions or review gates."}
+  },
+  {
+    "source": "docs/guide/09-make-it-yours.md",
+    "disposition": "inactive",
+    "target": "upstream/pstack/docs/guide/09-make-it-yours.md",
+    "review": "Read all 100 lines: transcript-mined automate-me and incremental update, three-reviewer reflect with approval, architecture/types/lint/tests/docs enforcement ranking and evidence table, create-skill-based authoring, verification generators, layered technical writing, blind sanitized eval and observer effect, Grok Bot sender-key/webhook/Tailscale UI, and separate-PR pitfall. Retain full original as reference because its personal-mode generator assumes Cursor workspace transcripts and .cursor output/built-in authoring, its reviewer/eval orchestration assumes specific delegation, and its bot UI requires separately configured private webhook/network infrastructure. Do not copy these unsupported prompts into active instructions or claim transcript mining/bot deployment was ported; generic engineering principles and design/verification are preserved in other full adapted chapters.",
+    "hosts": {"cli": "Inactive Cursor customization/bot workflow.", "vscode": "Inactive Cursor customization/bot workflow.", "cloud": "Inactive Cursor customization/bot workflow."}
+  },
+  {
+    "source": "docs/guide/10-recipes-and-pitfalls.md",
+    "disposition": "adapted",
+    "target": "copilot/docs/guide/10-recipes-and-pitfalls.md",
+    "review": "Read all 156 lines: every worked recipe for understanding, restatement, prototypes, plans, arena, swarm, skeptical review, TDD, UI proof, benchmark, structural correction, help, stepping away, redirection, plain-language replies, and all 14 pitfalls. Keep the full recipes/explanations/checklists and illustration. Convert slash invocation claims to natural-language named skills, require actual-source reporting, account for missing workers with serial coverage, replace persistent-mode question and unbounded overnight promise with bounded authorized work/no merge-deploy, mark overnight original inactive, reject portable Cursor model-router assumptions, and require native skill validation instead of Cursor create-skill.",
+    "hosts": {"cli": "Adapted requests; no guaranteed slash aliases or unattended continuation.", "vscode": "Adapted requests; actual skill/worker capabilities govern execution.", "cloud": "Adapted requests; bounded task permissions and blockers remain explicit."}
+  },
+  {
+    "source": "docs/guide/README.md",
+    "disposition": "adapted",
+    "target": "copilot/docs/guide/README.md",
+    "review": "Read the entire original index, all ten chapter purposes, help-only prompt behavior and token-cost explanation, goal-plus-proof example, and automatic routing/todo claims. Replace the index with an accurate map to seven full adapted chapters and explicit historical links for three complete inactive Cursor chapters; do not claim all ten workflows are operational. Preserve the central goal/checkable-finish teaching and show natural-language invocation, host/permission boundaries, retained illustration provenance, and exact audit/compatibility links. Across every adapted chapter, within-package guide/skill/image links remain relative and confined to copilot/, while historical archive links use absolute cursor/plugins GitHub URLs pinned to e5136d82418d2db3165ea1050d17577cd618cc05/pstack and audit links use the port repository blob/main/audit URL so cached plugin installations do not depend on checkout-only sibling directories. Installation remains in the parent's root README rather than duplicating unverified product commands.",
+    "hosts": {"cli": "Adapted human navigation, not an instruction auto-loader.", "vscode": "Adapted human navigation, not an instruction auto-loader.", "cloud": "Adapted human navigation, not an instruction auto-loader."}
+  },
+  {
+    "source": "docs/guide/images/design.jpg",
+    "disposition": "unchanged",
+    "target": "copilot/docs/guide/images/design.jpg",
+    "review": "Inspected as a 1200x800 baseline JFIF JPEG with Exif metadata. Copy byte-for-byte and retain the full design chapter's illustration; original architect/arena/interrogate labels are historical artwork, not native command registration.",
+    "hosts": {"cli": "Static guide illustration.", "vscode": "Static guide illustration.", "cloud": "Static guide illustration."}
+  },
+  {
+    "source": "docs/guide/images/overnight.jpg",
+    "disposition": "unchanged",
+    "target": "copilot/docs/guide/images/overnight.jpg",
+    "review": "Inspected as a 1200x800 baseline JFIF JPEG with Exif metadata and preserve byte-for-byte with the complete illustration set. Its original overnight chapter remains inactive due to Cursor runtime/private automation dependencies; retaining the image is not a claim that an overnight loop or scheduler works in Copilot.",
+    "hosts": {"cli": "Static retained artwork; no overnight runtime.", "vscode": "Static retained artwork; no overnight runtime.", "cloud": "Static retained artwork; no overnight runtime."}
+  },
+  {
+    "source": "docs/guide/images/recipes.jpg",
+    "disposition": "unchanged",
+    "target": "copilot/docs/guide/images/recipes.jpg",
+    "review": "Inspected as a 1200x800 baseline JFIF JPEG with Exif metadata. Preserve the original binary exactly and retain the recipes illustration. Its depicted original skill/loop labels are artwork; adapted surrounding text explicitly supplies no universal slash commands or persistent loop service.",
+    "hosts": {"cli": "Static guide illustration.", "vscode": "Static guide illustration.", "cloud": "Static guide illustration."}
+  },
+  {
+    "source": "docs/guide/images/router.jpg",
+    "disposition": "unchanged",
+    "target": "copilot/docs/guide/images/router.jpg",
+    "review": "Inspected as a 1200x800 baseline JFIF JPEG with Exif metadata. Preserve byte-for-byte and retain the routing chapter illustration; its departure-board labels illustrate workflow selection, not a native command/runtime API.",
+    "hosts": {"cli": "Static guide illustration.", "vscode": "Static guide illustration.", "cloud": "Static guide illustration."}
+  },
+  {
+    "source": "docs/guide/images/understanding.jpg",
+    "disposition": "unchanged",
+    "target": "copilot/docs/guide/images/understanding.jpg",
+    "review": "Inspected as a 1200x800 baseline JFIF JPEG with Exif metadata. Preserve byte-for-byte and retain the complete understanding chapter's detective/evidence illustration; it grants no source-control, MCP, or private transcript access.",
+    "hosts": {"cli": "Static guide illustration.", "vscode": "Static guide illustration.", "cloud": "Static guide illustration."}
+  },
+  {
+    "source": "docs/guide/images/verification.jpg",
+    "disposition": "unchanged",
+    "target": "copilot/docs/guide/images/verification.jpg",
+    "review": "Inspected as a 1200x800 baseline JFIF JPEG with Exif metadata. Preserve byte-for-byte and retain the verification chapter's real-test/evidence illustration; no benchmark result or live verification is inferred from artwork.",
+    "hosts": {"cli": "Static guide illustration.", "vscode": "Static guide illustration.", "cloud": "Static guide illustration."}
+  },
+  {
+    "source": "plugin.json",
+    "disposition": "inactive",
+    "target": "upstream/pstack/plugin.json",
+    "review": "Read the full Agent Plugins 1.0 manifest: $schema https://agent-plugins.org/schemas/1.0.0/plugin.schema.json, pstack 0.15.25, quality description, Lauren Tan author, original Cursor homepage/repository, MIT, and all seven keywords. Unlike the Cursor manifest it declares no explicit skills/agents paths. Copilot CLI now supports Agent Plugins 1.0 as well as legacy manifests; this original is not archived because its schema is unsupported. It remains unchanged and inactive because this port deliberately chooses the legacy copilot/plugin.json layout with explicit skills:'skills/' and agents:'agents/' for its adapted content. The immutable original sits outside the active plugin root; the parent owns the active manifest.",
+    "hosts": {"cli": "Inactive original schema/version metadata; not an installed plugin entry.", "vscode": "Inactive original schema/version metadata; not an installed plugin entry.", "cloud": "Inactive original schema/version metadata; not an installed plugin entry."}
+  }
+]
