@@ -103,6 +103,14 @@ install agents for other hosts. Use only tools your session actually exposes.
 * `audit/passages.json`: exact original text and source line ranges for changes
   and inactive text, adapted replacement text, rationale and documentation links.
 * `audit/compatibility.txt`: readable compatibility matrix and file audit.
+* [Feature evaluation register](audit/gaps.txt): 25 separate records explaining
+  what upstream Cursor pstack uses each feature for, how its workflow operates,
+  the current Copilot treatment, dependencies, security decisions, and acceptance
+  evidence needed. Each has a stable `GAP-xx` ID and pinned source citations.
+  [The structured register](audit/gaps.json) is authoritative for future updates;
+  keep its readable companion in sync. Fill its decision, notes, and issue fields
+  as you evaluate each item. All decisions initially remain unfilled. Recording
+  an item does not enable it or imply Copilot lacks the underlying capability.
 
 Run the offline checks using Python's standard library:
 
